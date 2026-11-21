@@ -1,0 +1,103 @@
+{
+ "accuracy": 0.9950819672131147,
+ "matched": 607,
+ "scored": 610,
+ "by_metric": {
+  "revenue": [
+   34,
+   35
+  ],
+  "cost_of_revenue": [
+   24,
+   24
+  ],
+  "gross_profit": [
+   13,
+   13
+  ],
+  "rd_expense": [
+   18,
+   18
+  ],
+  "sga_expense": [
+   17,
+   17
+  ],
+  "operating_income": [
+   23,
+   23
+  ],
+  "pretax_income": [
+   33,
+   33
+  ],
+  "income_tax": [
+   35,
+   35
+  ],
+  "net_income": [
+   33,
+   33
+  ],
+  "eps_basic": [
+   34,
+   34
+  ],
+  "eps_diluted": [
+   33,
+   34
+  ],
+  "total_assets": [
+   35,
+   35
+  ],
+  "total_liabilities": [
+   26,
+   26
+  ],
+  "total_equity": [
+   35,
+   35
+  ],
+  "cash_and_equivalents": [
+   34,
+   34
+  ],
+  "long_term_debt": [
+   31,
+   32
+  ],
+  "operating_cash_flow": [
+   35,
+   35
+  ],
+  "capex": [
+   31,
+   31
+  ],
+  "dividends_paid": [
+   28,
+   28
+  ],
+  "share_repurchases": [
+   31,
+   31
+  ],
+  "net_interest_income": [
+   7,
+   7
+  ],
+  "provision_credit_losses": [
+   3,
+   3
+  ],
+  "noninterest_expense": [
+   7,
+   7
+  ],
+  "deposits": [
+   7,
+   7
+  ]
+ }
+}

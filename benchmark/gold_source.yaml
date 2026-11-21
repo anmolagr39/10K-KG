@@ -1,0 +1,435 @@
+# Benchmark source (human-edited). `python -m kg.eval.make_benchmark` turns this into
+# benchmark/test.jsonl and benchmark/dev.jsonl, computing derived golden answers from the gold facts.
+#
+# How every item was made:
+#   1. question drafted while reading the filing PDFs (before the system's graph existed);
+#   2. each gold fact located on its PDF page (1-based physical page of data/pdfs/<doc>),
+#      preferring the primary financial statement page; `alt` lists other pages printing the same value;
+#   3. `printed` is the exact string on the page; value = printed x scale;
+#   4. kg.eval.gold_check verifies the printed string is on the cited page, and cross-checks
+#      numbers against SEC XBRL (`xbrl:` concept) - XBRL is never used by the system itself;
+#   5. reviewed by hand (Anmol).
+#
+# Fact fields: t ticker | m metric (canonical name, for readability) | printed | scale (default 1e6
+#   for USD) | unit | end (period end date) | page | doc (main|ex13, default main) | alt pages | xbrl
+# Relation facts: t | rel | obj (ticker if the object is in the corpus, else a name) | page | quote
+
+test:
+  # ------------------------------------------------------------------ single-fact
+  - id: T01
+    type: single_fact
+    question: What was Costco's total revenue for its fiscal year ended August 30, 2026?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: COST, m: revenue, printed: "303,154", unit: USD, end: 2026-08-30, page: 52, alt: [88], xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+    part: income statement
+
+  - id: T02
+    type: single_fact
+    question: How much did Merck spend on research and development in 2025?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: MRK, m: rd_expense, printed: "15,789", unit: USD, end: 2025-12-31, page: 136, alt: [105], xbrl: ResearchAndDevelopmentExpense}
+    part: income statement
+
+  - id: T03
+    type: single_fact
+    question: What were JPMorgan Chase's total deposits at December 31, 2025?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: JPM, m: deposits, printed: "2,559,320", unit: USD, end: 2025-12-31, page: 272, alt: [93, 109, 437], xbrl: Deposits}
+    part: balance sheet (bank)
+
+  - id: T04
+    type: single_fact
+    question: What was NVIDIA's diluted earnings per share for fiscal year 2026?
+    answer: {kind: number, unit: USD/share, formula: f1}
+    facts:
+      f1: {t: NVDA, m: eps_diluted, printed: "4.90", scale: 1, unit: USD/share, end: 2026-01-25, page: 83, alt: [63, 99], xbrl: EarningsPerShareDiluted}
+    part: income statement (per share)
+
+  - id: T05
+    type: single_fact
+    question: Which accounting firm audits Adobe's financial statements?
+    answer: {kind: entity, value: KPMG LLP, aliases: [KPMG]}
+    facts:
+      f1: {t: ADBE, rel: audited_by, obj: KPMG LLP, page: 142, quote: "/s/ KPMG LLP"}
+    part: auditor's report
+
+  - id: T06
+    type: single_fact
+    question: How many associates did Home Depot employ at the end of fiscal 2025?
+    answer: {kind: number, unit: count, formula: f1}
+    facts:
+      f1: {t: HD, m: employees, printed: "472,400", scale: 1, unit: count, end: 2026-02-01, page: 18}
+    part: Item 1 (human capital, prose)
+
+  - id: T07
+    type: single_fact
+    question: In which U.S. state is Visa incorporated?
+    answer: {kind: entity, value: Delaware}
+    facts:
+      f1: {t: V, m: state_of_incorporation, printed: Delaware, unit: text, page: 1}
+    part: cover page
+
+  - id: T08
+    type: single_fact
+    question: How much did Eli Lilly spend on purchases of property and equipment in 2025?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: LLY, m: capex, printed: "7,841", unit: USD, end: 2025-12-31, page: 88, xbrl: PaymentsToAcquireOtherPropertyPlantAndEquipment}
+    part: cash flow statement
+
+  - id: T09
+    type: single_fact
+    question: What provision for credit losses did Capital One record in 2025?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: COF, m: provision_credit_losses, printed: "20,655", unit: USD, end: 2025-12-31, page: 146, alt: [61, 150], xbrl: ProvisionForLoanLossesExpensed}
+    part: income statement (lender)
+
+  - id: T10
+    type: single_fact
+    question: What were net sales of Amazon's AWS segment in 2025?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: AMZN, m: segment_net_sales:AWS, printed: "128,725", unit: USD, end: 2025-12-31, page: 107, alt: [43, 108]}
+    part: segment note (notes table)
+
+  # ------------------------------------------------------------------ multi-hop
+  - id: T11
+    type: multi_hop
+    question: What was Alphabet's operating margin in 2025 (income from operations as a percentage of revenues)?
+    answer: {kind: percent, formula: "f1 / f2 * 100"}
+    facts:
+      f1: {t: GOOGL, m: operating_income, printed: "129,039", unit: USD, end: 2025-12-31, page: 87, alt: [58, 66, 144], xbrl: OperatingIncomeLoss}
+      f2: {t: GOOGL, m: revenue, printed: "402,836", unit: USD, end: 2025-12-31, page: 87, alt: [58, 60, 105, 144], xbrl: Revenues}
+    part: income statement + formula
+
+  - id: T12
+    type: multi_hop
+    question: What was Amazon's free cash flow in 2025, defined as net cash provided by operating activities minus purchases of property and equipment?
+    answer: {kind: number, unit: USD, formula: "f1 - f2"}
+    facts:
+      f1: {t: AMZN, m: operating_cash_flow, printed: "139,514", unit: USD, end: 2025-12-31, page: 60, alt: [39, 51], xbrl: NetCashProvidedByUsedInOperatingActivities}
+      f2: {t: AMZN, m: capex, printed: "131,819", unit: USD, end: 2025-12-31, page: 60, xbrl: PaymentsToAcquireProductiveAssets}
+    part: cash flow statement + formula
+
+  - id: T13
+    type: multi_hop
+    question: By what percentage did Walmart's total revenues grow in fiscal 2026 compared with fiscal 2025?
+    answer: {kind: percent, formula: "(f1 - f2) / f2 * 100"}
+    facts:
+      f1: {t: WMT, m: revenue, printed: "713,163", unit: USD, end: 2026-01-31, page: 84, alt: [63, 120, 121], xbrl: Revenues}
+      f2: {t: WMT, m: revenue, printed: "680,985", unit: USD, end: 2025-01-31, page: 84, alt: [63, 120, 121], xbrl: Revenues}
+    part: income statement, two periods (YoY)
+
+  - id: T14
+    type: multi_hop
+    question: What was Oracle's effective tax rate for fiscal 2026, i.e. provision for income taxes divided by income before income taxes?
+    answer: {kind: percent, formula: "f1 / f2 * 100"}
+    facts:
+      f1: {t: ORCL, m: income_tax, printed: "2,467", unit: USD, end: 2026-05-31, page: 119, alt: [98, 172], xbrl: IncomeTaxExpenseBenefit}
+      f2: {t: ORCL, m: pretax_income, printed: "19,554", unit: USD, end: 2026-05-31, page: 119, alt: [172], xbrl: "IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic+IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign"}
+    part: income statement + formula
+
+  - id: T15
+    type: multi_hop
+    question: Which other companies in the corpus are audited by the same accounting firm as NVIDIA?
+    answer: {kind: list, value: [IBM, CSCO, QCOM, AVGO, JPM, BAC, GS, MA, AXP, PYPL, JNJ, MRK]}
+    facts:
+      f0:  {t: NVDA, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 82, quote: "PricewaterhouseCoopers LLP"}
+      f1:  {t: IBM, rel: audited_by, obj: PricewaterhouseCoopers LLP, doc: ex13, page: 43, quote: "PricewaterhouseCoopers LLP"}
+      f2:  {t: CSCO, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 95, quote: "PricewaterhouseCoopers LLP"}
+      f3:  {t: QCOM, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 86, quote: "PricewaterhouseCoopers LLP"}
+      f4:  {t: AVGO, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 81, quote: "PricewaterhouseCoopers LLP"}
+      f5:  {t: JPM, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 263, alt: [265], quote: "audited by PricewaterhouseCoopers LLP"}
+      f6:  {t: BAC, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 147, quote: "audited by PricewaterhouseCoopers"}
+      f7:  {t: GS, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 296, quote: "PricewaterhouseCoopers LLP"}
+      f8:  {t: MA, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 97, quote: "PricewaterhouseCoopers LLP"}
+      f9:  {t: AXP, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 134, quote: "PricewaterhouseCoopers LLP"}
+      f10: {t: PYPL, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 103, quote: "PricewaterhouseCoopers LLP"}
+      f11: {t: JNJ, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 118, quote: "PricewaterhouseCoopers LLP"}
+      f12: {t: MRK, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 230, quote: "PricewaterhouseCoopers LLP"}
+    part: auditor's reports across filings (relation chain NVIDIA -> firm -> other clients)
+
+  - id: T16
+    type: multi_hop
+    question: What percentage of its 2025 revenue did Meta spend on research and development?
+    answer: {kind: percent, formula: "f1 / f2 * 100"}
+    facts:
+      f1: {t: META, m: rd_expense, printed: "57,372", unit: USD, end: 2025-12-31, page: 148, alt: [124, 127], xbrl: ResearchAndDevelopmentExpense}
+      f2: {t: META, m: revenue, printed: "200,966", unit: USD, end: 2025-12-31, page: 148, alt: [124, 125, 171], xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+    part: income statement + formula
+
+  - id: T17
+    type: multi_hop
+    question: What percentage of Apple's total net sales in fiscal 2026 came from Services?
+    answer: {kind: percent, formula: "f1 / f2 * 100"}
+    facts:
+      f1: {t: AAPL, m: line_item:Services net sales, printed: "123,301", unit: USD, end: 2026-09-26, page: 51}
+      f2: {t: AAPL, m: revenue, printed: "478,834", unit: USD, end: 2026-09-26, page: 51, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+    part: income statement sub-line (share of total)
+
+  - id: T18
+    type: multi_hop
+    question: What was Bank of America's efficiency ratio in 2025, i.e. total noninterest expense divided by total revenue net of interest expense?
+    answer: {kind: percent, formula: "f1 / f2 * 100"}
+    facts:
+      f1: {t: BAC, m: noninterest_expense, printed: "69,727", unit: USD, end: 2025-12-31, page: 151, alt: [55, 59], xbrl: NoninterestExpense}
+      f2: {t: BAC, m: revenue, printed: "113,097", unit: USD, end: 2025-12-31, page: 151, alt: [59], xbrl: Revenues}
+    part: bank income statement + formula
+
+  - id: T19
+    type: multi_hop
+    question: What was Costco's total revenue per employee in fiscal 2026?
+    answer: {kind: number, unit: USD, formula: "f1 / f2", tolerance_rel: 0.01}
+    facts:
+      f1: {t: COST, m: revenue, printed: "303,154", unit: USD, end: 2026-08-30, page: 52, alt: [88], xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f2: {t: COST, m: employees, printed: "355,000", scale: 1, unit: count, end: 2026-08-30, page: 8}
+    part: income statement + Item 1 prose (two different parts of the filing)
+
+  - id: T20
+    type: multi_hop
+    question: By what percentage did Microsoft's net income grow in fiscal year 2026 versus fiscal year 2025?
+    answer: {kind: percent, formula: "(f1 - f2) / f2 * 100"}
+    facts:
+      f1: {t: MSFT, m: net_income, printed: "133,749", unit: USD, end: 2026-06-30, page: 78, alt: [59, 68, 79, 81, 82], xbrl: NetIncomeLoss}
+      f2: {t: MSFT, m: net_income, printed: "101,832", unit: USD, end: 2025-06-30, page: 78, alt: [59, 68, 79, 81, 82], xbrl: NetIncomeLoss}
+    part: income statement, two periods (YoY)
+
+  # ------------------------------------------------------------------ cross-filing
+  - id: T21
+    type: cross_filing
+    question: Rank JPMorgan Chase, Bank of America, Citigroup, Wells Fargo and Goldman Sachs by net income in 2025, highest first.
+    answer: {kind: ranking, value: [JPM, BAC, WFC, GS, C]}
+    facts:
+      f1: {t: JPM, m: net_income, printed: "57,048", unit: USD, end: 2025-12-31, page: 270, alt: [93], xbrl: NetIncomeLoss}
+      f2: {t: BAC, m: net_income, printed: "30,509", unit: USD, end: 2025-12-31, page: 151, alt: [59], xbrl: NetIncomeLoss}
+      f3: {t: C, m: net_income, printed: "14,306", unit: USD, end: 2025-12-31, page: 177, alt: [14, 18], xbrl: NetIncomeLoss}
+      f4: {t: WFC, m: net_income, printed: "21,338", unit: USD, end: 2025-12-31, doc: ex13, page: 135, alt: [4, 138], xbrl: NetIncomeLoss}
+      f5: {t: GS, m: net_income, printed: "17,176", unit: USD, end: 2025-12-31, page: 297, alt: [150], xbrl: NetIncomeLoss}
+    part: five bank income statements (one in an Exhibit 13)
+
+  - id: T22
+    type: cross_filing
+    question: Among the semiconductor companies that NVIDIA names as competitors in its 10-K, which one spent the most on research and development in its latest fiscal year?
+    answer: {kind: entity, value: INTC, aliases: [Intel, Intel Corporation]}
+    facts:
+      r1: {t: NVDA, rel: competes_with, obj: AMD, page: 14, quote: "Advanced Micro Devices, Inc., or AMD"}
+      r2: {t: NVDA, rel: competes_with, obj: INTC, page: 14, quote: "Intel Corporation, or Intel"}
+      r3: {t: NVDA, rel: competes_with, obj: AVGO, page: 14, quote: "Broadcom"}
+      r4: {t: NVDA, rel: competes_with, obj: QCOM, page: 14, quote: "Qualcomm Incorporated"}
+      f1: {t: AMD, m: rd_expense, printed: "8,091", unit: USD, end: 2025-12-27, page: 86, xbrl: ResearchAndDevelopmentExpense}
+      f2: {t: INTC, m: rd_expense, printed: "13,774", unit: USD, end: 2025-12-27, page: 101, xbrl: ResearchAndDevelopmentExpense}
+      f3: {t: AVGO, m: rd_expense, printed: "10,977", unit: USD, end: 2025-11-02, page: 84, xbrl: ResearchAndDevelopmentExpense}
+      f4: {t: QCOM, m: rd_expense, printed: "10,207", unit: USD, end: 2026-09-27, page: 88, xbrl: ResearchAndDevelopmentExpense}
+    part: Item 1 prose relation (NVIDIA) + four other filings' income statements
+
+  - id: T23
+    type: cross_filing
+    question: Which of the five retailers (Walmart, Costco, Target, Home Depot, Lowe's) had the highest operating margin in its latest fiscal year?
+    answer: {kind: entity, value: HD, aliases: [Home Depot, The Home Depot]}
+    facts:
+      f1: {t: WMT, m: operating_income, printed: "29,825", unit: USD, end: 2026-01-31, page: 84, xbrl: OperatingIncomeLoss}
+      f2: {t: WMT, m: revenue, printed: "713,163", unit: USD, end: 2026-01-31, page: 84, xbrl: Revenues}
+      f3: {t: COST, m: operating_income, printed: "11,685", unit: USD, end: 2026-08-30, page: 52, xbrl: OperatingIncomeLoss}
+      f4: {t: COST, m: revenue, printed: "303,154", unit: USD, end: 2026-08-30, page: 52, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f5: {t: TGT, m: operating_income, printed: "5,117", unit: USD, end: 2026-01-31, page: 47, xbrl: OperatingIncomeLoss}
+      f6: {t: TGT, m: revenue, printed: "104,780", unit: USD, end: 2026-01-31, page: 47, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f7: {t: HD, m: operating_income, printed: "20,890", unit: USD, end: 2026-02-01, page: 73, xbrl: OperatingIncomeLoss}
+      f8: {t: HD, m: revenue, printed: "164,683", unit: USD, end: 2026-02-01, page: 73, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f9: {t: LOW, m: operating_income, printed: "10,153", unit: USD, end: 2026-01-30, page: 69, xbrl: OperatingIncomeLoss}
+      f10: {t: LOW, m: revenue, printed: "86,286", unit: USD, end: 2026-01-30, page: 69, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+    part: five income statements + formula, different fiscal calendars
+    note: "margins: WMT 4.18%, COST 3.85%, TGT 4.88%, HD 12.69%, LOW 11.77%"
+
+  - id: T24
+    type: cross_filing
+    question: What was the combined revenue of Apple, Microsoft, Alphabet, Amazon and Meta in their latest fiscal years?
+    answer: {kind: number, unit: USD, formula: "f1 + f2 + f3 + f4 + f5"}
+    facts:
+      f1: {t: AAPL, m: revenue, printed: "478,834", unit: USD, end: 2026-09-26, page: 51, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f2: {t: MSFT, m: revenue, printed: "331,839", unit: USD, end: 2026-06-30, page: 78, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f3: {t: GOOGL, m: revenue, printed: "402,836", unit: USD, end: 2025-12-31, page: 87, xbrl: Revenues}
+      f4: {t: AMZN, m: revenue, printed: "716,924", unit: USD, end: 2025-12-31, page: 61, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f5: {t: META, m: revenue, printed: "200,966", unit: USD, end: 2025-12-31, page: 148, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+    part: five income statements, aggregate
+
+  - id: T25
+    type: cross_filing
+    question: Which of the five pharma companies (Johnson & Johnson, Pfizer, Merck, AbbVie, Eli Lilly) reported the highest research and development expense in 2025? Use the research and development line, excluding acquired in-process R&D.
+    answer: {kind: entity, value: MRK, aliases: [Merck, "Merck & Co."]}
+    facts:
+      f1: {t: JNJ, m: rd_expense, printed: "14,665", unit: USD, end: 2025-12-28, page: 52}
+      f2: {t: PFE, m: rd_expense, printed: "10,437", unit: USD, end: 2025-12-31, page: 109}
+      f3: {t: MRK, m: rd_expense, printed: "15,789", unit: USD, end: 2025-12-31, page: 136, xbrl: ResearchAndDevelopmentExpense}
+      f4: {t: ABBV, m: rd_expense, printed: "9,096", unit: USD, end: 2025-12-31, page: 92}
+      f5: {t: LLY, m: rd_expense, printed: "13,337", unit: USD, end: 2025-12-31, page: 83}
+    part: five income statements, compare
+    note: "if acquired IPR&D were added, Lilly (16,247) would lead - the question pins the R&D line"
+
+  - id: T26
+    type: cross_filing
+    question: Which reported higher net revenue in its latest fiscal year, Visa or Mastercard, and by how much?
+    answer: {kind: compare, winner: V, aliases: [Visa], formula: "f1 - f2"}
+    facts:
+      f1: {t: V, m: revenue, printed: "45,903", unit: USD, end: 2026-09-30, page: 100, alt: [68], xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f2: {t: MA, m: revenue, printed: "32,791", unit: USD, end: 2025-12-31, page: 98, alt: [79], xbrl: Revenues}
+    part: two income statements with different fiscal year ends
+
+  - id: T27
+    type: cross_filing
+    question: Which of the payments companies (Visa, Mastercard, American Express, PayPal, Capital One) had the highest net income in its latest fiscal year?
+    answer: {kind: entity, value: V, aliases: [Visa]}
+    facts:
+      f1: {t: V, m: net_income, printed: "23,504", unit: USD, end: 2026-09-30, page: 100, xbrl: NetIncomeLoss}
+      f2: {t: MA, m: net_income, printed: "14,968", unit: USD, end: 2025-12-31, page: 98, xbrl: ProfitLoss}
+      f3: {t: AXP, m: net_income, printed: "10,833", unit: USD, end: 2025-12-31, page: 136, xbrl: NetIncomeLoss}
+      f4: {t: PYPL, m: net_income, printed: "5,233", unit: USD, end: 2025-12-31, page: 105, xbrl: NetIncomeLoss}
+      f5: {t: COF, m: net_income, printed: "2,453", unit: USD, end: 2025-12-31, page: 146, xbrl: NetIncomeLoss}
+    part: five income statements, compare
+
+  - id: T28
+    type: cross_filing
+    question: Which of the five chip companies (NVIDIA, AMD, Intel, Qualcomm, Broadcom) had the largest total assets at its latest balance sheet date?
+    answer: {kind: entity, value: INTC, aliases: [Intel]}
+    facts:
+      f1: {t: NVDA, m: total_assets, printed: "206,803", unit: USD, end: 2026-01-25, page: 85, xbrl: Assets}
+      f2: {t: AMD, m: total_assets, printed: "76,926", unit: USD, end: 2025-12-27, page: 88, xbrl: Assets}
+      f3: {t: INTC, m: total_assets, printed: "211,429", unit: USD, end: 2025-12-27, page: 103, xbrl: Assets}
+      f4: {t: QCOM, m: total_assets, printed: "60,829", unit: USD, end: 2026-09-27, page: 87, xbrl: Assets}
+      f5: {t: AVGO, m: total_assets, printed: "171,092", unit: USD, end: 2025-11-02, page: 83, xbrl: Assets}
+    part: "five balance sheets, compare (close call, Intel vs NVIDIA)"
+
+  - id: T29
+    type: cross_filing
+    question: How much larger were Home Depot's net sales than Lowe's net sales in their latest fiscal years?
+    answer: {kind: number, unit: USD, formula: "f1 - f2"}
+    facts:
+      f1: {t: HD, m: revenue, printed: "164,683", unit: USD, end: 2026-02-01, page: 73, alt: [55], xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f2: {t: LOW, m: revenue, printed: "86,286", unit: USD, end: 2026-01-30, page: 69, alt: [45], xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+    part: two income statements, difference
+
+  - id: T30
+    type: cross_filing
+    question: Which companies in the corpus name TSMC as a foundry or manufacturing partner in their 10-K?
+    answer: {kind: list, value: [NVDA, AMD, INTC, QCOM, AVGO]}
+    facts:
+      r1: {t: NVDA, rel: supplied_by, obj: TSMC, page: 12, quote: "Taiwan Semiconductor Manufacturing Company Limited, or TSMC"}
+      r2: {t: AMD, rel: supplied_by, obj: TSMC, page: 18, quote: "Taiwan Semiconductor Manufacturing Company Limited (TSMC)"}
+      r3: {t: INTC, rel: supplied_by, obj: TSMC, page: 10, quote: "third-party foundries, particularly TSMC"}
+      r4: {t: QCOM, rel: supplied_by, obj: TSMC, page: 12, quote: "Taiwan Semiconductor Manufacturing Company (TSMC)"}
+      r5: {t: AVGO, rel: supplied_by, obj: TSMC, page: 15, quote: "Taiwan Semiconductor Manufacturing Company Limited"}
+    part: Item 1 prose across five filings (inverse relation lookup)
+
+dev:
+  - id: D01
+    type: single_fact
+    question: What was IBM's total revenue in 2025?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: IBM, m: revenue, printed: "67,535", unit: USD, end: 2025-12-31, doc: ex13, page: 44, alt: [12, 17], xbrl: Revenues}
+  - id: D02
+    type: single_fact
+    question: Who is Cisco's independent auditor?
+    answer: {kind: entity, value: PricewaterhouseCoopers LLP, aliases: [PwC, PricewaterhouseCoopers]}
+    facts:
+      f1: {t: CSCO, rel: audited_by, obj: PricewaterhouseCoopers LLP, page: 95, quote: "PricewaterhouseCoopers LLP"}
+  - id: D03
+    type: multi_hop
+    question: What was Intel's operating margin in 2025?
+    answer: {kind: percent, formula: "f1 / f2 * 100"}
+    facts:
+      f1: {t: INTC, m: operating_income, printed: "(2,214)", value: -2214, unit: USD, end: 2025-12-27, page: 101, xbrl: OperatingIncomeLoss}
+      f2: {t: INTC, m: revenue, printed: "52,853", unit: USD, end: 2025-12-27, page: 101, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+  - id: D04
+    type: multi_hop
+    question: What was Target's free cash flow in fiscal 2025 (cash provided by operating activities minus expenditures for property and equipment)?
+    answer: {kind: number, unit: USD, formula: "f1 - f2"}
+    facts:
+      f1: {t: TGT, m: operating_cash_flow, printed: "6,562", unit: USD, end: 2026-01-31, page: 50, xbrl: NetCashProvidedByUsedInOperatingActivities}
+      f2: {t: TGT, m: capex, printed: "3,727", unit: USD, end: 2026-01-31, page: 50, xbrl: PaymentsToAcquirePropertyPlantAndEquipment}
+  - id: D05
+    type: cross_filing
+    question: Rank Johnson & Johnson, Pfizer, Merck, AbbVie and Eli Lilly by revenue in 2025, highest first.
+    answer: {kind: ranking, value: [JNJ, LLY, MRK, PFE, ABBV]}
+    facts:
+      f1: {t: JNJ, m: revenue, printed: "94,193", unit: USD, end: 2025-12-28, page: 52}
+      f2: {t: PFE, m: revenue, printed: "62,579", unit: USD, end: 2025-12-31, page: 109}
+      f3: {t: MRK, m: revenue, printed: "65,011", unit: USD, end: 2025-12-31, page: 136}
+      f4: {t: ABBV, m: revenue, printed: "61,160", unit: USD, end: 2025-12-31, page: 92}
+      f5: {t: LLY, m: revenue, printed: "65,179", unit: USD, end: 2025-12-31, page: 83}
+  - id: D06
+    type: single_fact
+    question: Which companies in the corpus does AMD name as competitors?
+    answer: {kind: list, value: [INTC, NVDA, AVGO, QCOM]}
+    facts:
+      r1: {t: AMD, rel: competes_with, obj: INTC, page: 17, quote: "Intel Corporation (Intel)"}
+      r2: {t: AMD, rel: competes_with, obj: NVDA, page: 17, quote: "Nvidia Corporation"}
+      r3: {t: AMD, rel: competes_with, obj: AVGO, page: 18, quote: "Broadcom Corporation"}
+      r4: {t: AMD, rel: competes_with, obj: QCOM, page: 18, quote: "Qualcomm Incorporated"}
+  - id: D07
+    type: multi_hop
+    question: What was Salesforce's revenue per employee in fiscal 2026?
+    answer: {kind: number, unit: USD, formula: "f1 / f2", tolerance_rel: 0.01}
+    facts:
+      f1: {t: CRM, m: revenue, printed: "41,525", unit: USD, end: 2026-01-31, page: 97, alt: [72, 73], xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+      f2: {t: CRM, m: employees, printed: "83,334", scale: 1, unit: count, end: 2026-01-31, page: 18}
+  - id: D08
+    type: cross_filing
+    question: Of the companies in the corpus that AMD names as competitors, which had the highest revenue in its latest fiscal year?
+    answer: {kind: entity, value: NVDA, aliases: [NVIDIA]}
+    facts:
+      r1: {t: AMD, rel: competes_with, obj: INTC, page: 17, quote: "Intel Corporation (Intel)"}
+      r2: {t: AMD, rel: competes_with, obj: NVDA, page: 17, quote: "Nvidia Corporation"}
+      r3: {t: AMD, rel: competes_with, obj: AVGO, page: 18, quote: "Broadcom Corporation"}
+      r4: {t: AMD, rel: competes_with, obj: QCOM, page: 18, quote: "Qualcomm Incorporated"}
+      f1: {t: INTC, m: revenue, printed: "52,853", unit: USD, end: 2025-12-27, page: 101}
+      f2: {t: NVDA, m: revenue, printed: "215,938", unit: USD, end: 2026-01-25, page: 83}
+      f3: {t: AVGO, m: revenue, printed: "63,887", unit: USD, end: 2025-11-02, page: 84}
+      f4: {t: QCOM, m: revenue, printed: "43,120", unit: USD, end: 2026-09-27, page: 88}
+  - id: D09
+    type: single_fact
+    question: What was Wells Fargo's net interest income in 2025?
+    answer: {kind: number, unit: USD, formula: f1}
+    facts:
+      f1: {t: WFC, m: net_interest_income, printed: "47,484", unit: USD, end: 2025-12-31, doc: ex13, page: 135, alt: [4, 6], xbrl: InterestIncomeExpenseNet}
+  - id: D10
+    type: multi_hop
+    question: What percentage of Microsoft's total revenue in fiscal 2026 came from "Service and other" revenue?
+    answer: {kind: percent, formula: "f1 / f2 * 100"}
+    facts:
+      f1: {t: MSFT, m: "line_item:Service and other revenue", printed: "267,143", unit: USD, end: 2026-06-30, page: 78}
+      f2: {t: MSFT, m: revenue, printed: "331,839", unit: USD, end: 2026-06-30, page: 78, xbrl: RevenueFromContractWithCustomerExcludingAssessedTax}
+  - id: D11
+    type: multi_hop
+    question: By what percentage did NVIDIA's revenue grow in fiscal 2026 compared with fiscal 2025?
+    answer: {kind: percent, formula: "(f1 - f2) / f2 * 100"}
+    facts:
+      f1: {t: NVDA, m: revenue, printed: "215,938", unit: USD, end: 2026-01-25, page: 83, xbrl: Revenues}
+      f2: {t: NVDA, m: revenue, printed: "130,497", unit: USD, end: 2025-01-26, page: 83, xbrl: Revenues}
+  - id: D12
+    type: cross_filing
+    question: Which companies in the corpus are audited by Deloitte & Touche LLP?
+    answer: {kind: list, value: [MSFT, LOW]}
+    facts:
+      f1: {t: MSFT, rel: audited_by, obj: Deloitte & Touche LLP, page: 134, quote: "DELOITTE & TOUCHE LLP"}
+      f2: {t: LOW, rel: audited_by, obj: Deloitte & Touche LLP, page: 65, quote: "Deloitte & Touche LLP"}
+  - id: D13
+    type: cross_filing
+    question: What was the average research and development expense of NVIDIA, AMD, Intel, Qualcomm and Broadcom in their latest fiscal years?
+    answer: {kind: number, unit: USD, formula: "(f1 + f2 + f3 + f4 + f5) / 5"}
+    facts:
+      f1: {t: NVDA, m: rd_expense, printed: "18,497", unit: USD, end: 2026-01-25, page: 83, xbrl: ResearchAndDevelopmentExpense}
+      f2: {t: AMD, m: rd_expense, printed: "8,091", unit: USD, end: 2025-12-27, page: 86, xbrl: ResearchAndDevelopmentExpense}
+      f3: {t: INTC, m: rd_expense, printed: "13,774", unit: USD, end: 2025-12-27, page: 101, xbrl: ResearchAndDevelopmentExpense}
+      f4: {t: QCOM, m: rd_expense, printed: "10,207", unit: USD, end: 2026-09-27, page: 88, xbrl: ResearchAndDevelopmentExpense}
+      f5: {t: AVGO, m: rd_expense, printed: "10,977", unit: USD, end: 2025-11-02, page: 84, xbrl: ResearchAndDevelopmentExpense}
+  - id: D14
+    type: cross_filing
+    question: Which had more total assets at its latest balance sheet date, Costco or Target, and by how much?
+    answer: {kind: compare, winner: COST, aliases: [Costco], formula: "f1 - f2"}
+    facts:
+      f1: {t: COST, m: total_assets, printed: "89,045", unit: USD, end: 2026-08-30, page: 54, xbrl: Assets}
+      f2: {t: TGT, m: total_assets, printed: "59,490", unit: USD, end: 2026-01-31, page: 49, xbrl: Assets}

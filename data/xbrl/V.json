@@ -1,0 +1,6611 @@
+{
+"cik": 1403161,
+"accession": "0001403161-26-000134",
+"entityName": "VISA INC.",
+"facts": {
+"dei:EntityPublicFloat": {
+"USD": [
+{
+"end": "2026-03-31",
+"val": 501700000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q1I"
+}
+]
+},
+"us-gaap:AccountsPayableCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 555000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 606000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccountsReceivableNetCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 3126000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 3749000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccruedIncomeTaxesCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 512000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 380000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccruedIncomeTaxesNoncurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 309000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 571000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccruedLiabilitiesCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 5466000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 5525000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 5870000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 6146000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccumulatedOtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 12000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccumulatedOtherComprehensiveIncomeLossDefinedBenefitPensionAndOtherPostretirementPlansNetOfTax": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 32000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 27000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccumulatedOtherComprehensiveIncomeLossForeignCurrencyTranslationAdjustmentNetOfTax": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 575000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": -91000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 248000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": -252000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AdditionalPaidInCapitalCommonStock": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 21934000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 22343000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AdjustmentsRelatedToTaxWithholdingForShareBasedCompensation": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 208000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 281000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 289000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:AdjustmentsToAdditionalPaidInCapitalSharebasedCompensationRequisiteServicePeriodRecognitionValue": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 850000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 897000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 928000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:AmortizationOfIntangibleAssets": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 79000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 78000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 105000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:AociLossCashFlowHedgeCumulativeGainLossAfterTax": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": -307000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": -135000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:Assets": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 99627000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 94360000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AssetsCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 37766000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 30486000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AvailableForSaleDebtSecuritiesAccumulatedGrossUnrealizedGainBeforeTax": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 16000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 2000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AvailableForSaleDebtSecuritiesAccumulatedGrossUnrealizedLossBeforeTax": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AvailableForSaleDebtSecuritiesAmortizedCostBasis": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 2405000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 848000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AvailableForSaleSecuritiesDebtMaturitiesAfterOneThroughFiveYearsFairValue": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AvailableForSaleSecuritiesDebtMaturitiesWithinOneYearFairValue": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 850000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:AvailableForSaleSecuritiesDebtSecurities": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 2421000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 850000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:CapitalExpendituresIncurredButNotYetPaid": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 52000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 59000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 187000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CashAndCashEquivalentsAtCarryingValue": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 17164000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 12938000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents": {
+"USD": [
+{
+"end": "2023-09-30",
+"val": 21990000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2023Q3I"
+},
+{
+"end": "2024-09-30",
+"val": 19763000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024Q3I"
+},
+{
+"end": "2025-09-30",
+"val": 24987000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 19118000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -2227000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 5224000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -5869000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CommonStockDividendsPerShareCashPaid": {
+"USD/shares": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0.52,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0.59,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0.67,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CommonStockDividendsPerShareDeclared": {
+"USD/shares": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0.52,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0.59,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0.67,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CommunicationsAndInformationTechnology": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 778000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 894000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1066000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:ComprehensiveIncomeNetOfTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 20752000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 20614000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 23004000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CostsAndExpenses": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 12331000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 16006000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 17793000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CurrentFederalTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 2694000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1879000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2351000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CurrentForeignTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 1281000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1854000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2507000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CurrentIncomeTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 4273000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 3984000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 5220000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:CurrentStateAndLocalTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 298000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 251000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 362000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DebtInstrumentCarryingAmount": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 22586000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 171000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 160000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DebtLongtermAndShorttermCombinedAmount": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 25171000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 22071000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredFederalIncomeTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -132000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 102000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -569000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DeferredForeignIncomeTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 50000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 41000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -58000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DeferredIncomeTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -100000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 152000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -631000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DeferredIncomeTaxLiabilities": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 6949000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 6996000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredIncomeTaxLiabilitiesNet": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 5549000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 5184000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredStateAndLocalIncomeTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -18000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 9000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -4000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsNet": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 1528000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1983000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsOperatingLossCarryforwards": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 258000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 273000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsOther": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 288000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1107000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsOtherComprehensiveLoss": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 206000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 36000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsStateTaxes": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 74000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 70000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsTaxDeferredExpenseCompensationAndBenefits": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 250000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 400000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsTaxDeferredExpenseOther": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 26000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 174000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsTaxDeferredExpenseReservesAndAccrualsLegalSettlements": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 690000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 196000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxAssetsValuationAllowance": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 264000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 273000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxLiabilities": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 5421000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 5013000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxLiabilitiesGoodwillAndIntangibleAssetsIntangibleAssets": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 6532000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 6558000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxLiabilitiesOther": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 121000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 151000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DeferredTaxLiabilitiesPropertyPlantAndEquipment": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 296000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 287000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DefinedContributionPlanCostRecognized": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 212000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 220000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 232000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DepreciationAndAmortization": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 1034000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1220000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1403000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DividendsCash": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 4217000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 4634000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 5112000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateContinuingOperations": {
+"pure": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0.17,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0.17,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0.163,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationAtFederalStatutoryIncomeTaxRate": {
+"pure": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0.21,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0.21,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0.21,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationForeignIncomeTaxRateDifferential": {
+"pure": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -0.04,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -0.03,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationOtherAdjustments": {
+"pure": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -0.01,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationStateAndLocalIncomeTaxes": {
+"pure": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0.01,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0.01,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0.01,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationTaxSettlements": {
+"pure": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -0.01,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+}
+]
+},
+"us-gaap:EffectOfExchangeRateOnCashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 382000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 420000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -362000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EmployeeRelatedLiabilitiesCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 1863000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 2391000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:EquitySecuritiesWithoutReadilyDeterminableFairValueAmount": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 1056000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1020000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:EquitySecuritiesWithoutReadilyDeterminableFairValueUpwardPriceAdjustmentAnnualAmount": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 10000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 14000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 19000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EquitySecuritiesWithoutReadilyDeterminableFairValueUpwardPriceAdjustmentCumulativeAmount": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 564000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 490000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:FiniteLivedIntangibleAssetsAccumulatedAmortization": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 245000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 344000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:FiniteLivedIntangibleAssetsGross": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 476000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 895000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:FiniteLivedIntangibleAssetsNet": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 231000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 551000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:GainLossOnInvestments": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -44000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -51000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 148000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:GeneralAndAdministrativeExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 1598000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1926000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2297000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:Goodwill": {
+"USD": [
+{
+"end": "2024-09-30",
+"val": 18941000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024Q3I"
+},
+{
+"end": "2025-09-30",
+"val": 19879000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 20801000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:GoodwillAcquiredDuringPeriod": {
+"USD": [
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 794000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1034000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:GoodwillAndIntangibleAssetImpairment": {
+"USD": [
+{
+"end": "2026-02-01",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q4I"
+}
+]
+},
+"us-gaap:GoodwillForeignCurrencyTranslationGainLoss": {
+"USD": [
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 144000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -112000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:HedgedLiabilityFairValueHedgeCumulativeIncreaseDecrease": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": -50000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": -355000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 14537000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 14776000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 17165000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 23916000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 24194000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 28093000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 9379000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 9418000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 10928000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxExaminationInterestAccrued": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 160000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 183000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:IncomeTaxExaminationInterestExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 29000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 140000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 23000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 4173000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 4136000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 4589000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxesPaidNet": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 5775000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 4541000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 5684000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxesReceivable": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 232000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 502000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:IncomeTaxesReceivableNoncurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 427000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 721000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:IncomeTaxReconciliationForeignIncomeTaxRateDifferential": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -828000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -775000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+}
+]
+},
+"us-gaap:IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 5022000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 5081000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 5900000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxReconciliationOtherReconcilingItems": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -56000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -151000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+}
+]
+},
+"us-gaap:IncomeTaxReconciliationStateAndLocalIncomeTaxes": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 258000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 244000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 283000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxReconciliationTaxSettlements": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -223000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+}
+]
+},
+"us-gaap:IncreaseDecreaseInAccountsPayable": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 109000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 67000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncreaseDecreaseInAccountsReceivable": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 237000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 542000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 587000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncreaseDecreaseInAccruedLiabilitiesAndOtherOperatingLiabilities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -676000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -373000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 772000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncreaseDecreaseInOtherOperatingAssets": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 199000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -160000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 582000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IndefiniteLivedIntangibleAssetsExcludingGoodwill": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 27415000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 26819000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:IntangibleAssetsGrossExcludingGoodwill": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 27891000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 27714000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:IntangibleAssetsNetExcludingGoodwill": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 27646000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 27370000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:InterestPaidNet": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 583000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 587000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 720000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:InvestmentIncomeNet": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 948000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 740000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 721000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:Investments": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 1833000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1145000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LaborAndRelatedExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 6264000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 6961000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 7934000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityPaymentsDue": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 1085000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueAfterYearFive": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 439000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 150000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearFive": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 89000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearFour": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 111000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearThree": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 135000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityPaymentsDueYearTwo": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 161000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LesseeOperatingLeaseLiabilityUndiscountedExcessAmount": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 201000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:Liabilities": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 61718000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 58249000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LiabilitiesAndStockholdersEquity": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 99627000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 94360000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LiabilitiesCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 35048000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 31588000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LitigationReserveCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 3033000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 990000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 5569000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 2716000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 13137000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 2750000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 1750000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 1500000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 2033000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 1416000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermDebtNoncurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 19602000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 19355000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LongTermInvestments": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 999000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 94000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LossContingencyAccrualAtCarryingValue": {
+"USD": [
+{
+"end": "2024-09-30",
+"val": 1727000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024Q3I"
+},
+{
+"end": "2025-09-30",
+"val": 3033000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 990000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:LossContingencyLossInPeriod": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 462000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 2562000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1764000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:MarketingAndAdvertisingExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 1560000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1684000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2315000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:NetCashProvidedByUsedInFinancingActivities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -20633000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -18963000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -28241000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:NetCashProvidedByUsedInInvestingActivities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -1926000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 708000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -994000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:NetCashProvidedByUsedInOperatingActivities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 19950000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 23059000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 23728000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:NetIncomeLoss": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 19743000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 20058000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 23504000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:NoncashContributionExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 67000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 282000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:NonoperatingIncomeExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 321000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 200000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -17000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:NumberOfCountriesInWhichEntityOperates": {
+"country": [
+{
+"end": "2026-09-30",
+"val": 200,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:NumberOfReportableSegments": {
+"segment": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OperatingIncomeLoss": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 23595000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 23994000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 28110000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OperatingLeaseCost": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 179000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 195000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 190000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OperatingLeaseLiability": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 913000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 884000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:OperatingLeaseLiabilityCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 150000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 135000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:OperatingLeaseLiabilityNoncurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 763000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 749000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:OperatingLeaseRightOfUseAsset": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 954000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 907000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:OperatingLeaseWeightedAverageDiscountRatePercent": {
+"pure": [
+{
+"end": "2025-09-30",
+"val": 0.041,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 0.043,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:OtherAssetsNoncurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 3944000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 4445000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossAmortizationAdjustmentFromAOCIPensionAndOtherPostretirementBenefitPlansForNetPriorServiceCostCreditBeforeTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 9000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 6000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossAmortizationAdjustmentFromAOCIPensionAndOtherPostretirementBenefitPlansForNetPriorServiceCostCreditTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 2000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossCashFlowHedgeGainLossBeforeReclassificationAndTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -38000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -172000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 36000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossCashFlowHedgeGainLossBeforeReclassificationTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -9000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -36000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -4000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossCashFlowHedgeGainLossReclassificationBeforeTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -55000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -170000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossCashFlowHedgeGainLossReclassificationTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -7000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -13000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -38000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossNetInvestmentHedgeGainLossBeforeReclassificationAndTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -321000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -459000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 287000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansAdjustmentBeforeReclassificationAdjustmentsAndTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -172000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 20000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansBeforeReclassificationAdjustmentsTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -40000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 4000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeUnrealizedHoldingGainLossOnSecuritiesArisingDuringPeriodBeforeTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 120000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -23000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -14000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeUnrealizedHoldingGainLossOnSecuritiesArisingDuringPeriodTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 26000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -5000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -3000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherLiabilitiesNoncurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 1519000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 2122000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:OtherNoncashIncomeExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -136000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -94000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -306000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherNonoperatingIncomeExpense": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 962000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 789000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 741000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsForProceedsFromOtherInvestingActivities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 93000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -121000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -25000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsForRepurchaseOfCommonStock": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 16713000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 18316000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 20451000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsOfDividends": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 4217000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 4634000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 5112000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsRelatedToTaxWithholdingForShareBasedCompensation": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 208000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 281000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 289000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 4443000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 50000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 915000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 887000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 705000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsToAcquireOtherInvestments": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 231000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 68000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 158000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PaymentsToAcquireProductiveAssets": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 1257000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1482000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1671000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PrepaidExpenseAndOtherAssetsCurrent": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 2679000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 3156000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:ProceedsFromPaymentsForOtherFinancingActivities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 170000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -52000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -123000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:ProceedsFromSaleAndMaturityOfAvailableForSaleSecurities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 5013000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 3024000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1565000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:ProceedsFromStockOptionsExercised": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 335000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 396000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 304000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:ProfessionalFees": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 635000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 759000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1014000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PropertyPlantAndEquipmentGross": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 10106000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 11212000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:PropertyPlantAndEquipmentNet": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 4236000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 5066000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:RepaymentsOfLongTermDebt": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 5565000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:RestrictedCashAndCashEquivalents": {
+"USD": [
+{
+"end": "2024-09-30",
+"val": 3089000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024Q3I"
+},
+{
+"end": "2025-09-30",
+"val": 2990000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 628000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:RetainedEarningsAccumulatedDeficit": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 15106000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 13632000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 35926000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 40000000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 45903000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:RevenueRemainingPerformanceObligation": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 5600000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 410000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 231000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 113000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:ShareBasedCompensation": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 850000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 897000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 928000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:SharePrice": {
+"USD/shares": [
+{
+"end": "2025-09-30",
+"val": 341.38,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 359.33,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest": {
+"USD": [
+{
+"end": "2023-09-30",
+"val": 38733000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2023Q3I"
+},
+{
+"end": "2024-09-30",
+"val": 39137000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024Q3I"
+},
+{
+"end": "2025-09-30",
+"val": 37909000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 36111000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:StockIssuedDuringPeriodValueNewIssues": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 335000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 396000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 304000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:StockRepurchasedAndRetiredDuringPeriodValue": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 16958000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 18185000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 20515000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:StockRepurchaseProgramRemainingAuthorizedRepurchaseAmount1": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 24400000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecognizedTaxBenefits": {
+"USD": [
+{
+"end": "2023-09-30",
+"val": 3497000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2023Q3I"
+},
+{
+"end": "2024-09-30",
+"val": 3750000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024Q3I"
+},
+{
+"end": "2025-09-30",
+"val": 1672000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1774000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecognizedTaxBenefitsDecreasesResultingFromPriorPeriodTaxPositions": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 322000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 2455000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 22000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:UnrecognizedTaxBenefitsDecreasesResultingFromSettlementsWithTaxingAuthorities": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 127000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 49000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 42000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:UnrecognizedTaxBenefitsIncreasesResultingFromCurrentPeriodTaxPositions": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 556000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 150000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 164000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:UnrecognizedTaxBenefitsIncreasesResultingFromPriorPeriodTaxPositions": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 148000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 281000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 6000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:UnrecognizedTaxBenefitsReductionsResultingFromLapseOfApplicableStatuteOfLimitations": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 2000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 5000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 4000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:UnrecognizedTaxBenefitsThatWouldImpactEffectiveTaxRate": {
+"USD": [
+{
+"end": "2024-09-30",
+"val": 1400000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024Q3I"
+},
+{
+"end": "2025-09-30",
+"val": 1500000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1600000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:ConversionOfStockAmountConverted1": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentBeforeTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 741000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 583000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -561000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossForeignCurrencyTranslationAdjustmentTax": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": -71000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": -101000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 105000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PreferredStockParOrStatedValuePerShare": {
+"USD/shares": [
+{
+"end": "2025-09-30",
+"val": 0.0001,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 0.0001,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:PreferredStockSharesIssued": {
+"shares": [
+{
+"end": "2025-09-30",
+"val": 5000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 5000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:PreferredStockSharesOutstanding": {
+"shares": [
+{
+"end": "2025-09-30",
+"val": 5000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 5000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:InterestExpenseNonoperating": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 641000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 589000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 758000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DividendsCommonStock": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 4200000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 4600000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 5100000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:InvestmentIncomeInterestAndDividend": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 992000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 791000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 573000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DeferredOtherTaxExpenseBenefit": {
+"USD": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -314000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:DerivativeAssetNotionalAmount": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 11896000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 16313000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DerivativeFairValueOfDerivativeAsset": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 62000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 152000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:DerivativeFairValueOfDerivativeLiability": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 319000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 431000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecordedUnconditionalPurchaseObligationBalanceOnFifthAnniversary": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 215000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecordedUnconditionalPurchaseObligationBalanceOnFirstAnniversary": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 780000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecordedUnconditionalPurchaseObligationBalanceOnFourthAnniversary": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 380000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecordedUnconditionalPurchaseObligationBalanceOnSecondAnniversary": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 648000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecordedUnconditionalPurchaseObligationBalanceOnThirdAnniversary": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 530000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecordedUnconditionalPurchaseObligationBalanceSheetAmount": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 2939000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:UnrecordedUnconditionalPurchaseObligationDueAfterFiveYears": {
+"USD": [
+{
+"end": "2026-09-30",
+"val": 386000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:ContractWithCustomerLiability": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 1700000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 1900000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationCrossBorderOtherAmount": {
+"USD": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -192000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationCrossBorderOtherPercent": {
+"pure": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -0.007,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationFdiiAmount": {
+"USD": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 686000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationFdiiPercent": {
+"pure": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0.024,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:EffectiveIncomeTaxRateReconciliationTaxCredits": {
+"pure": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 0.019,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:FederalIncomeTaxExpenseBenefitContinuingOperations": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 2562000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1981000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 1782000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:ForeignIncomeTaxExpenseBenefitContinuingOperations": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 1331000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 1895000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2449000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxPaidFederalAfterRefundReceived": {
+"USD": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2955000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxPaidStateAndLocalAfterRefundReceived": {
+"USD": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 392000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:IncomeTaxReconciliationTaxCredits": {
+"USD": [
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 540000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:OtherComprehensiveIncomeLossNetOfTaxPortionAttributableToParent": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 1009000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 556000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": -500000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:PreferredStockIncludingAdditionalPaidInCapital": {
+"USD": [
+{
+"end": "2025-09-30",
+"val": 745000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q3I"
+},
+{
+"end": "2026-09-30",
+"val": 507000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q3I"
+}
+]
+},
+"us-gaap:ProceedsFromIssuanceOfLongTermDebt": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 0,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 3924000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 2995000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"us-gaap:StateAndLocalIncomeTaxExpenseBenefitContinuingOperations": {
+"USD": [
+{
+"start": "2023-10-01",
+"end": "2024-09-30",
+"val": 280000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2024"
+},
+{
+"start": "2024-10-01",
+"end": "2025-09-30",
+"val": 260000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025"
+},
+{
+"start": "2025-10-01",
+"end": "2026-09-30",
+"val": 358000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026"
+}
+]
+},
+"srt:StockRepurchaseProgramAuthorizedAmount1": {
+"USD": [
+{
+"end": "2025-04-30",
+"val": 30000000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2025Q1I"
+},
+{
+"end": "2026-04-30",
+"val": 20000000000,
+"accn": "0001403161-26-000134",
+"fy": 2026,
+"fp": "FY",
+"form": "10-K",
+"filed": "2026-11-05",
+"frame": "CY2026Q1I"
+}
+]
+}
+}
+}

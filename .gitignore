@@ -1,0 +1,14 @@
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+
+# large / regenerable intermediates
+data/raw/
+data/parsed/
+data/xbrl_raw/
+scratch/

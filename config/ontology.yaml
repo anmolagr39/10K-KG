@@ -1,0 +1,534 @@
+# Canonical metrics of the knowledge graph.
+#
+# Every company labels its rows differently. The extractor maps each row label onto one of these
+# ids, so "Total net sales" (Apple), "Revenues" (Alphabet) and "Net revenue" (AMD) all become
+# `revenue` and can be compared across filings.
+#
+#   type:      monetary | per_share | shares | count | text
+#   statement: IS (income statement) | BS (balance sheet) | CF (cash flows) | cover | auditor | text
+#   period:    duration (a flow over a fiscal year) | instant (a balance at a date)
+#   synonyms:  normalised labels (lower case, no punctuation) that map to this metric
+#   patterns:  regexes over the normalised label (used when no synonym matches)
+#   us_gaap:   XBRL tags, used ONLY by src/kg/eval/xbrl_check.py to measure extraction accuracy.
+#              The pipeline never reads XBRL.
+
+metrics:
+  revenue:
+    name: Revenue
+    description: Top line. Total revenue / net sales. For banks, total net revenue (net of interest expense).
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [revenue, revenues, total revenue, total revenues, net revenue, net revenues, total net revenue, total
+        net revenues, net sales, total net sales, sales, sales to customers, total sales, total revenues net of
+        interest expense, total revenue net of interest expense, total net revenue net of interest expense, total
+        net sales and revenue]
+    us_gaap: [Revenues, RevenueFromContractWithCustomerExcludingAssessedTax, RevenuesNetOfInterestExpense, SalesRevenueNet,
+      RevenueFromContractWithCustomerIncludingAssessedTax]
+  cost_of_revenue:
+    name: Cost of revenue
+    description: Cost of sales / cost of revenue / cost of goods sold (total).
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [cost of sales, total cost of sales, cost of revenue, cost of revenues, total cost of revenue, total
+        cost of revenues, cost of goods sold, cost of products sold, merchandise costs, cost of sales excluding
+        amortization of intangible assets, cost of products sold excluding amortization of intangible assets, total
+        cost, total costs of revenue]
+    us_gaap: [CostOfRevenue, CostOfGoodsAndServicesSold, CostOfGoodsSold]
+  gross_profit:
+    name: Gross profit
+    description: Revenue minus cost of revenue, in dollars (Apple calls it "gross margin").
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [gross profit, gross margin, total gross margin, total gross profit]
+    us_gaap: [GrossProfit]
+  rd_expense:
+    name: Research and development expense
+    description: R&D expense.
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [research and development, research and development expense, research and development expenses, research
+        development and related expenses, total research and development, research and development costs]
+    patterns: ['^research and development( expenses?| costs?)?$']
+    us_gaap: [ResearchAndDevelopmentExpense, ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost]
+  sga_expense:
+    name: Selling, general and administrative expense
+    description: SG&A expense (when reported as one line).
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [selling general and administrative, selling general and administrative expenses, selling general
+        and administrative expense, marketing selling and administrative, selling marketing and administrative expenses,
+      marketing selling and administrative expenses, selling general administrative and other, sales general and
+        administrative, marketing general and administrative, operating selling general and administrative expenses,
+      selling informational and administrative expenses, marketing general and administrative expenses]
+    us_gaap: [SellingGeneralAndAdministrativeExpense]
+  sales_marketing_expense:
+    name: Sales and marketing expense
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [sales and marketing, marketing and sales, sales and marketing expense, selling and marketing]
+    us_gaap: [SellingAndMarketingExpense]
+  ga_expense:
+    name: General and administrative expense
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [general and administrative, general and administrative expense, general and administrative expenses]
+    us_gaap: [GeneralAndAdministrativeExpense]
+  operating_expenses:
+    name: Total operating expenses
+    description: Total operating expenses (non-banks; for banks see noninterest_expense).
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [total operating expenses, operating expenses total, total expenses, total costs and expenses, total
+        operating costs and expenses]
+    us_gaap: [OperatingExpenses]
+  operating_income:
+    name: Operating income
+    description: Operating income / income from operations.
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [operating income, income from operations, operating income loss, operating profit, operating income
+        (loss), total operating income, operating earnings, earnings from operations]
+    us_gaap: [OperatingIncomeLoss]
+  pretax_income:
+    name: Income before income taxes
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [income before provision for income taxes, income before income taxes, earnings before income taxes,
+      income before taxes, income before income tax expense, income from continuing operations before income taxes,
+      earnings before provision for taxes on income, income before income tax provision, income before provision
+        for taxes, income loss before income taxes, income before income tax expense benefit, pretax income, income
+        before tax, pre tax earnings, pretax earnings, earnings before taxes, pre tax income]
+    patterns: ['^(income|earnings|profit)( \w+){0,3} before (provision for )?(income )?tax', '^(income|earnings)(
+        \w+){0,4} before (provision|taxes|income tax)', '^pre ?tax (income|earnings)$']
+    us_gaap: [IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest, IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments]
+  income_tax:
+    name: Income tax expense
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [provision for income taxes, income tax expense, provision for taxes, income tax provision, income
+        taxes, provision for taxes on income, income tax expense benefit, provision for income taxes benefit, provision
+        for benefit from income taxes, income tax provision benefit, provision for (benefit from) income taxes,
+      provision for benefit from taxes, income tax benefit expense, provision benefit for taxes on income, taxes
+        on income, provision for income tax, income tax expense benefit net]
+    us_gaap: [IncomeTaxExpenseBenefit]
+    patterns: ['^(provision|benefit) (for|from)( benefit from| provision for)? (income )?taxes']
+  net_income:
+    name: Net income
+    description: Net income attributable to the company (excludes noncontrolling interests).
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [net income, net earnings, net income loss, net income (loss), net loss, net earnings attributable
+        to the company]
+    us_gaap: [NetIncomeLoss]
+  net_income_to_common:
+    name: Net income applicable to common stockholders
+    description: Net income after preferred dividends (banks report this separately).
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [net income applicable to common stockholders, net income applicable to common equity, net income
+        applicable to common shareholders, net income available to common stockholders, net income available to
+        common shareholders, net earnings applicable to common shareholders, net income attributable to common shareholders,
+      net income to common stockholders]
+    us_gaap: [NetIncomeLossAvailableToCommonStockholdersBasic]
+  eps_basic:
+    name: Basic earnings per share
+    type: per_share
+    statement: IS
+    period: duration
+    synonyms: [basic, basic earnings per share, net income per share basic, earnings per share basic, basic net
+        income per share, basic earnings per common share, net income per basic share]
+    us_gaap: [EarningsPerShareBasic]
+  eps_diluted:
+    name: Diluted earnings per share
+    type: per_share
+    statement: IS
+    period: duration
+    synonyms: [diluted, diluted earnings per share, net income per share diluted, earnings per share diluted, diluted
+        net income per share, diluted earnings per common share, net income per diluted share]
+    us_gaap: [EarningsPerShareDiluted]
+  shares_basic:
+    name: Weighted-average basic shares
+    type: shares
+    statement: IS
+    period: duration
+    synonyms: []
+    us_gaap: [WeightedAverageNumberOfSharesOutstandingBasic]
+  shares_diluted:
+    name: Weighted-average diluted shares
+    type: shares
+    statement: IS
+    period: duration
+    synonyms: []
+    us_gaap: [WeightedAverageNumberOfDilutedSharesOutstanding]
+  interest_expense:
+    name: Interest expense
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [interest expense, total interest expense, interest expense net]
+    us_gaap: [InterestExpense, InterestExpenseNonoperating]
+  net_interest_income:
+    name: Net interest income
+    description: Banks. Interest income minus interest expense.
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [net interest income, net interest revenue]
+    us_gaap: [InterestIncomeExpenseNet, InterestIncomeExpenseAfterProvisionForLoanLoss]
+  noninterest_income:
+    name: Noninterest income
+    description: Banks. Total noninterest revenue / income (fees, trading, etc.).
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [total noninterest revenue, total noninterest income, noninterest income, total non interest revenues,
+      total non interest income, total noninterest revenues, non interest income, total other revenues]
+    us_gaap: [NoninterestIncome]
+  provision_credit_losses:
+    name: Provision for credit losses
+    description: Banks/lenders. Expense set aside for expected loan losses.
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [provision for credit losses, provisions for credit losses, provision for credit losses net, provisions
+        for credit losses and for benefits and claims, provision for loan losses]
+    us_gaap: [ProvisionForLoanLeaseAndOtherLosses, ProvisionForLoanAndLeaseLosses, CreditLossExpense]
+  noninterest_expense:
+    name: Noninterest expense
+    description: Banks. Total noninterest (operating) expense.
+    type: monetary
+    statement: IS
+    period: duration
+    synonyms: [total noninterest expense, noninterest expense, total non interest expense, total non interest expenses,
+      total noninterest expenses]
+    us_gaap: [NoninterestExpense]
+  cash_and_equivalents:
+    name: Cash and cash equivalents
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [cash and cash equivalents, cash and due from banks, cash and equivalents, total cash and cash equivalents]
+    us_gaap: [CashAndCashEquivalentsAtCarryingValue, CashAndDueFromBanks]
+  accounts_receivable:
+    name: Accounts receivable, net
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [accounts receivable net, accounts receivable, trade receivables net, receivables net, accounts receivable
+        net of allowances, accounts receivable less allowance]
+    us_gaap: [AccountsReceivableNetCurrent]
+  inventories:
+    name: Inventories
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [inventories, inventory, merchandise inventories, merchandise inventory, inventories net]
+    us_gaap: [InventoryNet]
+  total_current_assets:
+    name: Total current assets
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [total current assets]
+    us_gaap: [AssetsCurrent]
+  goodwill:
+    name: Goodwill
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [goodwill, goodwill net]
+    us_gaap: [Goodwill]
+  total_assets:
+    name: Total assets
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [total assets]
+    us_gaap: [Assets]
+  total_current_liabilities:
+    name: Total current liabilities
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [total current liabilities]
+    us_gaap: [LiabilitiesCurrent]
+  long_term_debt:
+    name: Long-term debt
+    description: Long-term debt shown on the balance sheet (non-current portion when split).
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [long term debt, term debt, long term debt net, long term debt excluding current portion, long term
+        debt less current portion, long term debt net of current portion, long term borrowings, long term debt noncurrent,
+      notes and debentures, unsecured long term borrowings, noncurrent debt, non current debt, long term debt excluding
+        current installments, long term debt excluding current maturities, long term debt and other borrowings,
+      long term debt and finance lease obligations, debt, long term debt net of current maturities, long term debt
+        less current maturities]
+    us_gaap: [LongTermDebtNoncurrent, LongTermDebt, LongTermDebtAndCapitalLeaseObligations]
+  total_liabilities:
+    name: Total liabilities
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [total liabilities]
+    us_gaap: [Liabilities]
+  total_equity:
+    name: Total shareholders' equity
+    description: Equity attributable to the company's shareholders.
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [total shareholders equity, total stockholders equity, total equity, total shareowners equity, total
+        shareholders equity deficit, total stockholders equity deficit, total shareholders investment, total shareholders
+        deficit, total stockholders deficit, total common shareholders equity]
+    us_gaap: [StockholdersEquity, StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest]
+  total_liabilities_and_equity:
+    name: Total liabilities and equity
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [total liabilities and shareholders equity, total liabilities and stockholders equity, total liabilities
+        and equity, total liabilities and shareowners equity, total liabilities redeemable noncontrolling interests
+        and equity, total liabilities and shareholders equity deficit]
+    us_gaap: [LiabilitiesAndStockholdersEquity]
+  retained_earnings:
+    name: Retained earnings
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [retained earnings, retained earnings accumulated deficit, accumulated deficit, earnings retained,
+      reinvested earnings, retained earnings (accumulated deficit)]
+    us_gaap: [RetainedEarningsAccumulatedDeficit]
+  deposits:
+    name: Total deposits
+    description: Banks. Customer deposits.
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [total deposits, deposits, customer deposits, total customer deposits]
+    us_gaap: [Deposits]
+  loans:
+    name: Loans
+    description: Banks/lenders. Total loans (before allowance).
+    type: monetary
+    statement: BS
+    period: instant
+    synonyms: [loans, total loans, loans and leases, total loans and leases, loans held for investment, loans net
+        of unearned income, total loans held for investment, loans held for investment net of unearned income]
+    us_gaap: [LoansAndLeasesReceivableNetOfDeferredIncome, FinancingReceivableExcludingAccruedInterestBeforeAllowanceForCreditLoss]
+  operating_cash_flow:
+    name: Net cash from operating activities
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [cash generated by operating activities, net cash provided by operating activities, net cash from
+        operations, net cash provided by used in operating activities, net cash from operating activities, cash
+        provided by operating activities, net cash provided by operations, net cash flows from operating activities,
+      net cash provided by (used in) operating activities, net cash (used in) provided by operating activities,
+      net cash used in provided by operating activities, cash flows from operating activities, net cash provided
+        by operating activities of continuing operations]
+    us_gaap: [NetCashProvidedByUsedInOperatingActivities]
+    patterns: [^net cash\b.*\boperating activities\b, ^cash (generated|provided|used)\b.*\boperating activities\b]
+  investing_cash_flow:
+    name: Net cash from investing activities
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [cash used in investing activities, net cash used in investing activities, net cash used in investing,
+      net cash provided by used in investing activities, net cash from investing activities, cash generated by used
+        in investing activities, net cash used in provided by investing activities, cash used in investing activities,
+      net cash provided by investing activities]
+    us_gaap: [NetCashProvidedByUsedInInvestingActivities]
+    patterns: [^net cash\b.*\binvesting activities\b, ^cash (generated|provided|used)\b.*\binvesting activities\b]
+  financing_cash_flow:
+    name: Net cash from financing activities
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [cash used in financing activities, net cash used in financing activities, net cash used in financing,
+      net cash provided by used in financing activities, net cash from financing activities, net cash provided by
+        financing activities, net cash used in provided by financing activities]
+    us_gaap: [NetCashProvidedByUsedInFinancingActivities]
+    patterns: [^net cash\b.*\bfinancing activities\b, ^cash (generated|provided|used)\b.*\bfinancing activities\b]
+  capex:
+    name: Capital expenditures
+    description: Cash paid for property, plant and equipment (shown as an investing outflow; stored as a positive
+      amount).
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [payments for acquisition of property plant and equipment, additions to property and equipment, purchases
+        of property and equipment, capital expenditures, purchases of property plant and equipment, payments for
+        property and equipment, capital expenditure, purchases of property and equipment net, purchases of property
+        and equipment including internal use software, additions to property plant and equipment, payments for property
+        plant and equipment, acquisition of property plant and equipment, purchases of property equipment and software,
+      capital spending, acquisition of property and equipment, purchases related to property and equipment and intangible
+        assets, purchase of property leasehold improvements and equipment, purchases of property equipment and technology,
+      purchase of premises and equipment net of sales, changes in premises and equipment, expenditures for property
+        and equipment, acquisitions of property and equipment]
+    us_gaap: [PaymentsToAcquirePropertyPlantAndEquipment, PaymentsToAcquireProductiveAssets]
+    patterns: ['^(purchases?|acquisitions?|additions?|payments for|expenditures for|investments? in|capital expenditures)( of| to| for| on|
+        related to)? (property|premises|plant)']
+  depreciation_amortization:
+    name: Depreciation and amortization
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [depreciation and amortization, depreciation amortization and other, depreciation and amortization
+        expense, depreciation amortization and accretion net]
+    us_gaap: [DepreciationDepletionAndAmortization, DepreciationAmortizationAndAccretionNet]
+  stock_based_compensation:
+    name: Stock-based compensation
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [share based compensation expense, stock based compensation, stock based compensation expense, share
+        based compensation, stock compensation expense, stock based compensation and other]
+    us_gaap: [ShareBasedCompensation]
+  dividends_paid:
+    name: Dividends paid
+    description: Cash dividends paid to shareholders (stored as a positive amount).
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [payments for dividends and dividend equivalents, common stock cash dividends paid, dividends paid,
+      cash dividends paid, dividends paid to shareholders, dividends paid on common stock, dividends, cash dividends
+        paid to stockholders, payment of dividends, dividends paid to stockholders, dividend payments, payments
+        of dividends to stockholders, payments of dividends and dividend equivalents, payments of dividends, cash
+        dividend payments, cash dividends, dividends paid to common stockholders]
+    us_gaap: [PaymentsOfDividends, PaymentsOfDividendsCommonStock]
+    patterns: ['^(cash )?dividends?( and dividend equivalents)?( paid| payments)( on common stock| to (stock|share)holders)?',
+      '^payments? (of|for) dividends']
+  share_repurchases:
+    name: Share repurchases
+    description: Cash paid to repurchase common stock (stored as a positive amount).
+    type: monetary
+    statement: CF
+    period: duration
+    synonyms: [repurchases of common stock, common stock repurchased, repurchase of common stock, purchase of company
+        stock, purchases of treasury stock, treasury stock purchased, payments for repurchase of common stock, repurchases
+        of class a common stock, repurchase of class a common stock, repurchases of capital stock, purchases of
+        common stock, repurchase of common shares, common stock repurchases, repurchases of stock, payments for
+        repurchases of common stock, repurchases of common stock repurchase program, repurchases and retirements
+        of common stock, treasury stock repurchased, treasury stock acquired, repurchase of stock, repurchase of
+        american express common shares and other, payments related to repurchases of common stock, purchase of treasury
+        stock]
+    us_gaap: [PaymentsForRepurchaseOfCommonStock]
+    patterns: ['^(payments (for|related to) )?(repurchases?|purchases?)( and retirements)? of (common |class a common
+        |capital |company |treasury |our )?(stock|shares)', ^treasury stock (repurchased|acquired|purchased)]
+  shares_outstanding:
+    name: Common shares outstanding (cover page)
+    type: shares
+    statement: cover
+    period: instant
+    us_gaap: ['dei:EntityCommonStockSharesOutstanding']
+  public_float:
+    name: Public float (market value held by non-affiliates)
+    type: monetary
+    statement: cover
+    period: instant
+    us_gaap: ['dei:EntityPublicFloat']
+  employees:
+    name: Number of employees
+    type: count
+    statement: text
+    period: instant
+  state_of_incorporation:
+    name: State of incorporation
+    type: text
+    statement: cover
+    period: instant
+  hq_location:
+    name: Headquarters (principal executive offices) location
+    type: text
+    statement: cover
+    period: instant
+  exchange:
+    name: Stock exchange listing of the common stock
+    type: text
+    statement: cover
+    period: instant
+  fiscal_year_end:
+    name: Fiscal year end date
+    type: text
+    statement: cover
+    period: instant
+  auditor_since:
+    name: Year the current auditor started serving the company
+    type: count
+    statement: auditor
+    period: instant
+
+# Derived metrics: computed by the `derive` operator from facts in the graph; the formula is
+# stored on DERIVED_FROM edges (Metric -> Metric).
+derived:
+  gross_margin_pct:
+    name: Gross margin (%)
+    formula: gross_profit / revenue * 100
+    fallback: (revenue - cost_of_revenue) / revenue * 100
+    unit: pct
+  operating_margin_pct:
+    name: Operating margin (%)
+    formula: operating_income / revenue * 100
+    unit: pct
+  net_margin_pct:
+    name: Net margin (%)
+    formula: net_income / revenue * 100
+    unit: pct
+  free_cash_flow:
+    name: Free cash flow
+    formula: operating_cash_flow - capex
+    unit: USD
+  rd_intensity_pct:
+    name: R&D as % of revenue
+    formula: rd_expense / revenue * 100
+    unit: pct
+  effective_tax_rate_pct:
+    name: Effective tax rate (%)
+    formula: income_tax / pretax_income * 100
+    unit: pct
+  debt_to_equity:
+    name: Long-term debt to equity (x)
+    formula: long_term_debt / total_equity
+    unit: x
+  revenue_per_employee:
+    name: Revenue per employee
+    formula: revenue / employees
+    unit: USD
+  loan_to_deposit_pct:
+    name: Loans to deposits (%)
+    formula: loans / deposits * 100
+    unit: pct
+  efficiency_ratio_pct:
+    name: Efficiency ratio (%) (banks)
+    formula: noninterest_expense / revenue * 100
+    unit: pct
+  return_on_equity_pct:
+    name: Return on equity (%) (net income / year-end equity)
+    formula: net_income / total_equity * 100
+    unit: pct
+  return_on_assets_pct:
+    name: Return on assets (%) (net income / year-end assets)
+    formula: net_income / total_assets * 100
+    unit: pct
+  payout_ratio_pct:
+    name: Dividend payout (%) (dividends paid / net income)
+    formula: dividends_paid / net_income * 100
+    unit: pct
+  shareholder_returns:
+    name: Cash returned to shareholders (dividends + buybacks)
+    formula: dividends_paid + share_repurchases
+    unit: USD

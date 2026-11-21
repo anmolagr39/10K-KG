@@ -1,0 +1,36 @@
+ticker,cik,name,sector,aliases
+AAPL,320193,Apple Inc.,Big Tech,Apple|Apple Inc
+MSFT,789019,Microsoft Corporation,Big Tech,Microsoft|Microsoft Corp
+GOOGL,1652044,Alphabet Inc.,Big Tech,Alphabet|Google|Google LLC
+AMZN,1018724,"Amazon.com, Inc.",Big Tech,Amazon|Amazon.com|Amazon Web Services|AWS
+META,1326801,"Meta Platforms, Inc.",Big Tech,Meta|Meta Platforms|Facebook
+ORCL,1341439,Oracle Corporation,Enterprise Software,Oracle
+CRM,1108524,"Salesforce, Inc.",Enterprise Software,Salesforce|salesforce.com
+ADBE,796343,Adobe Inc.,Enterprise Software,Adobe
+IBM,51143,International Business Machines Corporation,Enterprise Software,IBM|International Business Machines
+CSCO,858877,"Cisco Systems, Inc.",Enterprise Software,Cisco|Cisco Systems
+NVDA,1045810,NVIDIA Corporation,Chips,NVIDIA|Nvidia
+AMD,2488,"Advanced Micro Devices, Inc.",Chips,AMD|Advanced Micro Devices
+INTC,50863,Intel Corporation,Chips,Intel
+QCOM,804328,QUALCOMM Incorporated,Chips,Qualcomm|QUALCOMM
+AVGO,1730168,Broadcom Inc.,Chips,Broadcom
+JPM,19617,JPMorgan Chase & Co.,Banks,JPMorgan|JPMorgan Chase|JP Morgan|J.P. Morgan|Chase
+BAC,70858,Bank of America Corporation,Banks,Bank of America|BofA
+C,831001,Citigroup Inc.,Banks,Citigroup|Citi|Citibank
+WFC,72971,Wells Fargo & Company,Banks,Wells Fargo
+GS,886982,"The Goldman Sachs Group, Inc.",Banks,Goldman Sachs|Goldman|Goldman Sachs Group
+V,1403161,Visa Inc.,Payments,Visa
+MA,1141391,Mastercard Incorporated,Payments,Mastercard|MasterCard
+AXP,4962,American Express Company,Payments,American Express|Amex
+PYPL,1633917,"PayPal Holdings, Inc.",Payments,PayPal
+COF,927628,Capital One Financial Corporation,Payments,Capital One
+WMT,104169,Walmart Inc.,Retail,Walmart|Wal-Mart
+COST,909832,Costco Wholesale Corporation,Retail,Costco
+TGT,27419,Target Corporation,Retail,Target
+HD,354950,"The Home Depot, Inc.",Retail,Home Depot|The Home Depot
+LOW,60667,"Lowe's Companies, Inc.",Retail,Lowe's|Lowes
+JNJ,200406,Johnson & Johnson,Pharma,Johnson & Johnson|J&J
+PFE,78003,Pfizer Inc.,Pharma,Pfizer
+MRK,310158,"Merck & Co., Inc.",Pharma,Merck|Merck & Co.
+ABBV,1551152,AbbVie Inc.,Pharma,AbbVie
+LLY,59478,Eli Lilly and Company,Pharma,Eli Lilly|Lilly
