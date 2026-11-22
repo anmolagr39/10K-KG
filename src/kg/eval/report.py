@@ -74,6 +74,8 @@ def main() -> None:
     table{border-collapse:collapse;margin:4px 0;font-size:8.8pt} td,th{border:1px solid #bbb;padding:2px 6px;text-align:center}
     td:first-child{text-align:left} code{font-size:8.5pt;background:#f2f2f2;padding:0 2px} .sub{color:#444}"""
     body = (f"<h1>Knowledge graph over 35 SEC 10-K filings: results</h1>"
+            f"<p><b>Anmol Agrawal</b> · Genloop Tech Intern take-home · Code, README and benchmark: "
+            f"<a href='https://github.com/anmolagr39/10K-KG'>github.com/anmolagr39/10K-KG</a></p>"
             f"<p class=sub>Accuracy = correct answers / questions. P / R = fact-level precision / recall "
             f"(retrieved fact nodes vs gold supporting facts, macro-averaged). 30 frozen test questions.</p>"
             + _table(cols)
