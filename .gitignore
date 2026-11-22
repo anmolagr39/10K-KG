@@ -17,3 +17,6 @@ scratch/
 data/extracted/*.json
 !data/extracted/*.relations.json
 data/*.log
+
+# AI assistant working notes (kept locally)
+CLAUDE.md

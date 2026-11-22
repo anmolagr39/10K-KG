@@ -131,7 +131,7 @@ so the evaluation re-runs offline (`LLM_OFFLINE=1`). Any OpenAI-compatible endpo
   with the formula recorded (`kg.eval.make_benchmark`).
 - Verification (`kg.eval.gold_check`): every printed value / quote is on its cited page (132/132), and
   every numeric gold fact equals SEC XBRL (78/78).
-- Frozen in git (commit `5ca1273`) before the first test run.
+- Frozen in git (commit `14dcf50`) before the first test run.
 - Scoring is deterministic: numbers within 0.5%, percentages within 0.1 pp, entities by alias, lists
   as sets, rankings in order. Precision / recall over fact nodes (same company + same period and value,
   or same relation and object), macro-averaged per question.
