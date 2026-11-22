@@ -138,10 +138,12 @@ so the evaluation re-runs offline (`LLM_OFFLINE=1`). Any OpenAI-compatible endpo
 
 ## How AI tools were used
 
-- Claude (claude.ai chat) for planning the design; Claude Code (Claude Opus) wrote most of the code
-  and drafted the benchmark questions and gold facts by reading the PDF pages.
-- Anmol agreed the design and the company list, approved the benchmark before it was frozen, and
-  reviewed the results; gold facts are machine-checked against the PDF pages and XBRL.
+- Design, code and benchmark: Claude (claude.ai chat for planning, Claude Code for implementation)
+  created the initial version based on the needs I stated, and it was iterated to the final version
+  through my review and change suggestions. This covers the solution design, the code, and the
+  benchmark questions and gold facts (taken from the PDF pages).
+- I chose the company list, approved the benchmark before it was frozen, and reviewed the results;
+  gold facts are also machine-checked against the PDF pages and XBRL.
 - In the system itself: Groq free tier. `qwen/qwen3.8-27b` for prose relation extraction (35 calls,
   quotes verified in code), `openai/gpt-oss-120b` for query planning (1 call per question). No LLM
   reads or writes a number that ends up in an answer.
