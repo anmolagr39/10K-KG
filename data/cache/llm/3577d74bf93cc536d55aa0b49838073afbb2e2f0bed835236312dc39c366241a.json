@@ -1,0 +1,30 @@
+{
+ "tag": "relations:QCOM:1",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of QUALCOMM Incorporated's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company QUALCOMM Incorporated names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies QUALCOMM Incorporated (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to QUALCOMM Incorporated (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of QUALCOMM Incorporated (entity = segment name)\n  \"acquisition\" - a company QUALCOMM Incorporated acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.14] QCT also competes in both single-mode and multimode environments against alternative communications technologies. Additional competitive factors exist for QCT product offerings that have expanded into industries and applications beyond mobile handsets, including automotive and IoT. QCT also faces competition, which may intensify in the future, from products internally developed by our customers, including some of our largest customers. These and other risks related to competition are more fully described in \"Part I, Item 1A. Risk Factors\" in this Annual Report, including the Risk Factors titled \"The semiconductor industry is subject to intense competition in an environment of rapid technological change. Our success depends in part on our ability to adapt to such change and compete effectively; and such change and competition could result in decreased demand for our products and technologies or declining average selling prices for our products or those of our customers or licensees\" and \"Our business, particularly our semiconductor business, may suffer as a result of our customers vertically integrating (i.e., developing their own integrated circuit products).\" QTL Segment. QTL grants licenses or otherwise provides rights to use portions of our intellectual property portfolio, which, among other rights, includes certain patent rights essential to and/or useful in the manufacture, sale and/or use of certain wireless products, including, without limitation, products implementing LTE and/or OFDMA-based 5G standards and their derivatives. Our licensees manufacture wireless cellular products such as mobile devices (including handsets), other consumer devices (e.g., tablets and PCs), plug-in end user data modem cards and embedded modules for incorporation into machine-to-machine devices and certain other devices, connected vehicle units and connected vehicle modules used in automobiles, wireless access points and small cells."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": []}",
+ "parsed": {
+  "relations": []
+ },
+ "usage": {
+  "queue_time": 0.04655303,
+  "prompt_tokens": 638,
+  "prompt_time": 0.044941297,
+  "completion_tokens": 11,
+  "completion_time": 0.021107145,
+  "total_tokens": 649,
+  "total_time": 0.066048442
+ }
+}

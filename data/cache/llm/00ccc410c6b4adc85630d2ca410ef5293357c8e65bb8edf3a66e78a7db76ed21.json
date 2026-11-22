@@ -1,0 +1,133 @@
+{
+ "tag": "relations:AMD",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Advanced Micro Devices, Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Advanced Micro Devices, Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Advanced Micro Devices, Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Advanced Micro Devices, Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Advanced Micro Devices, Inc. (entity = segment name)\n  \"acquisition\" - a company Advanced Micro Devices, Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.5] AMD's strategy and expected benefits; the growth, change and competitive landscape of the markets in which AMD participates; international sales will continue to be a significant portion of total sales in the foreseeable future; the expectation that AMD's cash, cash equivalents, and short-term investments together with the availability under that certain revolving credit facility (the Revolving Credit Agreement) made available to AMD and certain of its subsidiaries, our commercial paper program, and our cash flows from operations will be sufficient to fund AMD's operations, including capital expenditures, purchase and lease commitments and strategic activities over the next 12 months and beyond;\n[p.6] In March 2025, we acquired ZT Group Int'l, Inc. (ZT Systems), where we retained certain intellectual property and employees associated with the design operations (ZT Design Business). In October 2025, we sold the ZT data center infrastructure manufacturing business (ZT Manufacturing Business) to Sanmina Corporation (Sanmina).\n[p.8] Our Business Beginning in the first quarter of fiscal year 2025, we combined the Client and Gaming segments into one reportable segment to align with how we manage our business. Our three reportable segments are: • the Data Center segment, which primarily includes AI accelerators, CPUs for servers, GPUs, APUs, DPUs, AI NICs, FPGAs and SoC products for data centers; • the Client and Gaming segment, which primarily includes CPUs, APUs, chipsets for desktops and notebooks, discrete GPUs, and semi-custom SoC products and development services; and • the Embedded segment, which primarily includes embedded CPUs, APUs, FPGAs, SOMs, and adaptive SoC products. In addition to these reportable segments, we have an All Other category, which is not a reportable segment.\n[p.11] Our AMD Radeon PRO family of professional graphics products are designed for integration in desktop workstations, optimized through hardware and software for demanding use cases such as 3D rendering, design and manufacturing for Computer-Aided Design (CAD), and media and entertainment for broadcast and animation pipelines on high resolution displays.\n[p.12] The Versal devices achieve dramatic system-level performance improvements over today's fastest FPGA competitors' solutions and accelerate applications in a wide variety of markets, including aerospace and defense, automotive, industrial, vision and healthcare, communications infrastructure, test and measurement, emulation and prototyping, audio, video and broadcasting, and data center.\n[p.15] Customers Our Data Center Segment customers consist primarily of hyperscale data centers, original equipment manufacturers (OEMs), original design manufacturers (ODMs), system integrators and independent distributors in both domestic and international markets. ODMs provide design and/or manufacturing services to branded and unbranded private label resellers, OEMs and system builders. Our Client and Gaming Segment customers consist primarily of PC OEMs, a network of independent distributors and, for chipset products, ODMs that manufacture motherboards. PC OEMs and independent distributors as well as add-in-board manufacturers (AIBs), independent game console and portable gaming devices manufacturers and contract manufacturers for AMD branded graphics cards. Original Equipment Manufacturers We focus on three types of OEM partners: multi-nationals, selected regional accounts and selected global and local system integrators, who target commercial and consumer end customers of all sizes. Our OEM customers include numerous foreign and domestic manufacturers of servers and workstations, desktops, notebooks, PC motherboards and game consoles.\n[p.17] These products are incorporated into servers and other data center appliances sold by OEMs to the hyperscale customers or into custom servers or hardware designed by or for these customers and manufactured by ODMs or contract manufacturers. Add-in-Board (AIB) Manufacturers and System Integrators We offer component-level graphics and chipset products to AIB manufacturers who in turn build and sell board-level products using our technology to system integrators (SIs), retailers and sub distributors. Competition The markets in which our products are sold are highly competitive and rapidly evolving and delivering the latest and best products to market on time is critical to revenue growth. Competition in Data Center Segment In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia with our CPU, GPU DPU and AI NIC server products. In addition, we compete against Altera with our FPGA and adaptive SoC server products. Competition in Client and Gaming Segment Our primary competitor in the supply of CPUs and APUs is Intel.\n[p.18] Table of Contents Our principal competitor in the supply of discrete graphics is Nvidia, who is the discrete GPU market share leader, and Intel, who manufactures and sells integrated graphics processors and gaming-focused discrete GPUs. With respect to integrated graphics, higher unit shipments of our APUs and Intel's integrated graphics may drive computer manufacturers to reduce the number of systems they build paired with discrete graphics components, particularly for notebooks, because they may offer satisfactory graphics performance for most mainstream PC users at a lower cost. Competition in Embedded Segment We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA. In addition, we expect continued competition from the ASIC market, which has been ongoing since the inception of FPGAs. Intel is our main competitor for embedded CPUs. Other competitors include manufacturers of high-density programmable logic products characterized by FPGA-type architectures; high-volume and low-cost FPGAs as programmable replacements for ASICs and ASSPs; We focus on designing, with security in mind, new integrated circuits (ICs) with improved performance and performance-per-watt in advanced semiconductor manufacturing processes, the design of logic and interface IP, advanced packaging technologies, and heterogeneous integration technologies. Manufacturing Arrangements and Assembly and Test Facilities Third-Party Wafer Foundry Facilities We utilize Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of wafers for our HPC, FPGA and adaptive SoC products and GLOBALFOUNDRIES Inc. (GF), with respect to wafer purchases for our HPC products at the 12 nm and 14 nm technology nodes. Other Third-Party Manufacturers We outsource board-level graphics product manufacturing to third-party manufacturers. Assembly, Test, Mark and Packaging Facilities Wafers for our products are either sorted by the foundry or delivered by the foundry to our assembly, test, mark and packaging (ATMP) partners or subcontractors located in the Asia-Pacific region, who package and test our final semiconductor products.\n[p.20] We have acquired various licenses from external parties to certain technologies that are implemented in our products, including our IP cores and devices.\n[p.22] Total Rewards We invest in our workforce by offering competitive salaries, incentives, and benefits to ensure that we continue to attract and retain the industry's best and brightest in an equitable manner. Government Regulations Our global operations are subject to various United States and foreign laws and regulations, including, but not limited to, those relating to export control, customs, intellectual property, data privacy and security, climate, environmental, health and safety requirements, cybersecurity, tax, employment, competition and anti-trust, anti-corruption, anti-bribery, conflict minerals, corporate governance, financial and other disclosures, and AI. Environmental Regulations Our operations and properties are subject to various United States and foreign laws and regulations, including those relating to materials used in our products and the manufacturing processes of our products, discharge of pollutants into the environment, the treatment, transport, storage and disposal of solid and hazardous wastes and remediation of contamination.\n[p.27] Economic and Strategic Risks • The markets in which our products are sold are highly competitive and rapidly evolving. • The loss of a significant customer may have a material adverse effect on us. • If we cannot adequately protect our technology or other intellectual property through patents, copyrights, trade secrets, trademarks and other measures, we may lose a competitive advantage and incur significant expenses. Operational and Technology Risks • We rely on third parties to manufacture our products, and if they are unable to do so on a timely basis in sufficient quantities and using competitive technologies, our business could be materially adversely affected. • Essential equipment, materials, substrates or manufacturing processes may not be available to us. • We may fail to achieve expected manufacturing yields for our products. • We depend on third-party companies for the design, manufacture and supply of motherboards, software, memory and other computer platform components to support our business and products."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [\n  {\n    \"type\": \"acquisition\",\n    \"entity\": \"ZT Group Int'l, Inc.\",\n    \"quote\": \"In March 2025, we acquired ZT Group Int'l, Inc. (ZT Systems), where we retained certain intellectual property\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"segment\",\n    \"entity\": \"Data Center\",\n    \"quote\": \"the Data Center segment, which primarily includes AI accelerators, CPUs for servers, GPUs, APUs, DPUs, AI NICs\",\n    \"page\": 8\n  },\n  {\n    \"type\": \"segment\",\n    \"entity\": \"Client and Gaming\",\n    \"quote\": \"the Client and Gaming segment, which primarily includes CPUs, APUs, chipsets for desktops and notebooks, discrete GPUs\",\n    \"page\": 8\n  },\n  {\n    \"type\": \"segment\",\n    \"entity\": \"Embedded\",\n    \"quote\": \"the Embedded segment, which primarily includes embedded CPUs, APUs, FPGAs, SOMs, and adaptive SoC products.\",\n    \"page\": 8\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Intel Corporation\",\n    \"quote\": \"In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia\",\n    \"page\": 17\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Nvidia Corporation\",\n    \"quote\": \"In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia\",\n    \"page\": 17\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Altera\",\n    \"quote\": \"In addition, we compete against Altera with our FPGA and adaptive SoC server products.\",\n    \"page\": 17\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Lattice Semiconductor Corporation\",\n    \"quote\": \"We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Microsemi Corporation\",\n    \"quote\": \"We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Broadcom Corporation\",\n    \"quote\": \"and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Marvell Technology Group, Ltd.\",\n    \"quote\": \"and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Analog Devices\",\n    \"quote\": \"and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Texas Instruments Incorporated\",\n    \"quote\": \"Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"NXP Semiconductors N.V.\",\n    \"quote\": \"Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Qualcomm Incorporated\",\n    \"quote\": \"NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"supplier\",\n    \"entity\": \"Taiwan Semiconductor Manufacturing Company Limited\",\n    \"quote\": \"We utilize Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of wafers for our HPC, FPGA\",\n    \"page\": 18\n  },\n  {\n    \"type\": \"supplier\",\n    \"entity\": \"GLOBALFOUNDRIES Inc.\",\n    \"quote\": \"and GLOBALFOUNDRIES Inc. (GF), with respect to wafer purchases for our HPC products at the 12 nm and 14 nm\",\n    \"page\": 18\n  }\n]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "acquisition",
+    "entity": "ZT Group Int'l, Inc.",
+    "quote": "In March 2025, we acquired ZT Group Int'l, Inc. (ZT Systems), where we retained certain intellectual property",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "Data Center",
+    "quote": "the Data Center segment, which primarily includes AI accelerators, CPUs for servers, GPUs, APUs, DPUs, AI NICs",
+    "page": 8
+   },
+   {
+    "type": "segment",
+    "entity": "Client and Gaming",
+    "quote": "the Client and Gaming segment, which primarily includes CPUs, APUs, chipsets for desktops and notebooks, discrete GPUs",
+    "page": 8
+   },
+   {
+    "type": "segment",
+    "entity": "Embedded",
+    "quote": "the Embedded segment, which primarily includes embedded CPUs, APUs, FPGAs, SOMs, and adaptive SoC products.",
+    "page": 8
+   },
+   {
+    "type": "competitor",
+    "entity": "Intel Corporation",
+    "quote": "In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Nvidia Corporation",
+    "quote": "In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Altera",
+    "quote": "In addition, we compete against Altera with our FPGA and adaptive SoC server products.",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Lattice Semiconductor Corporation",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation",
+    "page": 18
+   },
+   {
+    "type": "competitor",
+    "entity": "Microsemi Corporation",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation",
+    "page": 18
+   },
+   {
+    "type": "competitor",
+    "entity": "Broadcom Corporation",
+    "quote": "and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments",
+    "page": 18
+   },
+   {
+    "type": "competitor",
+    "entity": "Marvell Technology Group, Ltd.",
+    "quote": "and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments",
+    "page": 18
+   },
+   {
+    "type": "competitor",
+    "entity": "Analog Devices",
+    "quote": "and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments",
+    "page": 18
+   },
+   {
+    "type": "competitor",
+    "entity": "Texas Instruments Incorporated",
+    "quote": "Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "page": 18
+   },
+   {
+    "type": "competitor",
+    "entity": "NXP Semiconductors N.V.",
+    "quote": "Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "page": 18
+   },
+   {
+    "type": "competitor",
+    "entity": "Qualcomm Incorporated",
+    "quote": "NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "page": 18
+   },
+   {
+    "type": "supplier",
+    "entity": "Taiwan Semiconductor Manufacturing Company Limited",
+    "quote": "We utilize Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of wafers for our HPC, FPGA",
+    "page": 18
+   },
+   {
+    "type": "supplier",
+    "entity": "GLOBALFOUNDRIES Inc.",
+    "quote": "and GLOBALFOUNDRIES Inc. (GF), with respect to wafer purchases for our HPC products at the 12 nm and 14 nm",
+    "page": 18
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.07030188,
+  "prompt_tokens": 2088,
+  "prompt_time": 0.341138758,
+  "completion_tokens": 1081,
+  "completion_time": 2.319936707,
+  "total_tokens": 3169,
+  "total_time": 2.661075465
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "ticker": "COST",
+ "relations": [
+  {
+   "ticker": "COST",
+   "type": "competitor",
+   "entity": "Walmart",
+   "entity_canonical": null,
+   "company": "WMT",
+   "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+   "page": 10,
+   "doc": "COST_10K_2026-08-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "COST",
+   "type": "competitor",
+   "entity": "Target",
+   "entity_canonical": null,
+   "company": "TGT",
+   "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+   "page": 10,
+   "doc": "COST_10K_2026-08-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "COST",
+   "type": "competitor",
+   "entity": "Kroger",
+   "entity_canonical": "Kroger",
+   "company": null,
+   "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+   "page": 10,
+   "doc": "COST_10K_2026-08-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "COST",
+   "type": "competitor",
+   "entity": "Amazon",
+   "entity_canonical": null,
+   "company": "AMZN",
+   "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+   "page": 10,
+   "doc": "COST_10K_2026-08-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "COST",
+   "type": "competitor",
+   "entity": "Sam's Club",
+   "entity_canonical": "Sam's Club",
+   "company": null,
+   "quote": "We also compete with other warehouse clubs, including Walmart's Sam's Club and BJ's Wholesale Club in the U.S.",
+   "page": 10,
+   "doc": "COST_10K_2026-08-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "COST",
+   "type": "competitor",
+   "entity": "BJ's Wholesale Club",
+   "entity_canonical": "BJ's Wholesale Club",
+   "company": null,
+   "quote": "We also compete with other warehouse clubs, including Walmart's Sam's Club and BJ's Wholesale Club in the U.S.",
+   "page": 10,
+   "doc": "COST_10K_2026-08-30.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 3869
+}

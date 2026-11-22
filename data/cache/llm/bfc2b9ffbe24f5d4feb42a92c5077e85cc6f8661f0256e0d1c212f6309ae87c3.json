@@ -1,0 +1,30 @@
+{
+ "tag": "relations:INTC:2",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Intel Corporation's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Intel Corporation names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Intel Corporation (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Intel Corporation (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Intel Corporation (entity = segment name)\n  \"acquisition\" - a company Intel Corporation acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.13] Organizations sought scalable, secure and energy-efficient solutions to manage rising complexity and performance needs, prioritizing GPU systems offered by certain of our competitors to handle compute-heavy generative "
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": []}",
+ "parsed": {
+  "relations": []
+ },
+ "usage": {
+  "queue_time": 0.048331089,
+  "prompt_tokens": 324,
+  "prompt_time": 0.02203445,
+  "completion_tokens": 6,
+  "completion_time": 0.011573443,
+  "total_tokens": 330,
+  "total_time": 0.033607893
+ }
+}

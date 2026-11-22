@@ -1,0 +1,30 @@
+{
+ "tag": "relations:GS:0",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of The Goldman Sachs Group, Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company The Goldman Sachs Group, Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies The Goldman Sachs Group, Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to The Goldman Sachs Group, Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of The Goldman Sachs Group, Inc. (entity = segment name)\n  \"acquisition\" - a company The Goldman Sachs Group, Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.23] Our Additionally, we have physical emissions intensity–based sustainability strategy focuses on two priorities: helping sectoral targets related to our financing activities in Energy, clients across industries decarbonize their businesses to Power, and Auto Manufacturing. We have offset with strategic partners whose strengths and areas of focus unabated emissions in our operations and business travel since complement our own, as well as through our supply chain. 2015 through a combination of emissions reduction efforts Our Sustainable Finance Group serves as the centralized and the procurement of Energy Attribute Certificates and group that drives our sustainability strategy and related efforts third-party-verified carbon credits. We have since expanded across our firm, including the commercial approach alongside our operational carbon commitment to include our supply our businesses, to advance Climate Transition and Inclusive chain, prioritizing emissions reductions. We have support outcomes to advance sustainable economic growth, integrated oversight of climate-related risks into our risk including through commercial solutions and corporate management governance structure, from board-level oversight engagement programs. at the firmwide and legal entity levels, as well as internal governance structures and responsibilities across our management teams and various firmwide groups that support Competition our businesses. We have also implemented Environmental & The financial services industry and all of our businesses are Social Due Diligence Guidelines to guide our overall risk- intensely competitive, and we expect them to remain so. Our based due diligence approach when evaluating relevant competitors provide investment banking, market-making and transactions for environmental and social risks and impacts. asset management services, private banking and lending and other wealth advisory services, commercial lending, credit Relevant employees also receive training with respect to environmental and social risks, including for sectors and cards, transaction banking, deposit-taking and other banking products and services, and make investments in securities, industries that we believe have higher potential for these risks. Our competitors include brokers and dealers, Condition and Results of Operations — Risk Management — investment banking firms, commercial banks, credit card Other Risk Management — Climate-Related and issuers, insurance companies, investment advisers, mutual Environmental Risk Management\" in Part II, Item 7 of this funds, hedge funds, private equity funds, private credit funds, Form 10-K for further information about our climate-related merchant banks and financial technology and other internet- and environmental risk management. based companies. Some of our competitors operate globally and others regionally, and we compete based on a number of factors, including transaction execution, client experience, products and services, innovation, reputation and price. 8 Goldman Sachs 2025 Form 10-K"
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": []}",
+ "parsed": {
+  "relations": []
+ },
+ "usage": {
+  "queue_time": 0.04783127,
+  "prompt_tokens": 830,
+  "prompt_time": 0.058682257,
+  "completion_tokens": 11,
+  "completion_time": 0.021147713,
+  "total_tokens": 841,
+  "total_time": 0.07982997
+ }
+}

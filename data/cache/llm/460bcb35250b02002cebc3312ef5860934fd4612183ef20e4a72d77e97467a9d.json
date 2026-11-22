@@ -1,0 +1,30 @@
+{
+ "tag": "relations:GS:1",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of The Goldman Sachs Group, Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company The Goldman Sachs Group, Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies The Goldman Sachs Group, Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to The Goldman Sachs Group, Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of The Goldman Sachs Group, Inc. (entity = segment name)\n  \"acquisition\" - a company The Goldman Sachs Group, Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.26] We also compete on the basis of the types of financial We have faced, and expect to continue to face, pressure to products and client experiences that we and our competitors retain market share by committing capital to businesses or offer. In particular, corporate clients may prefer, including cryptocurrencies, stablecoins and other seek such commitments (such as agreements to participate in digital assets that we cannot or may choose not to provide. their loan facilities) from financial services firms in Our competitors may also develop technology platforms that connection with investment banking and other assignments. provide a better client experience. Consolidation and convergence have significantly increased The provisions of the U.S. Dodd-Frank Wall Street Reform the capital base and geographic reach of some of our and Consumer Protection Act (Dodd-Frank Act), the competitors and have also hastened the globalization of the requirements promulgated by the Basel Committee on securities and other financial services markets. As a result, we Banking Supervision (Basel Committee) and other financial have had to commit capital to support our international regulations could affect our competitive position to the extent operations and to execute large global transactions. For stronger local presence and longer operating history outside example, the provisions of the Dodd-Frank Act that prohibit the U.S. proprietary trading and restrict investments in certain hedge We also compete with smaller institutions that offer more and private equity funds differentiate between U.S.-based and targeted services, such as independent advisory firms. Some non-U.S.-based banking organizations and give non-U.S.- clients may perceive these firms to be less susceptible to based banking organizations greater flexibility to trade outside potential conflicts of interest than we are, and, as described of the U.S. and to form and invest in funds outside the U.S. below, our ability to effectively compete with them could be Likewise, the obligations with respect to derivative affected by regulations and limitations on activities that apply transactions under Title VII of the Dodd-Frank Act depend, in to us but may not apply to them. part, on the location of the counterparties to the transaction. A number of our businesses are subject to intense price The impact of regulatory developments on our competitive competition. For example, the increasing volume of trades convergence, and the development of market practice and executed electronically, through the internet and through structures under the evolving regulatory regimes, as described alternative trading systems, has increased the pressure on further in \"Regulation\" below. trading commissions, in that commissions for electronic We also face intense competition in attracting and retaining trading are generally lower than those for non-electronic qualified employees. Price competition has also led to our ability to attract new employees, retain and motivate our compression in the difference between the price at which a existing employees and to continue to compensate employees market participant is willing to sell an instrument and the competitively amid intense public and regulatory scrutiny on price at which another market participant is willing to buy it the compensation practices of large financial institutions, (i.e., bid/offer spread), which has affected our market-making including in jurisdictions such as New York State where we businesses. In addition, and the standards of, the FRB and other regulators inside and we believe that we will continue to experience competitive outside the U.S., including the Prudential Regulation pressures in these and other areas in the future as some of our Authority (PRA) and the Financial Conduct Authority (FCA) competitors seek to obtain market share by further reducing in the U.K. We See \"Regulation — Compensation Practices\" and \"Risk and other banks also compete for deposits on the basis of the Factors — Competition — Our businesses would be adversely rates we offer. affected if we are unable to hire and retain qualified employees\" in Part I, Item 1A of this Form 10-K for further information about such regulation."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": []}",
+ "parsed": {
+  "relations": []
+ },
+ "usage": {
+  "queue_time": 0.054018572,
+  "prompt_tokens": 1078,
+  "prompt_time": 0.076365417,
+  "completion_tokens": 11,
+  "completion_time": 0.021187662,
+  "total_tokens": 1089,
+  "total_time": 0.097553079
+ }
+}

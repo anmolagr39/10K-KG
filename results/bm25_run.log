@@ -1,0 +1,36 @@
+T01 OK  P=1.00 R=1.00 | number: 303154000000
+T02 XX  P=0.00 R=0.00 | none: None
+T03 OK  P=1.00 R=1.00 | number: 2559320000000
+T04 XX  P=0.00 R=0.00 | none: None
+T05 XX  P=0.00 R=0.00 | none: None
+T06 OK  P=1.00 R=1.00 | number: 472400
+T07 XX  P=0.00 R=0.00 | none: None
+T08 OK  P=1.00 R=1.00 | number: 7841000000
+T09 OK  P=1.00 R=1.00 | number: 20700000000
+T10 OK  P=1.00 R=1.00 | number: 128725000000
+T11 XX  P=0.00 R=0.00 | none: None
+T12 XX  P=0.00 R=0.00 | number: 11194000000
+T13 OK  P=0.00 R=0.00 | percent: 4.7
+T14 OK  P=0.00 R=0.00 | percent: 12.6
+T15 XX  P=0.00 R=0.00 | none: None
+T16 XX  P=0.00 R=0.00 | percent: 29
+T17 XX  P=0.00 R=0.00 | none: None
+T18 XX  P=0.00 R=0.00 | percent: 51.51
+T19 XX  P=0.00 R=0.00 | none: None
+T20 XX  P=0.00 R=0.00 | none: None
+T21 XX  P=0.00 R=0.00 | none: None
+T22 XX  P=0.00 R=0.00 | none: None
+T23 XX  P=0.00 R=0.00 | none: None
+T24 XX  P=0.00 R=0.00 | none: None
+T25 XX  P=0.00 R=0.00 | none: None
+T26 XX  P=0.00 R=0.00 | none: None
+T27 XX  P=0.00 R=0.00 | none: None
+T28 XX  P=0.00 R=0.00 | none: None
+T29 OK  P=1.00 R=1.00 | number: HD (diff 78397000000)
+T30 XX  P=0.00 R=0.00 | list: ['INTC', 'AVGO', 'AMD']
+
+type             n  accuracy  precision  recall  abstain  cite-page
+overall         30      0.30       0.23    0.23       17       0.71
+single_fact     10      0.60       0.60    0.60        4       0.83
+multi_hop       10      0.20       0.00    0.00        5          -
+cross_filing    10      0.10       0.10    0.10        8       0.00

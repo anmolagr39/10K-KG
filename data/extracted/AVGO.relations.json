@@ -1,0 +1,18 @@
+{
+ "ticker": "AVGO",
+ "relations": [
+  {
+   "ticker": "AVGO",
+   "type": "supplier",
+   "entity": "Taiwan Semiconductor Manufacturing Company Limited",
+   "entity_canonical": "TSMC",
+   "company": null,
+   "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited",
+   "page": 15,
+   "doc": "AVGO_10K_2025-11-02.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 4414
+}

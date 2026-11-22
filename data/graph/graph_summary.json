@@ -1,0 +1,40 @@
+{
+ "nodes": 80359,
+ "edges": 211802,
+ "node_types": {
+  "metric": 68,
+  "company": 35,
+  "filing": 35,
+  "doc": 37,
+  "period": 105,
+  "source": 20237,
+  "fact": 59648,
+  "entity": 194
+ },
+ "stats": {
+  "facts_IS": 2572,
+  "facts_BS": 2207,
+  "facts_CF": 3940,
+  "facts_note": 50366,
+  "component_edges": 8881,
+  "regex_fiscal_year_end": 33,
+  "regex_legal_name": 32,
+  "regex_state_of_incorporation": 34,
+  "regex_hq_location": 29,
+  "regex_exchange": 34,
+  "regex_shares_outstanding": 19,
+  "regex_public_float": 24,
+  "relation_auditor": 35,
+  "regex_auditor_city": 28,
+  "regex_auditor_since": 34,
+  "regex_employees": 32,
+  "relation_ceo": 26,
+  "relation_cfo": 25,
+  "relation_segment": 37,
+  "unresolved_period": 3029,
+  "relation_competitor": 107,
+  "relation_acquisition": 16,
+  "relation_supplier": 18,
+  "derived_revenue": 3
+ }
+}

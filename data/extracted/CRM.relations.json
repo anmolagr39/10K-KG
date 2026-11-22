@@ -1,0 +1,18 @@
+{
+ "ticker": "CRM",
+ "relations": [
+  {
+   "ticker": "CRM",
+   "type": "acquisition",
+   "entity": "Informatica",
+   "entity_canonical": "Informatica",
+   "company": null,
+   "quote": "The acquisition of Informatica closed in the fourth quarter of fiscal 2026, significantly expanding our trusted data foundations.",
+   "page": 8,
+   "doc": "CRM_10K_2026-01-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 2016
+}

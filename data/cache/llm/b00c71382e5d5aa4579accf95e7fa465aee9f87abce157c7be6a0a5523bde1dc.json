@@ -1,0 +1,37 @@
+{
+ "tag": "relations:CRM",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Salesforce, Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Salesforce, Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Salesforce, Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Salesforce, Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Salesforce, Inc. (entity = segment name)\n  \"acquisition\" - a company Salesforce, Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.8] The acquisition of Informatica closed in the fourth quarter of fiscal 2026, significantly expanding our trusted data foundations.\n[p.14] Competition The market for our service offerings is highly competitive, rapidly evolving and fragmented, and subject to changing technology with low barriers to entry, shifting customer needs and frequent introductions of new products and services. Our current competitors include: • vendors of packaged business software, as well as companies offering enterprise applications delivered through on-premises offerings from enterprise software application vendors and cloud computing application service providers, either individually or with others; • AI-native companies and emerging startups that leverage generative AI and large language models as the core foundation of their architecture, offering highly specialized, autonomous, or automated solutions that may bypass traditional business process workflows or displace established user interfaces; • software companies that provide their product or service free of charge as a single product or when bundled with other offerings, or only charge a premium for advanced features and functionality, as well as companies that offer solutions that are sold without a direct sales organization; • vendors who offer software tailored to specific services, industries or market segments, as opposed to our full suite of service offerings including suppliers of traditional business intelligence and data preparation products, integration software vendors, marketing vendors, e-commerce solutions vendors, or AI software and service vendors; • productivity tool and email providers, unified communications providers and consumer application companies that have entered the business software market; and\n[p.18] Total Rewards We believe offering competitive compensation packages and robust benefits is an important factor in our ability to attract, retain and motivate our employees and to help enhance their everyday wellbeing."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"acquisition\", \"entity\": \"Informatica\", \"quote\": \"The acquisition of Informatica closed in the fourth quarter of fiscal 2026, significantly expanding our trusted data foundations.\", \"page\": 8}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "acquisition",
+    "entity": "Informatica",
+    "quote": "The acquisition of Informatica closed in the fourth quarter of fiscal 2026, significantly expanding our trusted data foundations.",
+    "page": 8
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.046424187,
+  "prompt_tokens": 631,
+  "prompt_time": 0.044560623,
+  "completion_tokens": 58,
+  "completion_time": 0.110172812,
+  "total_tokens": 689,
+  "total_time": 0.154733435
+ }
+}

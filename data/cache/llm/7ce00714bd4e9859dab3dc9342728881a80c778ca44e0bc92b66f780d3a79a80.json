@@ -1,0 +1,37 @@
+{
+ "tag": "relations:JNJ",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Johnson & Johnson's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Johnson & Johnson names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Johnson & Johnson (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Johnson & Johnson (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Johnson & Johnson (entity = segment name)\n  \"acquisition\" - a company Johnson & Johnson acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.9] Business General Johnson & Johnson and its subsidiaries (the Company) have approximately 138,200 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field.\n[p.10] MedTech The MedTech segment develops and manufactures a broad portfolio of products used in cardiovascular, orthopaedics, surgery, and vision supporting physicians, hospitals, eye care professionals and healthcare systems across a wide range of acute and elective procedures.\n[p.11] The Company's subsidiaries face patent challenges from third parties, including challenges seeking to manufacture and market generic and biosimilar versions of the Company's key pharmaceutical products prior to expiration of the applicable patents covering those products.\n[p.12] Competition In all of their product lines, the Company's subsidiaries compete with companies both locally and globally. The Company's compliance with these requirements is not expected to have a material effect upon its capital expenditures, cash flows, earnings or competitive position.\n[p.13] Separate IRA provisions redesign the Medicare Part D benefit in various ways, including by shifting a greater portion of costs to manufacturers within certain coverage phases and replacing the Part D coverage gap discount program with a new manufacturer discounting program. Failure to comply with IRA provisions may subject manufacturers to various penalties, including civil monetary penalties.\n[p.14] Further, the Company relies on global supply chains, and production and distribution processes, that are complex, and subject to increasing regulatory requirements that may affect sourcing, supply and pricing of materials used in the Company's products.\n[p.15] Compensation and benefits As part of the Company's total rewards philosophy, the Company offers competitive compensation and benefits to attract and retain top talent.\n[p.17] Risks related to our business, industry and operations The Company's businesses operate in highly competitive product markets and competitive pressures could adversely affect the Company's earnings. The Company faces substantial competition in its two operating segments and in all geographic markets. The Company's businesses compete with companies of all sizes on the basis of cost-effectiveness, technological innovations, intellectual property rights, product performance, real or perceived product advantages, pricing and availability and rate of reimbursement. The Company also competes with other market participants in securing rights to acquisitions, collaborations and licensing agreements with third parties. Competition for rights to product candidates and technologies may result in significant investment and acquisition costs and onerous agreement terms for the Company. Competitors' development of more effective or less costly products, and/or their ability to secure patent and other intellectual property rights and successfully market products ahead of the Company, could negatively impact sales of the Company's existing products as well as its ability to bring new products to market despite significant prior investment in the related product development. The Company may also experience operational and financial risk in connection with acquisitions if we are unable to fully identify potential risks and liabilities associated with acquired businesses or products, successfully integrate operations and employees, and successfully identify and realize synergies with existing businesses while containing acquisition-related strain on our management, operations and financial resources. For the Company's Innovative Medicine businesses, loss of patent exclusivity for a product often is followed by a substantial reduction in sales as competitors gain regulatory approval for generic, biosimilar and other competing products and enter the market. For the Company's MedTech businesses, technological innovation, product quality, reputation and customer service are especially important to competitiveness. The Company's business and operations will be negatively impacted if we are unable to introduce new products or technological advances that are safe, more effective, more effectively marketed or otherwise outperform those of our competitors. Interruptions and delays in manufacturing operations could adversely affect the Company's business, sales and reputation. The Company's manufacturing of products requires the timely delivery of sufficient amounts of complex, high-quality components and materials. The Company's subsidiaries operate 63 manufacturing facilities as well as sourcing from thousands of suppliers around the world. The Company has in the past, and may in the future, face unanticipated interruptions and delays in manufacturing through its internal or external supply chain. The Company relies on third parties to manufacture and supply certain of our products. The Company relies on third parties to manufacture and supply certain of our raw materials, component parts and products. However, we cannot guarantee that these third-party manufacturers will be able to meet our near-term or long-term manufacturing requirements, which could result in lost sales and have an adverse effect on our business. 2025 Annual Report 9"
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"segment\", \"entity\": \"MedTech\", \"quote\": \"The MedTech segment develops and manufactures a broad portfolio of products used in cardiovascular, orthopaedics, surgery, and vision\", \"page\": 10}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "MedTech",
+    "quote": "The MedTech segment develops and manufactures a broad portfolio of products used in cardiovascular, orthopaedics, surgery, and vision",
+    "page": 10
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.054601954,
+  "prompt_tokens": 1199,
+  "prompt_time": 0.082170725,
+  "completion_tokens": 59,
+  "completion_time": 0.113923114,
+  "total_tokens": 1258,
+  "total_time": 0.196093839
+ }
+}

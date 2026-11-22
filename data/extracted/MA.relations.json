@@ -1,0 +1,62 @@
+{
+ "ticker": "MA",
+ "relations": [
+  {
+   "ticker": "MA",
+   "type": "competitor",
+   "entity": "Visa",
+   "entity_canonical": null,
+   "company": "V",
+   "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover",
+   "page": 32,
+   "doc": "MA_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "MA",
+   "type": "competitor",
+   "entity": "American Express",
+   "entity_canonical": null,
+   "company": "AXP",
+   "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover",
+   "page": 32,
+   "doc": "MA_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "MA",
+   "type": "competitor",
+   "entity": "JCB",
+   "entity_canonical": "JCB",
+   "company": null,
+   "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover",
+   "page": 32,
+   "doc": "MA_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "MA",
+   "type": "competitor",
+   "entity": "China UnionPay",
+   "entity_canonical": "China UnionPay",
+   "company": null,
+   "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover",
+   "page": 32,
+   "doc": "MA_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "MA",
+   "type": "competitor",
+   "entity": "Discover",
+   "entity_canonical": "Discover",
+   "company": null,
+   "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover",
+   "page": 32,
+   "doc": "MA_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 7249
+}

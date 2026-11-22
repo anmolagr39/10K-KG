@@ -1,0 +1,183 @@
+{
+ "ticker": "IBM",
+ "relations": [
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Alphabet (Google)",
+   "entity_canonical": "Alphabet (Google)",
+   "company": null,
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Amazon",
+   "entity_canonical": null,
+   "company": "AMZN",
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "BMC",
+   "entity_canonical": "BMC",
+   "company": null,
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Broadcom",
+   "entity_canonical": null,
+   "company": "AVGO",
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Microsoft",
+   "entity_canonical": null,
+   "company": "MSFT",
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Oracle",
+   "entity_canonical": null,
+   "company": "ORCL",
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Salesforce",
+   "entity_canonical": null,
+   "company": "CRM",
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "SAP",
+   "entity_canonical": "SAP",
+   "company": null,
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Splunk",
+   "entity_canonical": "Splunk",
+   "company": null,
+   "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Accenture",
+   "entity_canonical": "Accenture",
+   "company": null,
+   "quote": "Our competitors include global firms such as Accenture, Capgemini, India-based service providers, management consulting firms, the consulting practices of public accounting firms",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Capgemini",
+   "entity_canonical": "Capgemini",
+   "company": null,
+   "quote": "Our competitors include global firms such as Accenture, Capgemini, India-based service providers, management consulting firms, the consulting practices of public accounting firms",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Dell Technologies",
+   "entity_canonical": "Dell Technologies",
+   "company": null,
+   "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Hewlett-Packard Enterprise (HPE)",
+   "entity_canonical": "Hewlett-Packard Enterprise (HPE)",
+   "company": null,
+   "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Intel",
+   "entity_canonical": null,
+   "company": "INTC",
+   "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "NetApp",
+   "entity_canonical": "NetApp",
+   "company": null,
+   "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "IBM",
+   "type": "competitor",
+   "entity": "Pure Storage",
+   "entity_canonical": "Pure Storage",
+   "company": null,
+   "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+   "page": 6,
+   "doc": "IBM_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 2620
+}

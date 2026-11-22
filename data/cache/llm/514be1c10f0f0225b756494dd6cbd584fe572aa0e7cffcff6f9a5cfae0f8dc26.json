@@ -1,0 +1,49 @@
+{
+ "tag": "relations:WMT",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Walmart Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Walmart Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Walmart Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Walmart Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Walmart Inc. (entity = segment name)\n  \"acquisition\" - a company Walmart Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.7] Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S. Our fiscal year ends on January 31 for our United States (\"U.S.\") and Canadian operations. We continue to heavily invest in omnichannel and eCommerce innovation, as well as supply chain capabilities, which enables us to leverage technology, talent and expertise, and expand our assortment and service offerings, including through the integration of advanced technologies such as AI. We are enhancing our omnichannel capabilities through a combination of stores, eCommerce websites, mobile applications and service offerings, as well as our supply chain, combined with approximately 2.1 million associates as of January 31, 2026, to better serve our customers. Our operations are conducted in three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S., which are further described below.\n[p.8] Additional information on our operating segments and geographic information is contained in Note 11 to our Consolidated Financial Statements. 6\n[p.9] Brand name merchandise represents a significant portion of the merchandise sold in Walmart U.S. We also market lines of merchandise under our private brands, including brands such as: \"Athletic Works,\" \"bettergoods,\" \"Equate,\" \"Free Assembly,\" \"Freshness Guaranteed,\" \"George,\" \"Great Value,\" \"Holiday Time,\" \"Hyper Tough,\" \"Joyspun,\" \"Kid Connection,\" \"Mainstays,\" \"Marketside,\" \"No Boundaries,\" \"onn.,\" \"Ozark Trail,\" \"Parent's Choice,\" \"Sam's Choice,\" \"Scoop,\" \"Spring Valley,\" \"Time and Tru,\" \"Way to Celebrate\" and \"Wonder Nation.\" The Company also markets lines of merchandise under licensed brands, some of which include: \"Avia,\" \"Better Homes & Gardens,\" \"Sofia Jeans by Sofia Vergara\" and \"The Pioneer Woman.\" Other offerings in the Walmart U.S. business include advertising solutions for brands and online marketplace sellers, supply chain and fulfillment capabilities to online marketplace sellers, and data analytics and insights for suppliers and brands.\n[p.11] Along with the private brands we market globally, such as \"Equate,\" \"George,\" \"Great Value,\" \"Holiday Time,\" \"Mainstays,\" \"Marketside,\" \"Member's Mark\" and \"Parent's Choice,\" our international markets have developed market specific brands including \"Aurrera\" and \"Lider.\" In addition, we have developed and continue to grow our relationships with regional and local suppliers in each market to ensure reliable sources of quality merchandise that is equal to national brands at low prices. • Grocery consists of dairy, meat, bakery, deli, produce, dry, chilled or frozen packaged foods, alcoholic and nonalcoholic beverages, floral, snack foods, candy, other grocery items, as well as consumables such as health and beauty aids, protein and nutrition, paper goods, laundry and home care, baby care, pet supplies and other consumable items; Within the categories above, the Sam's Club Member's Mark private label brand offers premium-quality, \"Made Without\" products across a wide range of categories at competitive, value-driven prices, designed to meet the needs of members. Other offerings in the Sam's Club U.S. business include advertising solutions for brands as well as operational insights and analytics for suppliers.\n[p.13] Additional Information About Our Business Competition. We employ many strategies and programs designed to meet competitive pressures within our industry, which increasingly incorporate the use of AI-powered tools. Suppliers, Supply Chain and Distribution. During fiscal 2026, we began combining the Sam's Club U.S. supply chain function with Walmart U.S. to streamline operations and leverage our enterprise systems and infrastructure over time.\n[p.17] Approximately 75% of U.S. salaried store, club and supply chain management associates began their careers in hourly positions, reflecting long‑term advancement opportunities within the Company.\n[p.18] From January 2025 to February 2026, he served as Executive Vice President and Chief eCommerce Officer, Walmart U.S. From November 2022 to January 2025, he served as Executive Vice President, Supply Chain, Walmart U.S. From April 2021 to November 2022, he served as Senior Vice President, Innovation and Automation, Walmart U.S. From December 2019 to April 2021, he served as Senior Vice President, Product and Engineering, Walmart U.S. Suresh Kumar Executive Vice President, Global Chief Technology Officer and Chief Development 2019 61 Officer, effective July 2019.\n[p.20] Our strategy, which includes investments in eCommerce, technology, AI, talent, supply chain automation and enhancements, advertising, acquisitions, joint ventures, new store and club openings and remodels and other customer initiatives, may not adequately or effectively allow us to continue to grow our omnichannel business offerings, increase comparable sales or maintain or grow our overall market position. In addition, to remain competitive, we must continue to develop, integrate and scale digital tools, including AI-powered search and discovery platforms and capabilities, useful interfaces and other marketing tools such as third-party recommendation engines, paid search and mobile applications."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Walmart U.S.\",\n      \"quote\": \"Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.\",\n      \"page\": 7\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Walmart International\",\n      \"quote\": \"Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.\",\n      \"page\": 7\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Sam's Club U.S.\",\n      \"quote\": \"Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.\",\n      \"page\": 7\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "Walmart U.S.",
+    "quote": "Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.",
+    "page": 7
+   },
+   {
+    "type": "segment",
+    "entity": "Walmart International",
+    "quote": "Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.",
+    "page": 7
+   },
+   {
+    "type": "segment",
+    "entity": "Sam's Club U.S.",
+    "quote": "Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.",
+    "page": 7
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.054342755,
+  "prompt_tokens": 1395,
+  "prompt_time": 0.099233744,
+  "completion_tokens": 195,
+  "completion_time": 0.381097608,
+  "total_tokens": 1590,
+  "total_time": 0.480331352
+ }
+}

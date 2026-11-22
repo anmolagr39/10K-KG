@@ -1,0 +1,67 @@
+{
+ "tag": "relations:COST",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Costco Wholesale Corporation's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Costco Wholesale Corporation names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Costco Wholesale Corporation (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Costco Wholesale Corporation (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Costco Wholesale Corporation (entity = segment name)\n  \"acquisition\" - a company Costco Wholesale Corporation acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.8] Well Being We strive to provide our employees with competitive wages and excellent benefits.\n[p.10] Table of Contents Competition Our industry is highly competitive, based on factors such as price, merchandise quality and selection, location, convenience, distribution strategy, and customer service. Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S. We also compete with other warehouse clubs, including Walmart's Sam's Club and BJ's Wholesale Club in the U.S. Many of the metropolitan areas in the U.S. and certain of our Other International locations have multiple competing clubs.\n[p.15] Table of Contents We have made and may continue to make investments and acquisitions to improve the speed, accuracy and efficiency of our supply chains and delivery channels.\n[p.16] We must also effectively monitor competitive technology trends, including the evolution of artificial intelligence (AI). Failure to deliver IT projects efficiently and effectively could result in the loss of our competitive position and adversely impact our financial condition and results of operations. We rely upon IT systems and networks, some of which are managed by or belong to third parties, including suppliers, partners, vendors, and service providers.\n[p.17] Table of Contents those managed by third parties such as cloud providers or suppliers that otherwise host or have access to confidential information, periodically have vulnerabilities, which may go unnoticed for a period of time.\n[p.19] Table of Contents contamination or spoilage, including the presence of foreign objects, substances, chemicals, other agents, or residues introduced during the growing, manufacturing, storage, handling, and transportation phases, or faulty design.\n[p.20] Table of Contents Market and Other External Risks We face strong competition from other retailers and warehouse club operators, which could adversely affect our business, financial condition and results of operations. We compete for members, employees, sites, products and services, and in other important respects with a wide range of local, regional and national wholesalers and retailers, both in the United States and in foreign countries, including other warehouse-club operators, supermarkets, supercenters, online retailers, gasoline stations, pharmacies, hard discounters, department and specialty stores and operators selling a single category or narrow range of merchandise or services. Additionally, the emergence of AI tools may change consumer shopping habits and increase the competition we face. Some competitors have greater technology capabilities, including the faster adoption of AI technologies, and greater market penetration than we do.\n[p.21] Table of Contents Suppliers may be unable to timely provide us with quality merchandise at competitive prices or may fail to adhere to our high standards, resulting in adverse effects on our business, merchandise inventories, sales, and profits. Such events could result in physical damage to our properties or inventory, additional heating, cooling, and refrigeration costs, limitations on store operating hours, less frequent visits by members to physical locations, the temporary closure of warehouses, depots, manufacturing, or home office facilities, the temporary lack of an adequate work force, disruptions to our IT systems, the temporary or long-term\n[p.23] Table of Contents disruption in the supply of products from some local or overseas suppliers, the temporary disruption in the transport of goods to or from overseas, delays in the delivery of goods to our warehouses or depots, delays in online merchandise delivery, the temporary reduction in the availability of products in our warehouses, and long-term disruption or threats to the habitability of key markets in which we operate."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Walmart\",\n      \"quote\": \"Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.\",\n      \"page\": 10\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Target\",\n      \"quote\": \"Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.\",\n      \"page\": 10\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Kroger\",\n      \"quote\": \"Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.\",\n      \"page\": 10\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Amazon\",\n      \"quote\": \"Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.\",\n      \"page\": 10\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Sam's Club\",\n      \"quote\": \"We also compete with other warehouse clubs, including Walmart's Sam's Club and BJ's Wholesale Club in the U.S.\",\n      \"page\": 10\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"BJ's Wholesale Club\",\n      \"quote\": \"We also compete with other warehouse clubs, including Walmart's Sam's Club and BJ's Wholesale Club in the U.S.\",\n      \"page\": 10\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "competitor",
+    "entity": "Walmart",
+    "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+    "page": 10
+   },
+   {
+    "type": "competitor",
+    "entity": "Target",
+    "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+    "page": 10
+   },
+   {
+    "type": "competitor",
+    "entity": "Kroger",
+    "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+    "page": 10
+   },
+   {
+    "type": "competitor",
+    "entity": "Amazon",
+    "quote": "Walmart, Target, Kroger, and Amazon are among our significant general merchandise retail competitors in the U.S.",
+    "page": 10
+   },
+   {
+    "type": "competitor",
+    "entity": "Sam's Club",
+    "quote": "We also compete with other warehouse clubs, including Walmart's Sam's Club and BJ's Wholesale Club in the U.S.",
+    "page": 10
+   },
+   {
+    "type": "competitor",
+    "entity": "BJ's Wholesale Club",
+    "quote": "We also compete with other warehouse clubs, including Walmart's Sam's Club and BJ's Wholesale Club in the U.S.",
+    "page": 10
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.053106269,
+  "prompt_tokens": 1005,
+  "prompt_time": 0.069186231,
+  "completion_tokens": 388,
+  "completion_time": 0.755886889,
+  "total_tokens": 1393,
+  "total_time": 0.82507312
+ }
+}

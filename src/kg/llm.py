@@ -64,10 +64,12 @@ def _wait_seconds(resp: requests.Response) -> float:
 
 
 def chat_json(messages: list[dict], model: str | None = None, max_tokens: int = 2000,
-              temperature: float = 0.0, tag: str = "", reasoning_effort: str | None = "low") -> dict:
-    """Return the model's JSON reply (dict). Cached; falls back to other models on daily-quota errors."""
+              temperature: float = 0.0, tag: str = "", reasoning_effort: str | None = "low",
+              allow_fallback: bool = True) -> dict:
+    """Return the model's JSON reply (dict). Cached; falls back to other models on daily-quota errors
+    unless allow_fallback=False (used where results must come from one fixed model)."""
     model = model or PLANNER_MODEL
-    order = [model] + [m for m in FALLBACKS if m != model]
+    order = [model] + ([m for m in FALLBACKS if m != model] if allow_fallback else [])
     last_err = None
     for m in order:
         payload = {"model": m, "messages": messages, "temperature": temperature,

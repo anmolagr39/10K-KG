@@ -1,0 +1,36 @@
+T01 OK  P=1.00 R=1.00 | $303.15 billion
+T02 OK  P=1.00 R=1.00 | $15.79 billion
+T03 OK  P=1.00 R=1.00 | $2,559.32 billion
+T04 OK  P=1.00 R=1.00 | $4.90 per share
+T05 OK  P=1.00 R=1.00 | KPMG LLP
+T06 OK  P=1.00 R=1.00 | 472,400
+T07 OK  P=1.00 R=1.00 | Delaware
+T08 OK  P=1.00 R=1.00 | $7.84 billion
+T09 OK  P=1.00 R=1.00 | $20.66 billion
+T10 OK  P=1.00 R=1.00 | $128.72 billion
+T11 OK  P=1.00 R=1.00 | 32.03%
+T12 OK  P=1.00 R=1.00 | $7.70 billion
+T13 OK  P=1.00 R=1.00 | 4.73%
+T14 OK  P=1.00 R=1.00 | 12.62%
+T15 XX  P=1.00 R=0.92 | IBM, CSCO, QCOM, AVGO, JPM, GS, MA, AXP, PYPL, JNJ, MRK
+T16 OK  P=1.00 R=1.00 | 28.55%
+T17 OK  P=1.00 R=1.00 | 25.75%
+T18 XX  P=0.67 R=1.00 | 201.37%
+T19 OK  P=1.00 R=1.00 | $853,955
+T20 OK  P=1.00 R=1.00 | 31.34%
+T21 OK  P=1.00 R=1.00 | JPM > BAC > WFC > GS > C
+T22 OK  P=0.67 R=1.00 | INTC ($13.77 billion)
+T23 OK  P=1.00 R=1.00 | HD (12.68%)
+T24 OK  P=1.00 R=1.00 | $2,131.40 billion
+T25 OK  P=1.00 R=1.00 | MRK ($15.79 billion)
+T26 OK  P=1.00 R=1.00 | V, higher by $13.11 billion (ranking: ['V', 'MA'])
+T27 OK  P=1.00 R=1.00 | V ($23.50 billion)
+T28 OK  P=1.00 R=1.00 | INTC ($211.43 billion)
+T29 OK  P=1.00 R=1.00 | $78.40 billion
+T30 XX  P=1.00 R=0.80 | NVDA, AMD, QCOM, AVGO
+
+type             n  accuracy  precision  recall  abstain  cite-page
+overall         30      0.90       0.98    0.99        0       0.98
+single_fact     10      1.00       1.00    1.00        0       1.00
+multi_hop       10      0.80       0.97    0.99        0       0.94
+cross_filing    10      0.90       0.97    0.98        0       1.00

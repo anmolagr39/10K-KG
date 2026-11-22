@@ -1,0 +1,194 @@
+{
+ "ticker": "ORCL",
+ "relations": [
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Adobe Systems Incorporated",
+   "entity_canonical": "Adobe Systems Incorporated",
+   "company": null,
+   "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Alphabet Inc.",
+   "entity_canonical": null,
+   "company": "GOOGL",
+   "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Amazon.com, Inc.",
+   "entity_canonical": null,
+   "company": "AMZN",
+   "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Cisco Systems, Inc.",
+   "entity_canonical": null,
+   "company": "CSCO",
+   "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Intel Corporation",
+   "entity_canonical": null,
+   "company": "INTC",
+   "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "International Business Machines Corporation",
+   "entity_canonical": null,
+   "company": "IBM",
+   "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Microsoft Corporation",
+   "entity_canonical": null,
+   "company": "MSFT",
+   "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Salesforce, Inc.",
+   "entity_canonical": null,
+   "company": "CRM",
+   "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "SAP SE",
+   "entity_canonical": "SAP",
+   "company": null,
+   "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Hewlett-Packard Enterprise",
+   "entity_canonical": "Hewlett-Packard Enterprise",
+   "company": null,
+   "quote": "SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Workday, Inc.",
+   "entity_canonical": "Workday",
+   "company": null,
+   "quote": "SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Allscripts Healthcare Solutions, Inc.",
+   "entity_canonical": "Allscripts Healthcare Solutions",
+   "company": null,
+   "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Arcadia Solutions",
+   "entity_canonical": "Arcadia Solutions",
+   "company": null,
+   "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "athenahealth, Inc.",
+   "entity_canonical": "athenahealth",
+   "company": null,
+   "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "Epic Systems Corporation",
+   "entity_canonical": "Epic Systems",
+   "company": null,
+   "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "competitor",
+   "entity": "InterSystems Corporation",
+   "entity_canonical": "InterSystems",
+   "company": null,
+   "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ORCL",
+   "type": "acquisition",
+   "entity": "Cerner Corporation",
+   "entity_canonical": "Cerner",
+   "company": null,
+   "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers",
+   "page": 25,
+   "doc": "ORCL_10K_2026-05-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 7901
+}

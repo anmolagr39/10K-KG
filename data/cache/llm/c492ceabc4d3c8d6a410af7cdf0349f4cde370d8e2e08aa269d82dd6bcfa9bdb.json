@@ -1,0 +1,127 @@
+{
+ "tag": "relations:IBM",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of International Business Machines Corporation's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company International Business Machines Corporation names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies International Business Machines Corporation (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to International Business Machines Corporation (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of International Business Machines Corporation (entity = segment name)\n  \"acquisition\" - a company International Business Machines Corporation acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.5] Competition IBM is a globally integrated enterprise that participates in a highly competitive environment. Across our business segments, we recognize hundreds of competitors worldwide and as we execute our hybrid cloud and AI strategy, we are regularly exposed to new competitors.\n[p.6] A summary of the competitive environment for each business segment is included below: Software: The depth, breadth, and innovation of our software offerings, coupled with our global reach, deep industry expertise and research capabilities help differentiate our offerings from our competitors. The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk, a CISCO Company. Our competitors include global firms such as Accenture, Capgemini, India-based service providers, management consulting firms, the consulting practices of public accounting firms, engineering service providers, and niche specialists. Our competitive position is supported by industry expertise; hybrid cloud, data, and AI capabilities; and the use of IBM technology and ecosystem partners to deliver solutions aligned to clients' strategic priorities. Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers (ODMs) who provide systems that are re- branded. Financing provides client and commercial financing, facilitating IBM clients' acquisition of hardware, software and services. The key competitive factors include: interest rates charged, IT product experience, client service, contract flexibility, ease of doing business, global capabilities and residual values. In client and commercial financing, Financing primarily competes with non-captive financing entities and financial institutions.\n[p.8] If IBM is unable to continue its cutting-edge innovation in a highly competitive and rapidly evolving environment or is unable to commercialize such innovations, expand and scale them with sufficient speed and versatility or is unable to attract a successful developer ecosystem, the company could fail in its ongoing efforts to maintain and increase its market share and its profit margins. IBM's reputation is potentially susceptible to damage by events such as significant disputes with clients, product defects, internal control deficiencies, delivery failures, cybersecurity incidents, government investigations or legal proceedings or actions of current or former clients, directors, employees, competitors, vendors, alliance partners or joint venture partners."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Alphabet (Google)\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Amazon\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"BMC\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Broadcom\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Microsoft\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Oracle\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Salesforce\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"SAP\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Splunk\",\n    \"quote\": \"The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Accenture\",\n    \"quote\": \"Our competitors include global firms such as Accenture, Capgemini, India-based service providers, management consulting firms, the consulting practices of public accounting firms\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Capgemini\",\n    \"quote\": \"Our competitors include global firms such as Accenture, Capgemini, India-based service providers, management consulting firms, the consulting practices of public accounting firms\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Dell Technologies\",\n    \"quote\": \"Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Hewlett-Packard Enterprise (HPE)\",\n    \"quote\": \"Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Intel\",\n    \"quote\": \"Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"NetApp\",\n    \"quote\": \"Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers\",\n    \"page\": 6\n  },\n  {\n    \"type\": \"competitor\",\n    \"entity\": \"Pure Storage\",\n    \"quote\": \"Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers\",\n    \"page\": 6\n  }\n]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "competitor",
+    "entity": "Alphabet (Google)",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Amazon",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "BMC",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Broadcom",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Microsoft",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Oracle",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Salesforce",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "SAP",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Splunk",
+    "quote": "The principal competitors in this segment include: Alphabet (Google), Amazon, BMC, Broadcom, Microsoft, Oracle, Salesforce, SAP and Splunk",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Accenture",
+    "quote": "Our competitors include global firms such as Accenture, Capgemini, India-based service providers, management consulting firms, the consulting practices of public accounting firms",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Capgemini",
+    "quote": "Our competitors include global firms such as Accenture, Capgemini, India-based service providers, management consulting firms, the consulting practices of public accounting firms",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Dell Technologies",
+    "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Hewlett-Packard Enterprise (HPE)",
+    "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Intel",
+    "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "NetApp",
+    "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+    "page": 6
+   },
+   {
+    "type": "competitor",
+    "entity": "Pure Storage",
+    "quote": "Our principal competitors include: Dell Technologies, Hewlett-Packard Enterprise (HPE), Intel, NetApp and Pure Storage as well as original device manufacturers",
+    "page": 6
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.052230029,
+  "prompt_tokens": 752,
+  "prompt_time": 0.05858915,
+  "completion_tokens": 1089,
+  "completion_time": 2.113479247,
+  "total_tokens": 1841,
+  "total_time": 2.172068397
+ }
+}

@@ -1,0 +1,227 @@
+{
+ "ticker": "AMD",
+ "relations": [
+  {
+   "ticker": "AMD",
+   "type": "acquisition",
+   "entity": "ZT Group Int'l, Inc.",
+   "entity_canonical": "ZT Group Int'l",
+   "company": null,
+   "quote": "In March 2025, we acquired ZT Group Int'l, Inc. (ZT Systems), where we retained certain intellectual property",
+   "page": 6,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "segment",
+   "entity": "Data Center",
+   "entity_canonical": "Data Center",
+   "company": null,
+   "quote": "the Data Center segment, which primarily includes AI accelerators, CPUs for servers, GPUs, APUs, DPUs, AI NICs",
+   "page": 8,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "segment",
+   "entity": "Client and Gaming",
+   "entity_canonical": "Client and Gaming",
+   "company": null,
+   "quote": "the Client and Gaming segment, which primarily includes CPUs, APUs, chipsets for desktops and notebooks, discrete GPUs",
+   "page": 8,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "segment",
+   "entity": "Embedded",
+   "entity_canonical": "Embedded",
+   "company": null,
+   "quote": "the Embedded segment, which primarily includes embedded CPUs, APUs, FPGAs, SOMs, and adaptive SoC products.",
+   "page": 8,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Intel Corporation",
+   "entity_canonical": null,
+   "company": "INTC",
+   "quote": "In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia",
+   "page": 17,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Nvidia Corporation",
+   "entity_canonical": null,
+   "company": "NVDA",
+   "quote": "In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia",
+   "page": 17,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Altera",
+   "entity_canonical": "Altera",
+   "company": null,
+   "quote": "In addition, we compete against Altera with our FPGA and adaptive SoC server products.",
+   "page": 17,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Lattice Semiconductor Corporation",
+   "entity_canonical": "Lattice Semiconductor",
+   "company": null,
+   "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Microsemi Corporation",
+   "entity_canonical": "Microsemi",
+   "company": null,
+   "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Broadcom Corporation",
+   "entity_canonical": null,
+   "company": "AVGO",
+   "quote": "and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Marvell Technology Group, Ltd.",
+   "entity_canonical": "Marvell",
+   "company": null,
+   "quote": "and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Analog Devices",
+   "entity_canonical": "Analog Devices",
+   "company": null,
+   "quote": "and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Texas Instruments Incorporated",
+   "entity_canonical": "Texas Instruments Incorporated",
+   "company": null,
+   "quote": "Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "NXP Semiconductors N.V.",
+   "entity_canonical": "NXP Semiconductors N.V.",
+   "company": null,
+   "quote": "Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "competitor",
+   "entity": "Qualcomm Incorporated",
+   "entity_canonical": null,
+   "company": "QCOM",
+   "quote": "NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "supplier",
+   "entity": "Taiwan Semiconductor Manufacturing Company Limited",
+   "entity_canonical": "TSMC",
+   "company": null,
+   "quote": "We utilize Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of wafers for our HPC, FPGA",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "supplier",
+   "entity": "GLOBALFOUNDRIES Inc.",
+   "entity_canonical": "GlobalFoundries",
+   "company": null,
+   "quote": "and GLOBALFOUNDRIES Inc. (GF), with respect to wafer purchases for our HPC products at the 12 nm and 14 nm",
+   "page": 18,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "segment",
+   "entity": "Data Center segment",
+   "entity_canonical": "Data Center segment",
+   "company": null,
+   "quote": "the Data Center segment, which primarily includes AI accelerators, CPUs for servers, GPUs, APUs, DPUs, AI NICs",
+   "page": 8,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "segment",
+   "entity": "Client and Gaming segment",
+   "entity_canonical": "Client and Gaming segment",
+   "company": null,
+   "quote": "the Client and Gaming segment, which primarily includes CPUs, APUs, chipsets for desktops and notebooks, discrete GPUs",
+   "page": 8,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AMD",
+   "type": "segment",
+   "entity": "Embedded segment",
+   "entity_canonical": "Embedded segment",
+   "company": null,
+   "quote": "the Embedded segment, which primarily includes embedded CPUs, APUs, FPGAs, SOMs, and adaptive SoC products",
+   "page": 8,
+   "doc": "AMD_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 9513
+}

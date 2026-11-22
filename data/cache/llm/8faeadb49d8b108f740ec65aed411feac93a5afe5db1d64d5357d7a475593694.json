@@ -1,0 +1,49 @@
+{
+ "tag": "relations:HD",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of The Home Depot, Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company The Home Depot, Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies The Home Depot, Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to The Home Depot, Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of The Home Depot, Inc. (entity = segment name)\n  \"acquisition\" - a company The Home Depot, Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.6] For disclosure purposes, the geographic operating segments of the U.S., Canada and Mexico are aggregated into one reportable segment (the \"Primary segment\"). In fiscal 2024, we acquired SRS, a leading residential specialty trade distribution company across several verticals engaged in the distribution of residential and commercial roofing products and complementary building products, landscape supplies, and swimming pool supplies serving the professional roofer, landscaper, and pool contractor. In fiscal 2025, SRS completed the acquisition of GMS, a leading distributor of specialty building products, including drywall, ceilings, steel framing and other complementary construction products. OUR BUSINESS OUR STRATEGY The Home Depot is focused on leveraging its distinct competitive advantages – our brand, excellent customer service, product authority in home improvement, knowledgeable associates and culture, scale, premier real estate portfolio, digital and interconnected experience, supply chain network, and our deep relationships with Pros – to take advantage of the significant growth opportunities in the highly fragmented markets in which we operate.\n[p.7] SRS also acquired GMS to accelerate the vision of becoming a leading, multi- category building materials distributor. In fiscal 2024, we acquired SRS, which sells products to specialty trade roofers, landscapers, and pool contractors. The acquisition of GMS by SRS in fiscal 2025 further expanded our ability to serve Pros by adding specialty interior building products such as wallboard, ceilings, steel framing and complementary products for residential and commercial projects.\n[p.9] Sourcing and Quality Assurance We maintain a global sourcing program to obtain high-quality and innovative products directly from manufacturers in the U.S. and around the world.\n[p.11] Table of Contents non-Canada and non-U.S. suppliers of private branded and direct import products. COMPETITION AND SEASONALITY Our industry is highly competitive, highly fragmented, and evolving. With respect to some products and services, we also compete with specialty design stores, showrooms, discount stores, paint stores, specialty and mass digital retailers, warehouse clubs, MRO distributors, national and local wholesale supply distributors, home décor retailers, and other retailers, as well as with providers of home improvement services and tool and equipment rental. Online and other digital capabilities, as well as AI tools, facilitate competitive entry, price transparency, and comparison shopping, increasing the level of competition we face. Our Pros also look for dedicated sales support, competitive credit and pricing options, project planning tools, professional and reliable deliveries, and product depth and job-lot quantities, particularly for their complex project needs. Our ability to be competitive on delivery and pickup times, options and costs depends on many factors, as described more fully under \"Our Supply Chain\" below, and our interconnected strategy.\n[p.15] OUR SUPPLY CHAIN We continue to focus on building best-in-class competitive advantages in our supply chain to be responsive to our customers' expectations for how, when and where they choose to receive our products and services. Our supply chain includes multiple distribution center platforms in the U.S., Canada, and Mexico that are tailored to meet the needs of our stores and customers based on types of products, location, transportation, and delivery requirements. Our network is designed to create a competitive advantage with unique, industry-leading capabilities for home improvement needs for both our Pros and consumers.\n[p.17] SUSTAINABILITY AND HUMAN CAPITAL MANAGEMENT We view sustainability and human capital management matters through the lens of our business, with an understanding that if we support our associates, our customers, our suppliers, and the communities we serve, we also support our business and create value for our shareholders. Focus on Our People Our culture and our associates provide intangible and hard-to-replicate competitive advantages, which have been key to helping us navigate challenging market conditions. This includes investing in competitive wages and benefits while also providing the culture, tools, training, and development opportunities that make working at The Home Depot an enjoyable and rewarding experience.\n[p.20] The Home Depot Foundation, a nonprofit organization supported by Home Depot and our suppliers, focuses on improving the homes and lives of U.S. veterans, assisting communities affected by natural disasters, and helping prepare more people for careers in the skilled trades. STRATEGIC RISKS A positive brand and reputation are critical to our business success, and, if our brand and reputation are damaged, it could negatively impact our relationships with our customers, associates and jobseekers, suppliers, service providers, vendors, shareholders, regulators, and the communities we serve, and, consequently, our business, results of operations and the price of our stock."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Primary segment\",\n      \"quote\": \"the geographic operating segments of the U.S., Canada and Mexico are aggregated into one reportable segment (the \\\"Primary segment\\\")\",\n      \"page\": 6\n    },\n    {\n      \"type\": \"acquisition\",\n      \"entity\": \"SRS\",\n      \"quote\": \"In fiscal 2024, we acquired SRS, a leading residential specialty trade distribution company across several verticals\",\n      \"page\": 6\n    },\n    {\n      \"type\": \"acquisition\",\n      \"entity\": \"GMS\",\n      \"quote\": \"In fiscal 2025, SRS completed the acquisition of GMS, a leading distributor of specialty building products\",\n      \"page\": 6\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "Primary segment",
+    "quote": "the geographic operating segments of the U.S., Canada and Mexico are aggregated into one reportable segment (the \"Primary segment\")",
+    "page": 6
+   },
+   {
+    "type": "acquisition",
+    "entity": "SRS",
+    "quote": "In fiscal 2024, we acquired SRS, a leading residential specialty trade distribution company across several verticals",
+    "page": 6
+   },
+   {
+    "type": "acquisition",
+    "entity": "GMS",
+    "quote": "In fiscal 2025, SRS completed the acquisition of GMS, a leading distributor of specialty building products",
+    "page": 6
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.048020835,
+  "prompt_tokens": 1255,
+  "prompt_time": 0.089296304,
+  "completion_tokens": 202,
+  "completion_time": 0.408263464,
+  "total_tokens": 1457,
+  "total_time": 0.497559768
+ }
+}

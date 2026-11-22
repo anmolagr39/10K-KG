@@ -1,5 +1,6 @@
 """Run a plan step by step over the graph; one repair round-trip to the planner on failure."""
 import copy
+import re
 
 from kg.query.operators import OPS, Ctx, OpError
 from kg.query.planner import Plan, PlanError, plan
@@ -48,12 +49,26 @@ def run_plan(p: Plan, ctx: Ctx) -> list:
         except OpError as e:
             raise OpError(f"step {step.id} ({step.op}): {e}")
         results[step.id] = out
+        ctx.results[step.id] = out
         ctx.trace.append({"step": step.id, "op": step.op, "args": step.args, "n": len(out),
                           "result": [{k: v for k, v in it.items() if k in ("ticker", "name", "value", "unit", "period_end", "winner")}
                                      for it in out[:12]]})
     if p.answer not in results:
         raise OpError(f"answer refers to unknown step {p.answer}")
     return results[p.answer]
+
+
+def _parts(p: Plan, ctx) -> list[dict]:
+    """Independent results of a plan: steps whose output no later step uses.
+    "Who audits Apple and since when?" -> [related(audited_by), get_fact(auditor_since)]."""
+    import json as _json
+    used = set()
+    for st in p.steps:
+        used |= set(re.findall(r"\$(s\d+)", _json.dumps(st.args)))
+    leaves = [st for st in p.steps if st.id not in used]
+    if len(leaves) <= 1:
+        return []
+    return [{"step": st.id, "op": st.op, "args": st.args, "items": ctx.results.get(st.id, [])} for st in leaves]
 
 
 def answer_question(question: str) -> dict:
@@ -67,7 +82,8 @@ def answer_question(question: str) -> dict:
             p = plan(question, repair={"plan": log["plans"][-1], "error": err} if attempt else None)
             log["plans"].append(p.model_dump())
             items = run_plan(p, ctx)
-            return {**log, "items": items, "touched": ctx.touched, "trace": ctx.trace, "final_op": p.steps[-1].op
+            return {**log, "items": items, "touched": ctx.touched, "trace": ctx.trace, "parts": _parts(p, ctx),
+                    "final_op": p.steps[-1].op
                     if p.steps[-1].id == p.answer else next(st.op for st in p.steps if st.id == p.answer),
                     "final_args": next(st.args for st in p.steps if st.id == p.answer), "repaired": attempt == 1}
         except PlanError as e:

@@ -52,6 +52,8 @@ def citations(res: dict) -> list[dict]:
 def fmt_value(v, unit) -> str:
     if not isinstance(v, (int, float)):
         return str(v)
+    if unit == "year":
+        return str(int(v))
     if unit == "USD":
         return f"${v / 1e9:,.2f} billion" if abs(v) >= 1e9 else f"${v / 1e6:,.1f} million" if abs(v) >= 1e6 else f"${v:,.0f}"
     if unit == "pct":
@@ -79,11 +81,50 @@ def render(res: dict, ans: dict) -> str:
     return str(ans.get("value"))
 
 
-def ask_cli(question: str, explain: bool = False) -> None:
+def chat_cli(explain: bool = False) -> None:
+    """Interactive loop: load the graph once, then answer questions as they are typed."""
+    print("Loading the knowledge graph ...", flush=True)
+    s = store()
+    print(f"Ready: {len(s.companies)} companies, {s.g.number_of_nodes():,} nodes, {s.g.number_of_edges():,} edges.")
+    print("Type a question and press Enter.  Commands: 'explain on' / 'explain off' (show the plan and trace), 'quit'.")
+    print("Examples:\n  What was Costco's total revenue in its latest fiscal year?\n"
+          "  Which of NVIDIA's competitors in the corpus spent the most on R&D?\n"
+          "  Rank the five banks by net income in 2025.\n  Who audits Apple and since when?\n")
+    while True:
+        try:
+            q = input("Q> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            break
+        if not q:
+            continue
+        if q.lower() in ("quit", "exit", "q"):
+            break
+        if q.lower().startswith("explain"):
+            explain = q.lower().endswith("on")
+            print(f"explain {'on' if explain else 'off'}")
+            continue
+        try:
+            ask_cli(q, explain=explain, header=False)
+        except Exception as e:  # keep the session alive
+            print(f"Error: {type(e).__name__}: {e}")
+        print()
+
+
+def ask_cli(question: str, explain: bool = False, header: bool = True) -> None:
     res = answer_question(question)
     ans = typed_answer(res)
-    print("Q:", question)
-    print("A:", render(res, ans))
+    if header:
+        print("Q:", question)
+    if res.get("parts"):
+        # a question with several independent parts ("who audits Apple and since when?")
+        print("A:")
+        for part in res["parts"]:
+            sub = {"items": part["items"], "final_op": part["op"], "final_args": part["args"], "error": None}
+            label = part["args"].get("metric") or part["args"].get("relation") or part["op"]
+            print(f"   {label.replace('_', ' ')}: {render(sub, typed_answer(sub))}")
+    else:
+        print("A:", render(res, ans))
     cites = citations(res)
     print("Sources:")
     for c in cites[:20]:

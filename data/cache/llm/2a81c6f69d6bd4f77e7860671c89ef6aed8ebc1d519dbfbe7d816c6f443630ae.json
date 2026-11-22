@@ -1,0 +1,61 @@
+{
+ "tag": "relations:AAPL",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Apple Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Apple Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Apple Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Apple Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Apple Inc. (entity = segment name)\n  \"acquisition\" - a company Apple Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.4] Business Company Background The Company designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services.\n[p.6] The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific. Rest of Asia Pacific includes Australia, New Zealand and those Asian countries not included in the Company's other reportable segments. Although the reportable segments provide similar hardware and software products and similar services, each one is managed separately to better align with the location of the Company's customers and distribution partners and the unique market dynamics of each geographic region. During 2026, the Company's net sales through its indirect distribution channels accounted for approximately 60% of total net sales. Competition The markets for the Company's products and services are highly competitive and are characterized by aggressive price competition, downward pressure on gross margins, continual improvement in product performance, and price sensitivity on the part of consumers and businesses. The markets in which the Company competes are further defined by frequent introduction of new products, services and technologies, including artificial intelligence technologies, short product life cycles, evolving industry standards, and rapid adoption of technological advancements. Many of the Company's competitors seek to compete primarily through aggressive pricing and very low cost structures, and by imitating the Company's products and infringing on its intellectual property.\n[p.8] The Company's ability to compete successfully depends heavily on ensuring the continuing and timely introduction of innovative new products, services and technologies. Principal competitive factors important to the Company include price, product and service features, including security features, relative price and performance, product and service quality and reliability, design and technology innovation, a strong third-party software and accessories ecosystem, marketing and distribution capability, service and support, corporate reputation, and the ability to effectively protect and enforce the Company's intellectual property rights. The Company's products, services and technologies face substantial competition from companies that have significant technical, marketing, distribution and other resources, as well as established hardware, software, and service offerings with large customer bases. In addition, the Company faces significant competition as competitors imitate the Company's product features and applications to offer more competitive solutions. The Company also expects competition to intensify as competitors imitate the Company's approach to providing components seamlessly within their offerings or work collaboratively to offer integrated solutions. Some of the Company's competitors have broad product lines, low-priced products, large installed bases of active devices, and large customer bases. The Company has a minority market share in the global smartphone, personal computer, tablet and wearables markets, and some of the markets in which the Company competes have from time to time experienced little to no growth or contracted overall. The Company also competes with a number of companies in the development and deployment of artificial intelligence and has made significant investments in building artificial intelligence features and related infrastructure across its products and services. Supply of Components and Computing Resources Although most components essential to the Company's business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. For example, the Company is experiencing supply constraints and rising costs driven by industry-wide supply-demand imbalances for key components, including advanced semiconductors, memory and storage. The Company uses some custom components that are not commonly used by its competitors, and new products introduced by the Company often utilize custom components available from only one source. The Company has entered into agreements for the supply of many components; however, the Company may not be able to extend or renew agreements for the supply of components on similar terms, or at all, and may not be successful in obtaining sufficient quantities from its suppliers or in a timely manner, or in identifying and obtaining sufficient quantities from an alternative source. In addition, component suppliers may fail, be subject to consolidation within a particular industry, or decide to concentrate on the production of common components instead of components customized to meet the Company's requirements, further limiting the Company's ability to obtain sufficient quantities of components on commercially reasonable terms, or at all.\n[p.9] The ability of the Company and its third-party providers to timely build, expand and operate data centers is subject to operational challenges and other external factors, including restrictions on international trade, supply chain constraints, access to financing, construction delays, the availability of power, water and land, labor shortages, public sentiment, as well as existing and evolving laws governing the permitting, zoning, operation and taxation of data centers. Research and Development Because the industries in which the Company competes are characterized by rapid technological advances, the Company's ability to compete successfully depends heavily upon its ability to successfully manage frequent introductions and transitions of competitive products, services and technologies, including artificial intelligence technologies, to the marketplace. The Company continues to develop new technologies to enhance existing hardware, software and services, and to expand the range of its offerings through research and development (\"R&D\"), licensing of intellectual property and technology, and acquisition of third-party businesses and technology. Although the Company believes the ownership of such intellectual property rights is an important factor in differentiating its business and that its success does depend in part on such ownership, the Company relies primarily on the innovative skills, technical competence and marketing abilities of its personnel. In addition, the Company's products and services have been, and may in the future be, alleged to infringe the intellectual property rights of others due to extensive existing intellectual property coverage, the rapid pace of new intellectual property rights generation, and technological changes in the industries in which the Company currently competes or may compete in the future.\n[p.10] The Company operates in a highly competitive market for skilled and experienced employees, and recognizes that recruiting and retaining top talent is critical to sustaining its culture of innovation and achieving its strategic initiatives. The Company believes that compensation should be competitive and equitable, and offers discretionary cash and equity awards to enable employees to share in the Company's success."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Americas\",\n      \"quote\": \"The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.\",\n      \"page\": 6\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Europe\",\n      \"quote\": \"The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.\",\n      \"page\": 6\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Greater China\",\n      \"quote\": \"The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.\",\n      \"page\": 6\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Japan\",\n      \"quote\": \"The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.\",\n      \"page\": 6\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Rest of Asia Pacific\",\n      \"quote\": \"The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.\",\n      \"page\": 6\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "Americas",
+    "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "Europe",
+    "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "Greater China",
+    "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "Japan",
+    "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "Rest of Asia Pacific",
+    "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+    "page": 6
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.054659322,
+  "prompt_tokens": 1516,
+  "prompt_time": 0.108371893,
+  "completion_tokens": 313,
+  "completion_time": 0.617457149,
+  "total_tokens": 1829,
+  "total_time": 0.725829042
+ }
+}

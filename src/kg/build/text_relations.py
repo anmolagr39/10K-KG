@@ -23,6 +23,7 @@ KEYWORDS = re.compile(r"compet|rival|foundr|supplier|suppl(y|ies) |manufactur|co
                       r"largest customer|significant customer|acquired|acquisition of|reportable segment|operating segment",
                       re.I)
 MAX_CHARS = 14000
+CHUNK_CHARS = 7000
 
 PROMPT = """You extract business relations from excerpts of {company}'s annual report (10-K, Item 1 Business).
 Each excerpt starts with [p.N] = its PDF page.
@@ -141,10 +142,27 @@ def extract_company(ticker: str, name: str, pdf: str) -> dict:
     texts = page_texts(pdf)
     if not text:
         return {"ticker": ticker, "relations": [], "dropped": [], "chars": 0}
-    raw = chat_json([{"role": "user", "content": PROMPT.format(company=name, text=text)}],
-                    model=EXTRACT_MODEL, max_tokens=2500, tag=f"relations:{ticker}")
+    # long excerpts are split at page boundaries: the model misses fewer relations in shorter inputs
+    chunks, cur = [], ""
+    for piece in re.split(r"\n(?=\[p\.\d+\])", text):
+        if cur and len(cur) + len(piece) > CHUNK_CHARS:
+            chunks.append(cur)
+            cur = piece
+        else:
+            cur = f"{cur}\n{piece}" if cur else piece
+    chunks.append(cur)
+    # two views of the same text: the whole excerpt, and (when long) page-aligned chunks.
+    # The model's recall varies between views; the union is taken and the grounding check below
+    # keeps precision (every kept relation still needs its verbatim quote on the cited page).
+    views = [(text, f"relations:{ticker}")] + ([(c, f"relations:{ticker}:{k}") for k, c in enumerate(chunks)]
+                                               if len(chunks) > 1 else [])
+    rels = []
+    for view, tag in views:
+        raw = chat_json([{"role": "user", "content": PROMPT.format(company=name, text=view)}],
+                        model=EXTRACT_MODEL, max_tokens=2500, tag=tag)
+        rels += raw.get("relations", []) or []
     keep, dropped, seen = [], [], set()
-    for rel in raw.get("relations", []) or []:
+    for rel in rels:
         if not isinstance(rel, dict) or rel.get("type") not in ("competitor", "supplier", "customer", "segment", "acquisition"):
             continue
         ok, page = grounded(rel, texts)

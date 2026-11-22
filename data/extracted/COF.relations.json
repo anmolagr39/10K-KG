@@ -1,0 +1,29 @@
+{
+ "ticker": "COF",
+ "relations": [
+  {
+   "ticker": "COF",
+   "type": "acquisition",
+   "entity": "Discover",
+   "entity_canonical": "Discover",
+   "company": null,
+   "quote": "On May 18, 2025, the Company closed the acquisition of Discover, pursuant to which (a) Merger Sub merged with and into Discover",
+   "page": 6,
+   "doc": "COF_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "COF",
+   "type": "competitor",
+   "entity": "American Express",
+   "entity_canonical": null,
+   "company": "AXP",
+   "quote": "Our Credit Card business competes with international, national, regional and local issuers of Visa ® and Mastercard ® credit cards, as well as with American Express ®",
+   "page": 9,
+   "doc": "COF_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 5154
+}

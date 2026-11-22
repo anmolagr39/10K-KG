@@ -1,0 +1,271 @@
+{
+ "ticker": "NVDA",
+ "relations": [
+  {
+   "ticker": "NVDA",
+   "type": "acquisition",
+   "entity": "Mellanox",
+   "entity_canonical": "Mellanox",
+   "company": null,
+   "quote": "Our acquisition of Mellanox in 2020 expanded our offerings to include networking, enabled our platforms to be data center scale",
+   "page": 4,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "supplier",
+   "entity": "Taiwan Semiconductor Manufacturing Company Limited",
+   "entity_canonical": "TSMC",
+   "company": null,
+   "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.",
+   "page": 12,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "supplier",
+   "entity": "Samsung Electronics Co., Ltd.",
+   "entity_canonical": "Samsung",
+   "company": null,
+   "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.",
+   "page": 12,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "supplier",
+   "entity": "Hon Hai Precision Industry Co., Ltd.",
+   "entity_canonical": "Foxconn",
+   "company": null,
+   "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+   "page": 12,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "supplier",
+   "entity": "Wistron Corporation",
+   "entity_canonical": "Wistron",
+   "company": null,
+   "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+   "page": 12,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "supplier",
+   "entity": "Fabrinet",
+   "entity_canonical": "Fabrinet",
+   "company": null,
+   "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+   "page": 12,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Advanced Micro Devices, Inc.",
+   "entity_canonical": null,
+   "company": "AMD",
+   "quote": "including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Huawei Technologies Co. Ltd.",
+   "entity_canonical": "Huawei",
+   "company": null,
+   "quote": "including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Intel Corporation",
+   "entity_canonical": null,
+   "company": "INTC",
+   "quote": "including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Alibaba Group",
+   "entity_canonical": "Alibaba Group",
+   "company": null,
+   "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Alphabet Inc.",
+   "entity_canonical": null,
+   "company": "GOOGL",
+   "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Amazon, Inc.",
+   "entity_canonical": null,
+   "company": "AMZN",
+   "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Baidu, Inc.",
+   "entity_canonical": "Baidu",
+   "company": null,
+   "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Microsoft Corporation",
+   "entity_canonical": null,
+   "company": "MSFT",
+   "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Ambarella, Inc.",
+   "entity_canonical": "Ambarella",
+   "company": null,
+   "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Broadcom",
+   "entity_canonical": null,
+   "company": "AVGO",
+   "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Qualcomm Incorporated",
+   "entity_canonical": null,
+   "company": "QCOM",
+   "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Renesas Electronics Corporation",
+   "entity_canonical": "Renesas Electronics",
+   "company": null,
+   "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Tesla, Inc.",
+   "entity_canonical": "Tesla",
+   "company": null,
+   "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Arista Networks",
+   "entity_canonical": "Arista Networks",
+   "company": null,
+   "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Cisco Systems, Inc.",
+   "entity_canonical": null,
+   "company": "CSCO",
+   "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Hewlett Packard Enterprise Company",
+   "entity_canonical": "Hewlett Packard Enterprise",
+   "company": null,
+   "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Lumentum Holdings Inc.",
+   "entity_canonical": "Lumentum Holdings",
+   "company": null,
+   "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "NVDA",
+   "type": "competitor",
+   "entity": "Marvell Technology, Inc",
+   "entity_canonical": "Marvell",
+   "company": null,
+   "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+   "page": 14,
+   "doc": "NVDA_10K_2026-01-25.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 10050
+}

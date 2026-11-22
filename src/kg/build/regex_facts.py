@@ -208,13 +208,18 @@ def auditor_facts(ticker: str, pdf: str) -> list[dict]:
             if firm:
                 break
     if not firm:
-        pats = [r"audited by " + FIRM, FIRM + r",? (?:an |our )?independent registered public accounting firm",
-                r"independent registered public accounting firm,? (?:is |was )?" + FIRM]
-        for j, f in enumerate(flats):
-            for pat in pats:
+        # the big audit firms are often named without "LLP" ("audited by PricewaterhouseCoopers,")
+        known = r"(PricewaterhouseCoopers(?: LLP)?|KPMG(?: LLP)?|Ernst & Young(?: LLP)?|Deloitte & Touche(?: LLP)?)"
+        pats = [r"audited by " + FIRM, FIRM + r",? (?:an |our |the )?independent registered public accounting firm",
+                r"independent registered public accounting firm,? (?:is |was )?" + FIRM,
+                r"audited by " + known + r"\b", known + r",? (?:an |our |the )?independent registered public accounting firm",
+                r"independent registered public accounting firm,? (?:is |was )?" + known]
+        for pat in pats:
+            for j, f in enumerate(flats):
                 m = re.search(pat, f)
                 if m:
-                    firm = (m.group(1).strip(), j, m.group(0))
+                    name = m.group(1).strip()
+                    firm = (name if name.endswith("LLP") else name + " LLP", j, m.group(0))
                     break
             if firm:
                 break

@@ -1,0 +1,18 @@
+{
+ "ticker": "LLY",
+ "relations": [
+  {
+   "ticker": "LLY",
+   "type": "acquisition",
+   "entity": "Loxo Oncology, Inc.",
+   "entity_canonical": "Loxo Oncology",
+   "company": null,
+   "quote": "Van Naarden joined Lilly in 2019 when the company acquired Loxo Oncology, Inc., where he was the chief operating officer.",
+   "page": 33,
+   "doc": "LLY_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 9766
+}

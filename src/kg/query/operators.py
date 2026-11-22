@@ -27,6 +27,7 @@ class Ctx:
     s: GraphStore
     touched: list = field(default_factory=list)     # fact ids in retrieval order
     trace: list = field(default_factory=list)
+    results: dict = field(default_factory=dict)     # step id -> items (for multi-part answers)
 
     def touch(self, fids):
         for f in fids:

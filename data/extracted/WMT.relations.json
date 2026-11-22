@@ -1,0 +1,40 @@
+{
+ "ticker": "WMT",
+ "relations": [
+  {
+   "ticker": "WMT",
+   "type": "segment",
+   "entity": "Walmart U.S.",
+   "entity_canonical": "Walmart U.S.",
+   "company": null,
+   "quote": "Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.",
+   "page": 7,
+   "doc": "WMT_10K_2026-01-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "WMT",
+   "type": "segment",
+   "entity": "Walmart International",
+   "entity_canonical": "Walmart International",
+   "company": null,
+   "quote": "Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.",
+   "page": 7,
+   "doc": "WMT_10K_2026-01-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "WMT",
+   "type": "segment",
+   "entity": "Sam's Club U.S.",
+   "entity_canonical": "Sam's Club U.S.",
+   "company": null,
+   "quote": "Our operations comprise three reportable segments: Walmart U.S., Walmart International and Sam's Club U.S.",
+   "page": 7,
+   "doc": "WMT_10K_2026-01-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 5220
+}

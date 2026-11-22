@@ -1,0 +1,95 @@
+{
+ "ticker": "INTC",
+ "relations": [
+  {
+   "ticker": "INTC",
+   "type": "competitor",
+   "entity": "AMD",
+   "entity_canonical": null,
+   "company": "AMD",
+   "quote": "CCG's primary competitor is AMD, which like us designs processors based on the x86 architecture.",
+   "page": 12,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "INTC",
+   "type": "competitor",
+   "entity": "Apple",
+   "entity_canonical": null,
+   "company": "AAPL",
+   "quote": "We also face significant competition from companies that design processors based on the ARM architecture, such as Apple with its M series products",
+   "page": 12,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "INTC",
+   "type": "competitor",
+   "entity": "Qualcomm",
+   "entity_canonical": null,
+   "company": "QCOM",
+   "quote": "We also face significant competition from companies that design processors based on the ARM architecture, such as ... Qualcomm with its Snapdragon products",
+   "page": 12,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "INTC",
+   "type": "competitor",
+   "entity": "MediaTek",
+   "entity_canonical": "MediaTek",
+   "company": null,
+   "quote": "We also face significant competition from companies that design processors based on the ARM architecture, such as ... MediaTek with its Kompanio products",
+   "page": 12,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "INTC",
+   "type": "segment",
+   "entity": "CCG",
+   "entity_canonical": "CCG",
+   "company": null,
+   "quote": "Our Intel Products business, which includes our CCG and DCAI operating segments",
+   "page": 12,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "INTC",
+   "type": "segment",
+   "entity": "DCAI",
+   "entity_canonical": "DCAI",
+   "company": null,
+   "quote": "Our Intel Products business, which includes our CCG and DCAI operating segments",
+   "page": 12,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "INTC",
+   "type": "segment",
+   "entity": "Intel Foundry",
+   "entity_canonical": "Intel Foundry",
+   "company": null,
+   "quote": "Our Intel Foundry operating segment also offers semiconductor design and manufacturing services to external customers",
+   "page": 12,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "INTC",
+   "type": "supplier",
+   "entity": "TSMC",
+   "entity_canonical": "TSMC",
+   "company": null,
+   "quote": "shift manufacturing to third-party foundries, particularly TSMC, as we develop products for nodes beyond Intel 18A",
+   "page": 10,
+   "doc": "INTC_10K_2025-12-27.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 14008
+}

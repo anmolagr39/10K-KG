@@ -1,0 +1,40 @@
+{
+ "ticker": "HD",
+ "relations": [
+  {
+   "ticker": "HD",
+   "type": "segment",
+   "entity": "Primary segment",
+   "entity_canonical": "Primary segment",
+   "company": null,
+   "quote": "the geographic operating segments of the U.S., Canada and Mexico are aggregated into one reportable segment (the \"Primary segment\")",
+   "page": 6,
+   "doc": "HD_10K_2026-02-01.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "HD",
+   "type": "acquisition",
+   "entity": "SRS",
+   "entity_canonical": "SRS",
+   "company": null,
+   "quote": "In fiscal 2024, we acquired SRS, a leading residential specialty trade distribution company across several verticals",
+   "page": 6,
+   "doc": "HD_10K_2026-02-01.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "HD",
+   "type": "acquisition",
+   "entity": "GMS",
+   "entity_canonical": "GMS",
+   "company": null,
+   "quote": "In fiscal 2025, SRS completed the acquisition of GMS, a leading distributor of specialty building products",
+   "page": 6,
+   "doc": "HD_10K_2026-02-01.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 5097
+}

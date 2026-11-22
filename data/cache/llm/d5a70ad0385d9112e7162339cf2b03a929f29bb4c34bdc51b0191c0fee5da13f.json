@@ -1,0 +1,37 @@
+{
+ "tag": "relations:AVGO",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Broadcom Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Broadcom Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Broadcom Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Broadcom Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Broadcom Inc. (entity = segment name)\n  \"acquisition\" - a company Broadcom Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.5] BUSINESS Overview We are a global technology leader that designs, develops and supplies a broad range of semiconductor and semiconductor- based solutions and infrastructure software solutions. Customers of these solutions are hyperscalers and companies with AI frontier models, as well as original equipment manufacturers (\"OEMs\") and system integrators that develop servers, switches and racks deployed in large-scale AI data centers to run training and inference workloads.\n[p.7] We supply a wide array of optical components for the Ethernet networking, storage, and access, metro- and long-haul telecommunication markets.\n[p.13] Distributors and OEMs, or their contract manufacturers (\"CMs\"), typically account for the substantial majority of our semiconductor sales.\n[p.14] Many of our semiconductor customers design products in North America or Europe that are then manufactured in Asia.\n[p.15] With sales offices located in various countries, our primary warehouse in Malaysia, and dedicated regional customer support call centers, where we address customer issues and handle logistics and other order fulfillment requirements, we believe we are well-positioned to support our customers throughout the design, technology transfer and manufacturing stages across all geographies. Our software customers generally consist of large enterprises that have computing environments from multiple vendors and are in most major industries worldwide, including banks, insurance companies, other financial services providers, government agencies, global IT service providers, telecommunication providers, transportation companies, manufacturers, technology companies, retailers, educational organizations and health care institutions. Manufacturing We focus on maintaining an efficient global supply chain and a variable, low-cost operating model. The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (\"TSMC\"). We also have a long history of operating in Asia where we manufacture and source the majority of our products and materials. We store the majority of our product inventory in our warehouse in Malaysia and our presence in Asia places us in close proximity to many of our customers' manufacturing facilities. Competition The markets in which we participate are highly competitive.\n[p.17] Competitors in semiconductor solutions include integrated device manufacturers, fabless semiconductor companies and the internal resources of large integrated OEMs. To accomplish this, we rely on a combination of IP rights, including patents, copyrights, trademarks, service marks, trade secrets and similar IP, as well as customary contractual protections with our customers, suppliers, employees and consultants, and through security measures to protect our trade secrets. We and our predecessors have also entered into a variety of IP licensing and cross-licensing arrangements that have both benefited our business and enabled some of our competitors. The industries in which we compete are characterized by the existence of a large number of patents, copyrights, trademarks and trade secrets and by the vigorous pursuit, protection and enforcement of IP rights, including by patent holding companies that do not make or sell products. With respect to any IP rights claims against us or our customers or distributors, we may be required to defend ourselves or our customers or distributors in litigation, cease manufacturing the infringing products, pay damages, expend resources to develop non-infringing technology, seek a license which may not be available on commercially reasonable terms or at all, or relinquish patents or other IP rights. Employees Our continued success depends on our ability to attract, motivate and retain our workforce in a highly competitive labor market.\n[p.22] • Dependence on a limited number of contract manufacturers and suppliers of critical materials and components within our supply chain, and potential failure to adjust such manufacturing and supply chain to meet customer demand, may adversely affect our ability to bring products to market and our results of operations. • We may be unable to maintain appropriate manufacturing capacity or product yields at our own manufacturing facilities. • Competition in our industries could prevent us from growing our revenue."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"supplier\", \"entity\": \"Taiwan Semiconductor Manufacturing Company Limited\", \"quote\": \"The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited\", \"page\": 15}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "supplier",
+    "entity": "Taiwan Semiconductor Manufacturing Company Limited",
+    "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited",
+    "page": 15
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.054349939,
+  "prompt_tokens": 1067,
+  "prompt_time": 0.0775149,
+  "completion_tokens": 63,
+  "completion_time": 0.125013861,
+  "total_tokens": 1130,
+  "total_time": 0.202528761
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "ticker": "ADBE",
+ "relations": [
+  {
+   "ticker": "ADBE",
+   "type": "segment",
+   "entity": "Digital Media",
+   "entity_canonical": "Digital Media",
+   "company": null,
+   "quote": "In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.",
+   "page": 18,
+   "doc": "ADBE_10K_2025-11-28.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ADBE",
+   "type": "segment",
+   "entity": "Digital Experience",
+   "entity_canonical": "Digital Experience",
+   "company": null,
+   "quote": "In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.",
+   "page": 18,
+   "doc": "ADBE_10K_2025-11-28.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ADBE",
+   "type": "segment",
+   "entity": "Publishing and Advertising",
+   "entity_canonical": "Publishing and Advertising",
+   "company": null,
+   "quote": "In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.",
+   "page": 18,
+   "doc": "ADBE_10K_2025-11-28.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "ADBE",
+   "type": "acquisition",
+   "entity": "Macromedia, Inc.",
+   "entity_canonical": "Macromedia",
+   "company": null,
+   "quote": "having joined Adobe in 2005 through the Company's acquisition of Macromedia, Inc., a software company",
+   "page": 27,
+   "doc": "ADBE_10K_2025-11-28.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 6398
+}

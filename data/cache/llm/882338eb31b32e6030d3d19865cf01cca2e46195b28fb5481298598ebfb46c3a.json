@@ -1,0 +1,30 @@
+{
+ "tag": "relations:BAC",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Bank of America Corporation's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Bank of America Corporation names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Bank of America Corporation (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Bank of America Corporation (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Bank of America Corporation (entity = segment name)\n  \"acquisition\" - a company Bank of America Corporation acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.6] Financial Condition and Results of Operations (MD&A) and Note 23 Bank of America is one of the world's largest financial – Business Segment Information to the Consolidated Financial institutions, serving individual consumers, small- and middle-market Statements. businesses, institutional investors, large corporations and Competition governments with a full range of banking, investing, asset We operate in a highly competitive environment. We routinely post and increasingly competing with firms offering products solely over the internet and with nonfinancial companies, including firms utilizing make accessible financial and other information regarding the Corporation on our website. Investors should monitor our website, emerging technologies, such as digital assets, rather than, or in addition to, traditional banking products. including the Investor Relations portion of our website, in addition to Competition is based on a number of factors including, among our press releases, U.S. Securities and Exchange Commission (SEC) filings, public conference calls and webcasts. Our ability to continue to compete pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of effectively also depends in large part on our ability to attract new 1934 (Exchange Act) are available on the Investor Relations portion of our website as soon as reasonably practicable after we employees and develop, retain and motivate our existing employees, while managing compensation and other costs. electronically file such reports with, or furnish them to, the SEC and at the SEC's website, www.sec.gov."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": []}",
+ "parsed": {
+  "relations": []
+ },
+ "usage": {
+  "queue_time": 0.191877547,
+  "prompt_tokens": 593,
+  "prompt_time": 0.045011731,
+  "completion_tokens": 11,
+  "completion_time": 0.021130778,
+  "total_tokens": 604,
+  "total_time": 0.066142509
+ }
+}

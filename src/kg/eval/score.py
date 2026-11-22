@@ -83,6 +83,8 @@ def fact_matches(r: dict, g: dict) -> bool:
         return False
     if g["kind"] == "relation":
         rel = (r.get("relation") or "").upper()
+        if not rel and r.get("kind") == "relation":   # baseline facts carry no relation type: object only
+            return _norm_ent(r.get("object")) == _norm_ent(g["object"])
         return rel == g["relation"].upper() and _norm_ent(r.get("object")) == _norm_ent(g["object"])
     if r.get("kind") == "relation":
         return False

@@ -1,0 +1,133 @@
+{
+ "tag": "relations:ORCL",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Oracle Corporation's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Oracle Corporation names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Oracle Corporation (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Oracle Corporation (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Oracle Corporation (entity = segment name)\n  \"acquisition\" - a company Oracle Corporation acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.5] We believe that offering customers broad, comprehensive, flexible and interoperable deployment models for Oracle applications and infrastructure technologies is important to our growth strategy, an important element of our corporate strategy and better addresses customer needs relative to our competitors.\n[p.7] We focus our development efforts on improving the performance, security, reliability, operation, integration and cost-effectiveness of our offerings relative to our competitors; facilitating the ease with which organizations are able to deploy, use, manage and maintain our offerings; and incorporating emerging technologies, such as AI, within our offerings to enable leaner business processes, automation and innovation. Item 7 Management's Discussion and Analysis of Financial Condition and Results of Operations and Note 13 of Notes to Consolidated Financial Statements, both included elsewhere in this Annual Report, provide additional information related to our businesses and operating segments.\n[p.9] • Oracle Fusion Cloud Enterprise Resource Planning (ERP), which includes Oracle Fusion Cloud Enterprise Performance Management (EPM) and Oracle Fusion Cloud Supply Chain and Manufacturing Management (SCM), is designed to provide complete financial, project and risk management solutions to help organizations manage finance and accounting functions, to optimize back-office operations by utilizing a single data and security model with a common user interface and to optimize and digitize their supply chains and manufacturing operations;\n[p.11] Table of Contents • NetSuite Applications Suite, which is generally marketed to small to medium-sized organizations and is designed to be a unified, cloud-based applications suite to run a company's entire business, includes modules for managing financials, supply chains, customer relationships, workforces, professional services and commerce, among others; and • Oracle Health applications, which are designed to enable medical professionals to deliver better healthcare to individual patients and communities.\n[p.13] We focus on the operation and integration of Oracle infrastructure technologies to make them easier to deploy, extend, interconnect, manage and maintain for our customers and to improve computing performance relative to our competitors' offerings. For example, the Oracle Exadata Database Machine integrates multiple Oracle technology components to work together to deliver improved performance, availability, scalability, security and operational efficiency of Oracle AI Database workloads relative to our competitors' products. OCI AI services are designed to be embedded into customer applications for a variety of predictive use cases, including, among others, the servicing of machine parts that are at risk of failing, using generative AI for fault detection on an assembly line, improving customer experiences in the purchasing of consumer products, managing the supply chain to keep retailer store shelves refreshed, credit fraud detection and financial modeling to stay within a business' forecasts.\n[p.17] Oracle Engineered Systems are designed to deliver improved performance, scalability, availability, security and operational efficiency relative to our competitors' products; to be upgraded effectively and efficiently; and to simplify maintenance cycles and improve security by providing a single solution for patching.\n[p.19] Manufacturing We rely on third-party manufacturing partners to produce most of our hardware products that we market and sell to customers and utilize internally to deliver Oracle Cloud offerings, and we distribute most of our hardware products from these partners' facilities.\n[p.21] Table of Contents hardware products requires that we purchase materials, supplies, product subassemblies and full assemblies from a number of suppliers. Refer to Risk Factors included in Item 1A within this Annual Report for additional discussion of the challenges we encounter with respect to the sources and availability of supplies for our hardware products and the related risks to our businesses. The Oracle Partner Network is a global program that manages our business relationships with a large, broad-based network of companies, including cloud and software, hardware and services suppliers, system integrators and resellers that deliver innovative solutions and services based upon and in conjunction with our product offerings.\n[p.25] Competition We face intense competition in all aspects of our business. The nature of the IT industry creates a competitive landscape that is constantly evolving as firms emerge, expand or are acquired, as technology evolves and as customer demands and competitive pressures otherwise change. Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc. In addition, due to the low barriers to entry in many of our market segments, new technologies and new and growing competitors frequently emerge to challenge our offerings. Our competitors range from companies offering broad IT solutions across many of our lines of business to vendors providing point solutions, or offerings focused on a specific functionality, product area or industry. For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation, among others.\n[p.26] Table of Contents Key competitive factors in each of the segments in which we currently compete and may compete in the future include: total cost of ownership, performance, scalability, reliability, security, functionality, efficiency, ease of use, speed to production and quality of technical support. Our products and services sales and the relative strength of our products and services versus those of our competitors are also directly and indirectly affected by the following, among other factors: • market adoption of cloud-based IT offerings, including Oracle Cloud offerings; • our ability to develop AI technologies and features and to have access to AI technologies of competitors; • the ease of deployment, use, transacting for and maintenance of our products and services offerings; • compatibility between Oracle products and services deployed within local IT environments and public cloud IT environments, including our Oracle Cloud environments; • the adoption of open source alternatives to commercial software by enterprise software customers; • products, features and functionality developed internally by customers and their IT staff; • products, features and functionality customized and implemented for customers by consultants, systems integrators or other third parties; and • the attractiveness of offerings from business processing outsourcers. For more information about the competitive risks we face, refer to Item 1A Risk Factors included elsewhere in this Annual Report.\n[p.30] Risk Factor Summary Business and Operational Risks • We may be unsuccessful in developing and selling new products and services, integrating acquired products and services and enhancing our existing products and services. • Our products and services may not function properly if we experience significant coding, manufacturing or configuration errors in our cloud, software and hardware offerings. • If we are unable to compete effectively, the results of operations and prospects for our business could be harmed."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"competitor\", \"entity\": \"Adobe Systems Incorporated\", \"quote\": \"including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Alphabet Inc.\", \"quote\": \"including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Amazon.com, Inc.\", \"quote\": \"including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Cisco Systems, Inc.\", \"quote\": \"including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Intel Corporation\", \"quote\": \"including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"International Business Machines Corporation\", \"quote\": \"Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Microsoft Corporation\", \"quote\": \"Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Salesforce, Inc.\", \"quote\": \"Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"SAP SE\", \"quote\": \"Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Hewlett-Packard Enterprise\", \"quote\": \"SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Workday, Inc.\", \"quote\": \"SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Allscripts Healthcare Solutions, Inc.\", \"quote\": \"such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Arcadia Solutions\", \"quote\": \"such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"athenahealth, Inc.\", \"quote\": \"such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"Epic Systems Corporation\", \"quote\": \"such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation\", \"page\": 25}, {\"type\": \"competitor\", \"entity\": \"InterSystems Corporation\", \"quote\": \"such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation\", \"page\": 25}, {\"type\": \"acquisition\", \"entity\": \"Cerner Corporation\", \"quote\": \"For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers\", \"page\": 25}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "competitor",
+    "entity": "Adobe Systems Incorporated",
+    "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Alphabet Inc.",
+    "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Amazon.com, Inc.",
+    "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Cisco Systems, Inc.",
+    "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Intel Corporation",
+    "quote": "including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "International Business Machines Corporation",
+    "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Microsoft Corporation",
+    "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Salesforce, Inc.",
+    "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "SAP SE",
+    "quote": "Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Hewlett-Packard Enterprise",
+    "quote": "SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Workday, Inc.",
+    "quote": "SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Allscripts Healthcare Solutions, Inc.",
+    "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Arcadia Solutions",
+    "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "athenahealth, Inc.",
+    "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "Epic Systems Corporation",
+    "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+    "page": 25
+   },
+   {
+    "type": "competitor",
+    "entity": "InterSystems Corporation",
+    "quote": "such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation",
+    "page": 25
+   },
+   {
+    "type": "acquisition",
+    "entity": "Cerner Corporation",
+    "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers",
+    "page": 25
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.04829042,
+  "prompt_tokens": 1654,
+  "prompt_time": 0.113963016,
+  "completion_tokens": 847,
+  "completion_time": 1.659853848,
+  "total_tokens": 2501,
+  "total_time": 1.773816864
+ }
+}

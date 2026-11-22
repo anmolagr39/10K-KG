@@ -1,0 +1,91 @@
+{
+ "tag": "relations:V",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Visa Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Visa Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Visa Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Visa Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Visa Inc. (entity = segment name)\n  \"acquisition\" - a company Visa Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.17] In fiscal 2026, we also expanded our participation in account-based payment infrastructure through our acquisition of Newpay in Argentina, which operates real-time payment infrastructure.\n[p.19] We have strengthened our position in the money movement space through additional assets we have acquired and built, such as Currencycloud and YellowPepper, to create the Visa Direct platform.\n[p.20] In fiscal 2026, we completed our acquisition of Prisma, a provider of credit, debit and prepaid card issuer processing services in Argentina, expanding our issuer processing presence in Latin America.\n[p.22] We expanded our Risk and Security Solutions offerings through the acquisition of Featurespace, whose real-time behavioral analytics and AI-powered payments protection technology help prevent payments fraud, mitigate financial crime risks and strengthen trust in payments.\n[p.28] In fiscal 2026, we completed our acquisition of Prisma, a provider of credit, debit and prepaid card issuer processing, and Newpay, a multi-network infrastructure provider that operates real-time payments services, the Banelco ATM network and the bill payment platform PagoMisCuentas, in Argentina. This acquisition is subject to review by the Argentine competition authority.\n[p.29] Table of Contents Competition The global payments industry continues to undergo dynamic and rapid change. Existing and emerging competitors compete with Visa's network and payment solutions for consumers and for participation by financial institutions and sellers. These competitors may be more concentrated in specific geographic regions, such as Discover in the U.S. and JCB in Japan, or have a leading position in certain countries, such as UnionPay in China. See Item 1A—Regulatory Risks—Government-imposed obligations and/or restrictions on international payments systems may prevent us from competing against providers in certain markets of this report. The following chart compares our network with certain network competitors for calendar year 2025 (1) : Diners Club / Visa American Express Discover JCB Mastercard Payments Volume ($B) 14,567 1,888 257 342 8,812 Total Volume ($B) (2) 17,100 1,897 271 350 10,646 Total Transactions (B) 336 13 4 7 223 Cards (M) (3) 5,142 153 72 178 3,377 (1) American Express, Diners Club / Discover, JCB and Mastercard data sourced from The Nilson Report issue 1310 (June 2026). In some cases, these entities can be both customers and competitors to Visa. While these technologies present partnership and growth opportunities for Visa, they may also compete with certain payment and money movement solutions.\n[p.31] However, with linkages such as PayNow in Singapore and UPI in India, cross-border RTP networks are advancing and will compete with our cross-border business. RTP networks can compete with Visa on consumer payments and other payment flows (e.g., B2B and P2P) but can also be customers for value-added services, such as risk management. We compete with payment processors for the processing of Visa transactions. For example, as a result of the Interchange Fee Regulation (IFR) in Europe, we may face competition from other networks, processors and other third parties who could process Visa transactions directly with issuers and acquirers. We compete with alternative solutions to our CMS (e.g., Visa Direct) such as ACH, RTP and wires. Competition spans risk and fraud management, cybersecurity, identity and authentication, data and analytics, consulting and advisory services, loyalty and engagement solutions, open finance-related offerings, and AI-enabled decisioning and workflow solutions. The integration of technology like GenAI can create new and better offerings that compete with our value-added services, such as strengthened risk monitoring and managing digital identification. We believe Visa is well-positioned competitively due to our global brand, our broad set of payment products, CMS and VAS offerings and our proven track record of processing payment transactions securely and reliably.\n[p.35] National competent authorities in the EEA are responsible for monitoring and enforcing the IFR in their markets. Visa Europe is also subject to supervisory oversight by the European Central Bank (ECB) and certain competent authorities in Europe. Visa Europe is also regulated by the UK's Payment Systems Regulator (PSR), which has wide-ranging powers and authority to review our business practices, systems, rules and fees with respect to promoting competition and innovation in the UK, and ensuring payment systems take care of, and promote, the interests of service users. While the regulatory status of the CFPB's rule is uncertain, all these changes have the potential to change the competitive landscape, which would present new challenges and opportunities to our business.\n[p.37] Although we generally do not receive IRF revenue directly, IRFs are a key competitive factor that affects our overall payments volume and net revenue."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"acquisition\",\n      \"entity\": \"Newpay\",\n      \"quote\": \"expanded our participation in account-based payment infrastructure through our acquisition of Newpay in Argentina\",\n      \"page\": 17\n    },\n    {\n      \"type\": \"acquisition\",\n      \"entity\": \"Currencycloud\",\n      \"quote\": \"additional assets we have acquired and built, such as Currencycloud and YellowPepper, to create the Visa Direct platform\",\n      \"page\": 19\n    },\n    {\n      \"type\": \"acquisition\",\n      \"entity\": \"YellowPepper\",\n      \"quote\": \"additional assets we have acquired and built, such as Currencycloud and YellowPepper, to create the Visa Direct platform\",\n      \"page\": 19\n    },\n    {\n      \"type\": \"acquisition\",\n      \"entity\": \"Prisma\",\n      \"quote\": \"we completed our acquisition of Prisma, a provider of credit, debit and prepaid card issuer processing services in Argentina\",\n      \"page\": 20\n    },\n    {\n      \"type\": \"acquisition\",\n      \"entity\": \"Featurespace\",\n      \"quote\": \"We expanded our Risk and Security Solutions offerings through the acquisition of Featurespace, whose real-time behavioral analytics\",\n      \"page\": 22\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Discover\",\n      \"quote\": \"These competitors may be more concentrated in specific geographic regions, such as Discover in the U.S.\",\n      \"page\": 29\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"JCB\",\n      \"quote\": \"such as Discover in the U.S. and JCB in Japan, or have a leading position in certain countries\",\n      \"page\": 29\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"UnionPay\",\n      \"quote\": \"or have a leading position in certain countries, such as UnionPay in China.\",\n      \"page\": 29\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"American Express\",\n      \"quote\": \"Diners Club / Visa American Express Discover JCB Mastercard Payments Volume ($B) 14,567 1,888 257 342 8,812\",\n      \"page\": 29\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Mastercard\",\n      \"quote\": \"Diners Club / Visa American Express Discover JCB Mastercard Payments Volume ($B) 14,567 1,888 257 342 8,812\",\n      \"page\": 29\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "acquisition",
+    "entity": "Newpay",
+    "quote": "expanded our participation in account-based payment infrastructure through our acquisition of Newpay in Argentina",
+    "page": 17
+   },
+   {
+    "type": "acquisition",
+    "entity": "Currencycloud",
+    "quote": "additional assets we have acquired and built, such as Currencycloud and YellowPepper, to create the Visa Direct platform",
+    "page": 19
+   },
+   {
+    "type": "acquisition",
+    "entity": "YellowPepper",
+    "quote": "additional assets we have acquired and built, such as Currencycloud and YellowPepper, to create the Visa Direct platform",
+    "page": 19
+   },
+   {
+    "type": "acquisition",
+    "entity": "Prisma",
+    "quote": "we completed our acquisition of Prisma, a provider of credit, debit and prepaid card issuer processing services in Argentina",
+    "page": 20
+   },
+   {
+    "type": "acquisition",
+    "entity": "Featurespace",
+    "quote": "We expanded our Risk and Security Solutions offerings through the acquisition of Featurespace, whose real-time behavioral analytics",
+    "page": 22
+   },
+   {
+    "type": "competitor",
+    "entity": "Discover",
+    "quote": "These competitors may be more concentrated in specific geographic regions, such as Discover in the U.S.",
+    "page": 29
+   },
+   {
+    "type": "competitor",
+    "entity": "JCB",
+    "quote": "such as Discover in the U.S. and JCB in Japan, or have a leading position in certain countries",
+    "page": 29
+   },
+   {
+    "type": "competitor",
+    "entity": "UnionPay",
+    "quote": "or have a leading position in certain countries, such as UnionPay in China.",
+    "page": 29
+   },
+   {
+    "type": "competitor",
+    "entity": "American Express",
+    "quote": "Diners Club / Visa American Express Discover JCB Mastercard Payments Volume ($B) 14,567 1,888 257 342 8,812",
+    "page": 29
+   },
+   {
+    "type": "competitor",
+    "entity": "Mastercard",
+    "quote": "Diners Club / Visa American Express Discover JCB Mastercard Payments Volume ($B) 14,567 1,888 257 342 8,812",
+    "page": 29
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.04616141,
+  "prompt_tokens": 1352,
+  "prompt_time": 0.092864816,
+  "completion_tokens": 648,
+  "completion_time": 1.358012787,
+  "total_tokens": 2000,
+  "total_time": 1.450877603
+ }
+}

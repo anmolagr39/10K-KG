@@ -1,0 +1,161 @@
+{
+ "ticker": "CSCO",
+ "relations": [
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Amazon Web Services LLC",
+   "entity_canonical": null,
+   "company": "AMZN",
+   "quote": "Our competitors (in each case relative to only some of our products or services) include: Amazon Web Services LLC;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Arista Networks, Inc.",
+   "entity_canonical": "Arista Networks",
+   "company": null,
+   "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Broadcom Inc.",
+   "entity_canonical": null,
+   "company": "AVGO",
+   "quote": "Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Ciena Corporation",
+   "entity_canonical": "Ciena",
+   "company": null,
+   "quote": "Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "CrowdStrike Holdings, Inc.",
+   "entity_canonical": "CrowdStrike Holdings",
+   "company": null,
+   "quote": "Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Datadog Inc.",
+   "entity_canonical": "Datadog",
+   "company": null,
+   "quote": "CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Dell Technologies Inc.",
+   "entity_canonical": "Dell Technologies",
+   "company": null,
+   "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Dynatrace Inc.",
+   "entity_canonical": "Dynatrace",
+   "company": null,
+   "quote": "Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Fortinet, Inc.",
+   "entity_canonical": "Fortinet",
+   "company": null,
+   "quote": "Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Hewlett-Packard Enterprise Company",
+   "entity_canonical": "Hewlett-Packard Enterprise Company",
+   "company": null,
+   "quote": "Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Huawei Technologies Co., Ltd.",
+   "entity_canonical": "Huawei",
+   "company": null,
+   "quote": "Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Microsoft Corporation",
+   "entity_canonical": null,
+   "company": "MSFT",
+   "quote": "Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Nokia Corporation",
+   "entity_canonical": "Nokia",
+   "company": null,
+   "quote": "Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "CSCO",
+   "type": "competitor",
+   "entity": "Nvidia Corporation",
+   "entity_canonical": null,
+   "company": "NVDA",
+   "quote": "Nokia Corporation; Nvidia Corporation;",
+   "page": 16,
+   "doc": "CSCO_10K_2026-07-25.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 5725
+}

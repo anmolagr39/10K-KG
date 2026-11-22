@@ -1,0 +1,18 @@
+{
+ "ticker": "JNJ",
+ "relations": [
+  {
+   "ticker": "JNJ",
+   "type": "segment",
+   "entity": "MedTech",
+   "entity_canonical": "MedTech",
+   "company": null,
+   "quote": "The MedTech segment develops and manufactures a broad portfolio of products used in cardiovascular, orthopaedics, surgery, and vision",
+   "page": 10,
+   "doc": "JNJ_10K_2025-12-28.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 5316
+}

@@ -12,3 +12,8 @@ data/raw/
 data/parsed/
 data/xbrl_raw/
 scratch/
+
+# regenerable in ~2 min from the PDFs (python -m kg build --stage extract); relations are kept
+data/extracted/*.json
+!data/extracted/*.relations.json
+data/*.log

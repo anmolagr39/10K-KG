@@ -1,0 +1,61 @@
+{
+ "tag": "relations:MA:0",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Mastercard Incorporated's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Mastercard Incorporated names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Mastercard Incorporated (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Mastercard Incorporated (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Mastercard Incorporated (entity = segment name)\n  \"acquisition\" - a company Mastercard Incorporated acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.11] • Driving brand preference and accelerating secular shift in commercial point-of-sale purchases by offering differentiated propositions across cards and platforms (both corporate and small business solutions, including expense management, reporting, reconciliation and data insights); expanding distribution of our point-of-sale offerings across financial institutions, new geographies, new channels and small businesses; and growing acceptance • Capturing commercial invoiced payments by driving engagement across buyers and suppliers to, among other things, simplify workflows, release working capital and improve data reconciliation to reduce end-to-end costs; building on our travel offerings to expand into additional select verticals (including business-to-business (\"B2B\") marketplaces, trade and logistics, healthcare, consumer packaged goods and pharmaceuticals); and embedding payments into widely used platforms and workflows • Modernizing disbursements and remittances by utilizing Mastercard Move to scale use cases across senders (including consumers, businesses and governments) and recipient consumers (both domestic and cross-border) and expand money movement across our global network of financial institution partners Services and other solutions.\n[p.19] Our VCN solution may include the use of Mastercard In Control™, our virtual card platform that allows buyers to pay suppliers using a one-time use card number that can be set with transaction level controls, providing configurability, flexibility and control over spending.\n[p.20] Through Mastercard Foundry, we continue to provide customers and partners access to thought leadership, innovation methodologies, new technologies and relevant early-stage fintech players.\n[p.25] • attract and retain talent with the key skills and capabilities needed to achieve short-term and long-term goals • develop an agile workforce to collaborate and compete in a fast-paced, innovative environment • build and sustain an inclusive and high-performing culture Attract talent.\n[p.27] • A competitive compensation approach (subject to periodic reviews) under which eligible employees across multiple job levels can receive long- term incentive equity awards • Contributions to employees' financial well-being as they plan for retirement through our \"Investing in You\" initiative, which sets a global minimum standard of 10% of base pay toward retirement • Continued expansion and prioritization of well-being offerings for employees, focused on supporting their minds, bodies and financial and social well-being, as well as embracing flexibility • Flexibility policies and programs to support employees, including a four-week \"work from elsewhere\" policy, meeting-free days and a hybrid work approach with an average of at least three days in the office per week • Supporting employees in giving back to their communities, including providing matching gifts for charitable donations that they make, donating to eligible charities of their choice for every applicable hour that they volunteer, and providing five paid days per year for full-time employees to engage in eligible volunteer work • Experience surveys that we periodically run to assess our overall employee engagement areas (with occasional focus on more targeted topics) and prioritize how we address emerging opportunity areas • A culture of high ethical business practices and compliance standards, grounded in honesty, decency, trust and personal accountability.\n[p.32] Competition We face a number of competitors both within and outside of the global payments industry. We compete in all categories of payments (including paper-based payments and all forms of electronic payments) as well as in all categories in which we provide services and solutions: • General Purpose Payments Networks. We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others. Globally, financial institutions may issue both Mastercard-branded and competitor payment products, and we compete for business on the basis of individual portfolios or programs.\n[p.34] We compete with ATM and point-of-sale debit networks. See \"Risk Factors\" in Part I, Item 1A for a more detailed discussion of the risks related to payments system regulation and government actions that may prevent us from competing effectively. We face competition in the ACH and real-time account-based payments space from providers of infrastructure, applications and services. These companies include information services and consulting firms that provide consulting services and insights to financial institutions, merchants and governments, technology companies that provide cyber and fraud solutions (including AI-based solutions), and companies that compete against us as providers of loyalty and program management solutions. Regulatory initiatives could also lead to increased competition in this space. 22 MASTERCARD 2025 FORM 10-K\n[p.35] Our competitive advantages include: Highly adaptable and world class global payments network that can reach a variety of parties to Global network enable payments anywhere Establishing rules, standards and bearing of financial risk (including our settlement guarantee backed Franchise model by our strong credit standing) that allows for interoperability among all participants Multi-rail Multiple payments capabilities based on our innovation and technology that enable choice Brand Globally recognized and trusted brands Products and services utilizing our data and AI assets, technology, platforms and expertise that Data and AI incorporate our Data and Tech Responsibility Principles and reflect our Privacy by Design, Data by Design and AI Governance processes World class talent and culture guided by the Mastercard Way, with a focus on providing an Talent and culture environment where everyone has the opportunity to succeed Technology Leading-edge technology that advances the quality, speed and diversity of our offerings and solutions Local presence and Ability to serve a broad array of participants in global payments due to our expanded on-soil presence government in individual markets and a heightened focus on working with governments engagement Collectively, the capabilities that we have created organically, and those that we have obtained through acquisitions, support and build upon each other to enhance the total proposition we offer our customers."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Visa\",\n      \"quote\": \"We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.\",\n      \"page\": 32\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"American Express\",\n      \"quote\": \"We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.\",\n      \"page\": 32\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"JCB\",\n      \"quote\": \"We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.\",\n      \"page\": 32\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"China UnionPay\",\n      \"quote\": \"We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.\",\n      \"page\": 32\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Discover\",\n      \"quote\": \"We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.\",\n      \"page\": 32\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "competitor",
+    "entity": "Visa",
+    "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.",
+    "page": 32
+   },
+   {
+    "type": "competitor",
+    "entity": "American Express",
+    "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.",
+    "page": 32
+   },
+   {
+    "type": "competitor",
+    "entity": "JCB",
+    "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.",
+    "page": 32
+   },
+   {
+    "type": "competitor",
+    "entity": "China UnionPay",
+    "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.",
+    "page": 32
+   },
+   {
+    "type": "competitor",
+    "entity": "Discover",
+    "quote": "We compete worldwide with payments networks such as Visa, American Express, JCB, China UnionPay and Discover, among others.",
+    "page": 32
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.054386661,
+  "prompt_tokens": 1417,
+  "prompt_time": 0.100886564,
+  "completion_tokens": 333,
+  "completion_time": 0.632286389,
+  "total_tokens": 1750,
+  "total_time": 0.733172953
+ }
+}

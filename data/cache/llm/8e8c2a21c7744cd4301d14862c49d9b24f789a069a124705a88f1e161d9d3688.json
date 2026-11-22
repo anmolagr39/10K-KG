@@ -1,0 +1,30 @@
+{
+ "tag": "relations:PYPL",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of PayPal Holdings, Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company PayPal Holdings, Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies PayPal Holdings, Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to PayPal Holdings, Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of PayPal Holdings, Inc. (entity = segment name)\n  \"acquisition\" - a company PayPal Holdings, Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.7] OUR STRENGTHS Our business is built on a strong foundation designed to drive profitable growth and differentiate us from our competitors. We believe that our competitive strengths include the following: • Two-sided platform—we facilitate online and offline transactions for millions of consumers and merchants.\n[p.11] PROTECTING CONSUMERS AND MERCHANTS Protecting consumers and merchants on our payments platform from financial and fraud loss is important to successfully compete and sustainably grow our business. COMPETITION The global payments industry is highly competitive, dynamic, innovative, and subject to regulatory scrutiny and oversight. We also face competition from providers offering a variety of payment products and services ranging from broader platform solutions to point solutions focused on a specific functionality or feature, including tokenized and contactless payment cards, digital wallets and mobile payments solutions, credit, installment or other buy now, pay later methods, real-time payment systems, P2P payments and money remittance services, card readers and other devices or technologies for payment at point of sale (such as contactless cards, tokenized cards, NFC based solutions, and Quick Response (\"QR\") code based solutions), value added services related to payments (such as payouts, adaptive payment optimization, foreign exchange and risk solutions), virtual currencies (such as cryptocurrencies and stablecoins) and distributed ledger technologies, and tools that simplify and personalize shopping experiences for consumers and merchants.\n[p.13] Risk Factors\" under the caption \"We face substantial and increasingly intense competition worldwide in the global payments industry\" for further discussion of the potential impact of competition on our business.\n[p.21] Various regulatory agencies continue to examine and implement laws governing a wide variety of issues, including virtual currencies, identity theft, account management guidelines, disclosure rules, cybersecurity, competition, and marketing, which may impact PayPal's business.\n[p.24] Numerous and evolving cybersecurity and related threats, including advanced and persisting cyberattacks, artificial intelligence (\"AI\")-enabled threats, cyberextortion, distributed denial-of-service attacks, ransomware, spear phishing and social engineering schemes, the introduction of computer viruses or other malware, and the destruction of all or portions of our IT and infrastructure and those of third parties with whom we partner or that are part of our IT supply chain, are becoming increasingly sophisticated and complex, may be difficult to detect, and could compromise the confidentiality, availability, and integrity of the data in our systems, as well as the systems themselves."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": []}",
+ "parsed": {
+  "relations": []
+ },
+ "usage": {
+  "queue_time": 0.048003871,
+  "prompt_tokens": 802,
+  "prompt_time": 0.057019288,
+  "completion_tokens": 11,
+  "completion_time": 0.021158142,
+  "total_tokens": 813,
+  "total_time": 0.07817743
+ }
+}

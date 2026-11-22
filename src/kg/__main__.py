@@ -21,6 +21,8 @@ def main(argv: list[str] | None = None) -> None:
     a = sub.add_parser("ask", help="answer a question from the graph")
     a.add_argument("question")
     a.add_argument("--explain", action="store_true")
+    c = sub.add_parser("chat", help="interactive: load the graph once, then ask questions")
+    c.add_argument("--explain", action="store_true")
     e = sub.add_parser("eval", help="run the benchmark")
     e.add_argument("--split", default="test", choices=["test", "dev"])
     e.add_argument("--system", default="graph", choices=["graph", "bm25"])
@@ -36,6 +38,9 @@ def main(argv: list[str] | None = None) -> None:
     elif args.cmd == "ask":
         from kg.query.answer import ask_cli
         ask_cli(args.question, explain=args.explain)
+    elif args.cmd == "chat":
+        from kg.query.answer import chat_cli
+        chat_cli(explain=args.explain)
     elif args.cmd == "eval":
         from kg.eval.run_eval import run
         run(split=args.split, system=args.system, ids=args.ids)

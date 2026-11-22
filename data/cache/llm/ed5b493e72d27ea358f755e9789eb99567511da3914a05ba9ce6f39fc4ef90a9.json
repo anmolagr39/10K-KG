@@ -1,0 +1,91 @@
+{
+ "tag": "relations:QCOM:0",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of QUALCOMM Incorporated's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company QUALCOMM Incorporated names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies QUALCOMM Incorporated (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to QUALCOMM Incorporated (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of QUALCOMM Incorporated (entity = segment name)\n  \"acquisition\" - a company QUALCOMM Incorporated acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.4] U.S./China trade or national security tensions; vertical integration by our customers; competition; and other statements regarding matters that are not historical are also forward-looking statements.\n[p.6] QCT develops and supplies integrated circuit platforms and system software with advanced connectivity and high- performance, low-power computing technologies. QTL grants licenses or otherwise provides rights to use portions of our intellectual property portfolio, which includes certain patent rights essential to and/or useful in the manufacture and sale of certain wireless products. Our QSI (Qualcomm Strategic Initiatives) reportable segment makes strategic investments. We also have nonreportable segments, including our Data Center, QGOV (Qualcomm Government Technologies) and Modular businesses. Beginning in the first quarter of fiscal 2027, our Data Center business, which has been presented as a nonreportable segment, will be included within our QCT reportable segment, to align to how we plan to manage the business going forward. At the same time, physical and industrial AI are beginning to reshape industries and provide new opportunities from robotics to manufacturing, logistics and energy, through embedded intelligence and enabling automation, real-time insights, autonomous systems and adaptive decision-making at the edge. Additionally, consumer demand for new experiences, combined with the needs of mobile operators and device manufacturers to provide differentiated features and services, is driving continued innovation within the smartphone across AI, connectivity, processing, multimedia, imaging, audio and more.\n[p.7] The combination of IoT products with connectivity, edge-computing, on-device AI and power-optimized and/or precise location tracking, along with cloud capabilities, is driving advancements in industries such as retail, transportation logistics, manufacturing, energy and utilities, smart home and video. A key enabler of this shift is physical AI, which is reshaping industrial applications and creating new opportunities, particularly in areas like manufacturing and robotics.\n[p.8] We continue to play a leading role in developing (and/or have acquired) many other technologies used across mobile and other industries, including: • audio technologies, including noise cancellation, that utilize advanced digital signal processing, AI-enhanced voice processing and low-power computing to improve speech intelligibility, reduce background noise and enhance audio experiences; • automotive platform features such as digital cockpit and ADAS/AD, including intelligent navigation, obstacle detection and safety-focused decision making, to enable in-cabin experiences and assisted driving solutions; • Bluetooth technology, which is a wireless personal area network that provides wireless connectivity between devices over short distances ranging from a few centimeters to approximately one hundred meters using the 2.4GHz industrial, scientific and medical spectrum band;\n[p.10] Acquisitions.\" Operating Segments We have three reportable segments. Additional information regarding our operating segments is provided in this Annual Report in \"Notes to Consolidated Financial Statements, Note 8. QCT is a leading developer and supplier of integrated circuit products and system software with advanced connectivity and high-performance, low-power computing technologies, for use in mobile devices; automotive systems for connectivity, digital cockpit and ADAS/AD; and IoT products, including personal AI and compute electronic devices, industrial devices, networking and robotics. QCT's integrated circuit products are sold and its system software is licensed to manufacturers that use our products in a broad range of devices, from low-tier, entry-level devices primarily for emerging regions to premium-tier devices. Our technology roadmap is the result of extensive collaboration with manufacturers, operators, developers, system integrators, infrastructure vendors, cloud providers, test tool vendors, service providers, AI companies, governments and industry standards organizations, as well as our years of research into emerging network standards and the development of integrated circuits.\n[p.12] In addition to the highly integrated core SoC, we also design and supply supporting components, including the RF transceiver, PM (power management), audio codecs, speaker amps and additional wireless connectivity integrated circuits. The combination of the SoC, system software and supporting components provides an overall platform with optimized performance and efficiency, enabling manufacturers to design and deliver powerful, slim and power-efficient devices ready for integration with complex cellular networks worldwide. Other than for certain of our RFFE modules and RF filter products, QCT utilizes a fabless production model, which means that we do not own or operate foundries for the production of silicon wafers from which our integrated circuits are made. The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries. Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC. The majority of our foundry, memory and semiconductor assembly and test suppliers are located in the Asia-Pacific region. QCT primarily uses internal fabrication facilities to manufacture certain RFFE modules and RF filter products. QCT's sales are primarily made through supply terms which implement a purchase order and order confirmation process for delivery of products. The industries in which QCT operates are intensely competitive. QCT competes worldwide with a number of U.S. and international designers and manufacturers of semiconductors, ranging from multinational companies with integrated research and development, manufacturing, sales and marketing organizations across a broad spectrum of product lines, to companies that are focused on a single application, industry or standard product, including those that produce products for industries and applications including handsets, automotive or IoT, among others. Companies that provide on-device AI, high-performance and low-power computing and connectivity-based integrated circuit products and/or software are generally competitors or potential competitors."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"segment\", \"entity\": \"QCT\", \"quote\": \"QCT develops and supplies integrated circuit platforms and system software with advanced connectivity and high- performance, low-power computing technologies.\", \"page\": 6}, {\"type\": \"segment\", \"entity\": \"QTL\", \"quote\": \"QTL grants licenses or otherwise provides rights to use portions of our intellectual property portfolio, which includes certain patent rights essential to and/or useful in the manufacture and sale of certain wireless products.\", \"page\": 6}, {\"type\": \"segment\", \"entity\": \"QSI\", \"quote\": \"Our QSI (Qualcomm Strategic Initiatives) reportable segment makes strategic investments.\", \"page\": 6}, {\"type\": \"supplier\", \"entity\": \"Taiwan Semiconductor Manufacturing Company (TSMC)\", \"quote\": \"The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Samsung Electronics\", \"quote\": \"The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"GlobalFoundries\", \"quote\": \"The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Amkor Technology\", \"quote\": \"Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Advanced Semiconductor Engineering\", \"quote\": \"Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Siliconware Precision Industries\", \"quote\": \"Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"STATS ChipPAC\", \"quote\": \"Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.\", \"page\": 12}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "QCT",
+    "quote": "QCT develops and supplies integrated circuit platforms and system software with advanced connectivity and high- performance, low-power computing technologies.",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "QTL",
+    "quote": "QTL grants licenses or otherwise provides rights to use portions of our intellectual property portfolio, which includes certain patent rights essential to and/or useful in the manufacture and sale of certain wireless products.",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "QSI",
+    "quote": "Our QSI (Qualcomm Strategic Initiatives) reportable segment makes strategic investments.",
+    "page": 6
+   },
+   {
+    "type": "supplier",
+    "entity": "Taiwan Semiconductor Manufacturing Company (TSMC)",
+    "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Samsung Electronics",
+    "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "GlobalFoundries",
+    "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Amkor Technology",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Advanced Semiconductor Engineering",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Siliconware Precision Industries",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "STATS ChipPAC",
+    "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+    "page": 12
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.049772545,
+  "prompt_tokens": 1432,
+  "prompt_time": 0.1015351,
+  "completion_tokens": 559,
+  "completion_time": 1.185565352,
+  "total_tokens": 1991,
+  "total_time": 1.287100452
+ }
+}

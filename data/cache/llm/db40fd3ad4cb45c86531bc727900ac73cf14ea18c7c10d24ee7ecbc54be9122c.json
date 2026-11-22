@@ -1,0 +1,55 @@
+{
+ "tag": "relations:PFE:0",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Pfizer Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Pfizer Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Pfizer Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Pfizer Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Pfizer Inc. (entity = segment name)\n  \"acquisition\" - a company Pfizer Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.18] • risks and uncertainties related to the impact of Pfizer's voluntary agreement with the U.S. Government designed to lower drug costs for U.S. patients and to include certain Pfizer products on the TrumpRx.gov platform, Pfizer's plans to further invest in U.S. manufacturing and potential tariff impacts, including risks relating to entering into binding final agreements with the U.S. Government; • U.S. federal or state legislation or regulatory action and/or policy efforts affecting, among other things, pharmaceutical product pricing, including international reference pricing (including Most-Favored-Nation drug pricing), intellectual property, product approval processes and pathways, reimbursement or access to or recommendations for our medicines and vaccines, tax changes or other restrictions on U.S. direct-to-consumer advertising; limitations on interactions with healthcare professionals and other industry stakeholders; as well as pricing pressures for our products as a result of highly competitive biopharmaceutical markets;\n[p.19] We apply science and our global resources to bring therapies to people that extend and significantly improve their lives through the discovery, development, manufacture, marketing, sale and distribution of Pfizer Inc. 2025 Form 10-K 3\n[p.20] In addition, we are scaling AI across R&D, manufacturing, commercial and patient engagement to improve productivity and accelerate innovation. COMMERCIAL OPERATIONS We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite. Within our Biopharma reportable segment, our commercial divisions market, sell and distribute our products, and global operating functions are responsible for the research, development, manufacturing and supply of our products. The commercial structure within our Biopharma reportable segment in 2025 was composed of the Pfizer U.S. Commercial Division, which focused on the commercialization of Pfizer's entire product portfolio in the U.S., and the Pfizer International Commercial Division, which focused on the commercialization of Pfizer's entire product portfolio in all international markets. As part of our continued focus on commercial execution, at the beginning of 2026, we made changes in our commercial structure, which included the transition of certain off-patent branded and generic sterile injectables and biosimilars from the Specialty Care and Oncology product portfolios to a new Global Hospital and Biosimilars organization within our Biopharma reportable segment. Effective January 1, 2026, the commercial structure within our Biopharma reportable segment is as follows: Division Description Pfizer U.S. Commercial Includes the U.S. commercial organization covering Pfizer's entire product portfolio except for the Global Hospital and Biosimilars organization, as well as the Global Access & Value, Global Chief Marketing Office and Primary Care and Specialty Care U.S. Medical Affairs organizations.\n[p.22] For additional information on our operating segments and products, including product revenues, see Note 17, and for additional information on the key operational revenue drivers of our business, see the Analysis of the Consolidated Statements of Operations section within MD&A.\n[p.24] In certain smaller markets we have full commercialization rights and BMS supplies the product to us at cost plus a percentage of the net sales to end- customers.\n[p.26] INTERNATIONAL OPERATIONS Our operations are conducted globally, and we supply our medicines and vaccines to approximately 200 countries and territories. Revenues from operations outside the U.S. of $25.5 billion, $24.9 billion and $31.4 billion accounted for 41%, 39% and 53% of Total revenues in 2025, 2024 and 2023, respectively. As a percentage of Total revenues, China was our largest market outside the U.S. in 2025 and 2024 (representing 5% and 4% of total revenues, respectively), and Japan was our largest market in 2023 (representing 6% of total revenues). For information on our significant customers, see Note 17C. Based on current sales and other factors, and considering the competition with products sold by our competitors, the patent rights we consider most significant in relation to our business as a whole, together with the year in which the basic product patent expires, are as follows:\n[p.28] There are other Europe patents and pending applications covering the formulation, various aspects of the manufacturing process, and the combination of serotype conjugates of Prevenar 13 that remain in force.\n[p.30] Risk Factors—Competitive Products, — Intellectual Property Protection and —Third-Party Intellectual Property Claims sections and Note 16A1. COMPETITION Our business is conducted in intensely competitive and highly regulated markets. Our competitors also may devote substantial funds and resources to R&D and their successful R&D could result in erosion of the sales of our existing products and potential sales of our products in development, as well as product obsolescence. In addition, several of our competitors operate without large R&D expenses and make a regular practice of challenging our product patents before their expiration. To help address competitive trends we continually emphasize innovation, which is underscored by our multi-billion-dollar investment in R&D, as well as our business development transactions, both designed to result in a strong and differentiated product pipeline.\n[p.32] Generic competitors often operate without large R&D expenses, as well as without costs of conveying medical information about products to the medical community. In addition, the approval process in the U.S. and in the EU exempts most generics from costly and time-consuming clinical trials to demonstrate their safety and efficacy, allowing generic manufacturers to rely on the safety and efficacy data of the innovator product. In China, for example, given the expansion of the QCE process and continuation of the VBP program, we expect to continue to face intensified competition by certain generic manufacturers in 2026 and beyond, which has and may continue to result in price cuts and volume loss of some of our products. Certain of our biologic products, including Enbrel (we market Enbrel outside the U.S. and Canada), already face, or may face in the future, competition from biosimilars (also referred to as follow-on biologics). Pricing pressures also may occur as a result of highly competitive biopharmaceutical markets and increasing concentration of insurers and PBMs. The breadth of the products covered by formularies can vary considerably from one MCO to another, and many formularies include alternative and competitive products for treatment of particular medical problems."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Biopharma\",\n      \"quote\": \"We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite.\",\n      \"page\": 20\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"PC1\",\n      \"quote\": \"We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite.\",\n      \"page\": 20\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Pfizer Ignite\",\n      \"quote\": \"We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite.\",\n      \"page\": 20\n    },\n    {\n      \"type\": \"supplier\",\n      \"entity\": \"BMS\",\n      \"quote\": \"In certain smaller markets we have full commercialization rights and BMS supplies the product to us at cost plus a percentage of the net sales to end- customers.\",\n      \"page\": 24\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "Biopharma",
+    "quote": "We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite.",
+    "page": 20
+   },
+   {
+    "type": "segment",
+    "entity": "PC1",
+    "quote": "We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite.",
+    "page": 20
+   },
+   {
+    "type": "segment",
+    "entity": "Pfizer Ignite",
+    "quote": "We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite.",
+    "page": 20
+   },
+   {
+    "type": "supplier",
+    "entity": "BMS",
+    "quote": "In certain smaller markets we have full commercialization rights and BMS supplies the product to us at cost plus a percentage of the net sales to end- customers.",
+    "page": 24
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.049608664,
+  "prompt_tokens": 1658,
+  "prompt_time": 0.119946531,
+  "completion_tokens": 300,
+  "completion_time": 0.584242278,
+  "total_tokens": 1958,
+  "total_time": 0.704188809
+ }
+}

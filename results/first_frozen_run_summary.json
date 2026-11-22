@@ -1,0 +1,34 @@
+{
+ "overall": {
+  "n": 30,
+  "accuracy": 0.9,
+  "precision": 0.9777777777777777,
+  "recall": 0.9907692307692308,
+  "abstained": 0,
+  "page_accuracy": 0.9805555555555556
+ },
+ "single_fact": {
+  "n": 10,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "abstained": 0,
+  "page_accuracy": 1.0
+ },
+ "multi_hop": {
+  "n": 10,
+  "accuracy": 0.8,
+  "precision": 0.9666666666666666,
+  "recall": 0.9923076923076923,
+  "abstained": 0,
+  "page_accuracy": 0.9416666666666667
+ },
+ "cross_filing": {
+  "n": 10,
+  "accuracy": 0.9,
+  "precision": 0.9666666666666666,
+  "recall": 0.9800000000000001,
+  "abstained": 0,
+  "page_accuracy": 1.0
+ }
+}

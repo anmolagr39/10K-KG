@@ -1,0 +1,800 @@
+{
+ "summary": {
+  "overall": {
+   "n": 14,
+   "accuracy": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "abstained": 0,
+   "page_accuracy": 1.0
+  },
+  "single_fact": {
+   "n": 4,
+   "accuracy": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "abstained": 0,
+   "page_accuracy": 1.0
+  },
+  "multi_hop": {
+   "n": 5,
+   "accuracy": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "abstained": 0,
+   "page_accuracy": 1.0
+  },
+  "cross_filing": {
+   "n": 5,
+   "accuracy": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "abstained": 0,
+   "page_accuracy": 1.0
+  }
+ },
+ "rows": [
+  {
+   "id": "D01",
+   "type": "single_fact",
+   "question": "What was IBM's total revenue in 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "$67.53 billion",
+   "gold": {
+    "kind": "number",
+    "value": 67535000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 67535000000.0,
+    "unit": "USD"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "get_fact",
+      "args": {
+       "companies": [
+        "IBM"
+       ],
+       "metric": "revenue",
+       "period": "fy:2025"
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 4.2
+  },
+  {
+   "id": "D02",
+   "type": "single_fact",
+   "question": "Who is Cisco's independent auditor?",
+   "correct": true,
+   "abstained": false,
+   "answer": "PricewaterhouseCoopers LLP",
+   "gold": {
+    "kind": "entity",
+    "value": "PricewaterhouseCoopers LLP",
+    "aliases": [
+     "PwC",
+     "PricewaterhouseCoopers"
+    ]
+   },
+   "pred": {
+    "kind": "entity",
+    "value": "PricewaterhouseCoopers LLP",
+    "list": [
+     "PricewaterhouseCoopers LLP"
+    ]
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "related",
+      "args": {
+       "subject": "CSCO",
+       "relation": "audited_by"
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D03",
+   "type": "multi_hop",
+   "question": "What was Intel's operating margin in 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "-4.19%",
+   "gold": {
+    "kind": "percent",
+    "value": -4.188977,
+    "unit": "pct",
+    "formula": "f1 / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "percent",
+    "value": -4.188976973870925,
+    "unit": "pct"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "derive",
+      "args": {
+       "companies": [
+        "INTC"
+       ],
+       "metric": "operating_margin_pct",
+       "period": "fy:2025"
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D04",
+   "type": "multi_hop",
+   "question": "What was Target's free cash flow in fiscal 2025 (cash provided by operating activities minus expenditures for property and equipment)?",
+   "correct": true,
+   "abstained": false,
+   "answer": "$2.83 billion",
+   "gold": {
+    "kind": "number",
+    "value": 2835000000.0,
+    "unit": "USD",
+    "formula": "f1 - f2",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 2835000000.0,
+    "unit": "USD"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "derive",
+      "args": {
+       "companies": [
+        "TGT"
+       ],
+       "metric": "free_cash_flow",
+       "period": "fy:2025"
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D05",
+   "type": "cross_filing",
+   "question": "Rank Johnson & Johnson, Pfizer, Merck, AbbVie and Eli Lilly by revenue in 2025, highest first.",
+   "correct": true,
+   "abstained": false,
+   "answer": "JNJ > LLY > MRK > PFE > ABBV",
+   "gold": {
+    "kind": "ranking",
+    "value": [
+     "JNJ",
+     "LLY",
+     "MRK",
+     "PFE",
+     "ABBV"
+    ],
+    "aliases": []
+   },
+   "pred": {
+    "kind": "ranking",
+    "value": [
+     "JNJ",
+     "LLY",
+     "MRK",
+     "PFE",
+     "ABBV"
+    ],
+    "values": [
+     94193000000.0,
+     65179000000.0,
+     65011000000.0,
+     62579000000.0,
+     61160000000.0
+    ]
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 5,
+   "n_gold": 5,
+   "n_matched_retrieved": 5,
+   "n_matched_gold": 5,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "get_fact",
+      "args": {
+       "companies": [
+        "JNJ",
+        "PFE",
+        "MRK",
+        "ABBV",
+        "LLY"
+       ],
+       "metric": "revenue",
+       "period": "fy:2025"
+      }
+     },
+     {
+      "id": "s2",
+      "op": "rank",
+      "args": {
+       "items": "$s1",
+       "order": "desc"
+      }
+     }
+    ],
+    "answer": "s2"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D06",
+   "type": "single_fact",
+   "question": "Which companies in the corpus does AMD name as competitors?",
+   "correct": true,
+   "abstained": false,
+   "answer": "INTC, NVDA, AVGO, QCOM",
+   "gold": {
+    "kind": "list",
+    "value": [
+     "INTC",
+     "NVDA",
+     "AVGO",
+     "QCOM"
+    ],
+    "aliases": []
+   },
+   "pred": {
+    "kind": "list",
+    "value": [
+     "INTC",
+     "NVDA",
+     "AVGO",
+     "QCOM"
+    ]
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 4,
+   "n_gold": 4,
+   "n_matched_retrieved": 4,
+   "n_matched_gold": 4,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "related",
+      "args": {
+       "subject": "AMD",
+       "relation": "competes_with",
+       "direction": "out",
+       "in_corpus": true
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D07",
+   "type": "multi_hop",
+   "question": "What was Salesforce's revenue per employee in fiscal 2026?",
+   "correct": true,
+   "abstained": false,
+   "answer": "$498,296",
+   "gold": {
+    "kind": "number",
+    "value": 498296.013632,
+    "unit": "USD",
+    "formula": "f1 / f2",
+    "tolerance": {
+     "rel": 0.01
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 498296.01363189094,
+    "unit": "USD"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "derive",
+      "args": {
+       "companies": [
+        "CRM"
+       ],
+       "metric": "revenue_per_employee",
+       "period": "fy:2026"
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D08",
+   "type": "cross_filing",
+   "question": "Of the companies in the corpus that AMD names as competitors, which had the highest revenue in its latest fiscal year?",
+   "correct": true,
+   "abstained": false,
+   "answer": "NVDA ($215.94 billion)",
+   "gold": {
+    "kind": "entity",
+    "value": "NVDA",
+    "aliases": [
+     "NVIDIA"
+    ]
+   },
+   "pred": {
+    "kind": "entity",
+    "value": "NVDA",
+    "metric_value": 215938000000.0,
+    "unit": "USD"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 8,
+   "n_gold": 8,
+   "n_matched_retrieved": 8,
+   "n_matched_gold": 8,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "related",
+      "args": {
+       "subject": "AMD",
+       "relation": "competes_with",
+       "direction": "out",
+       "in_corpus": true
+      }
+     },
+     {
+      "id": "s2",
+      "op": "get_fact",
+      "args": {
+       "companies": "$s1",
+       "metric": "revenue",
+       "period": "latest_fy"
+      }
+     },
+     {
+      "id": "s3",
+      "op": "rank",
+      "args": {
+       "items": "$s2",
+       "order": "desc",
+       "k": 1
+      }
+     }
+    ],
+    "answer": "s3"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D09",
+   "type": "single_fact",
+   "question": "What was Wells Fargo's net interest income in 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "$47.48 billion",
+   "gold": {
+    "kind": "number",
+    "value": 47484000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 47484000000.0,
+    "unit": "USD"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "get_fact",
+      "args": {
+       "companies": [
+        "WFC"
+       ],
+       "metric": "net_interest_income",
+       "period": "fy:2025"
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D10",
+   "type": "multi_hop",
+   "question": "What percentage of Microsoft's total revenue in fiscal 2026 came from \"Service and other\" revenue?",
+   "correct": true,
+   "abstained": false,
+   "answer": "80.50%",
+   "gold": {
+    "kind": "percent",
+    "value": 80.503799,
+    "unit": "pct",
+    "formula": "f1 / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "percent",
+    "value": 80.50379852880462,
+    "unit": "pct"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "find_line_item",
+      "args": {
+       "company": "MSFT",
+       "query": "Revenue: Service and other",
+       "period": "fy:2026"
+      }
+     },
+     {
+      "id": "s2",
+      "op": "get_fact",
+      "args": {
+       "companies": [
+        "MSFT"
+       ],
+       "metric": "revenue",
+       "period": "fy:2026"
+      }
+     },
+     {
+      "id": "s3",
+      "op": "compute",
+      "args": {
+       "op": "ratio_pct",
+       "a": "$s1",
+       "b": "$s2"
+      }
+     }
+    ],
+    "answer": "s3"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D11",
+   "type": "multi_hop",
+   "question": "By what percentage did NVIDIA's revenue grow in fiscal 2026 compared with fiscal 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "65.47%",
+   "gold": {
+    "kind": "percent",
+    "value": 65.473536,
+    "unit": "pct",
+    "formula": "(f1 - f2) / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "percent",
+    "value": 65.4735357900948,
+    "unit": "pct"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "yoy",
+      "args": {
+       "companies": [
+        "NVDA"
+       ],
+       "metric": "revenue",
+       "period": "fy:2026"
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D12",
+   "type": "cross_filing",
+   "question": "Which companies in the corpus are audited by Deloitte & Touche LLP?",
+   "correct": true,
+   "abstained": false,
+   "answer": "MSFT, LOW",
+   "gold": {
+    "kind": "list",
+    "value": [
+     "MSFT",
+     "LOW"
+    ],
+    "aliases": []
+   },
+   "pred": {
+    "kind": "list",
+    "value": [
+     "MSFT",
+     "LOW"
+    ]
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "related",
+      "args": {
+       "subject": "Deloitte & Touche LLP",
+       "relation": "audited_by",
+       "direction": "in",
+       "in_corpus": true
+      }
+     }
+    ],
+    "answer": "s1"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D13",
+   "type": "cross_filing",
+   "question": "What was the average research and development expense of NVIDIA, AMD, Intel, Qualcomm and Broadcom in their latest fiscal years?",
+   "correct": true,
+   "abstained": false,
+   "answer": "$12.31 billion",
+   "gold": {
+    "kind": "number",
+    "value": 12309200000.0,
+    "unit": "USD",
+    "formula": "(f1 + f2 + f3 + f4 + f5) / 5",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 12309200000.0,
+    "unit": "USD"
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 5,
+   "n_gold": 5,
+   "n_matched_retrieved": 5,
+   "n_matched_gold": 5,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "get_fact",
+      "args": {
+       "companies": [
+        "NVDA",
+        "AMD",
+        "INTC",
+        "QCOM",
+        "AVGO"
+       ],
+       "metric": "rd_expense",
+       "period": "latest_fy"
+      }
+     },
+     {
+      "id": "s2",
+      "op": "aggregate",
+      "args": {
+       "items": "$s1",
+       "fn": "avg"
+      }
+     }
+    ],
+    "answer": "s2"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  },
+  {
+   "id": "D14",
+   "type": "cross_filing",
+   "question": "Which had more total assets at its latest balance sheet date, Costco or Target, and by how much?",
+   "correct": true,
+   "abstained": false,
+   "answer": "COST, higher by $29.55 billion (ranking: ['COST', 'TGT'])",
+   "gold": {
+    "kind": "compare",
+    "winner": "COST",
+    "aliases": [
+     "Costco"
+    ],
+    "difference": 29555000000.0,
+    "formula": "f1 - f2",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "compare",
+    "winner": "COST",
+    "difference": 29555000000.0,
+    "unit": "USD",
+    "ranking": [
+     "COST",
+     "TGT"
+    ]
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 1.0,
+   "plan": {
+    "steps": [
+     {
+      "id": "s1",
+      "op": "get_fact",
+      "args": {
+       "companies": [
+        "COST",
+        "TGT"
+       ],
+       "metric": "total_assets",
+       "period": "latest_fy"
+      }
+     },
+     {
+      "id": "s2",
+      "op": "compare",
+      "args": {
+       "items": "$s1"
+      }
+     }
+    ],
+    "answer": "s2"
+   },
+   "error": null,
+   "repaired": false,
+   "seconds": 0.0
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "tag": "relations:MRK:1",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Merck & Co., Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Merck & Co., Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Merck & Co., Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Merck & Co., Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Merck & Co., Inc. (entity = segment name)\n  \"acquisition\" - a company Merck & Co., Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.30] The effect of product patent expiration on pharmaceutical product sales may also depend upon many other factors such as the nature of the market and the position of the product in it, the growth of the market, the complexities and economics of the process for manufacture of the active ingredient(s) of the product and the requirements of new drug provisions of the Federal Food, Drug and Cosmetic Act or similar laws and regulations in other countries.\n[p.34] The Fast Track designation provides pharmaceutical manufacturers with opportunities for frequent interactions with FDA reviewers during the product's development and the ability for the manufacturer to do a rolling submission of the NDA/BLA. The Breakthrough Therapy designation provides manufacturers with all of the features of the Fast Track designation as well as intensive guidance on implementing an efficient development program for the product and a commitment by the FDA to involve senior managers and experienced staff in the review. The Accelerated Approval designation allows the FDA to approve a product based on an effect on a surrogate or intermediate endpoint that is reasonably likely to predict a product's clinical benefit and generally requires the manufacturer to conduct required post-approval confirmatory trials to verify the clinical benefit. Pilot program eligibility requires alignment with one or more critical national health priorities, which include addressing a health crisis in the U.S., bringing innovative therapies to the American people, addressing a large unmet medical need, promoting domestic manufacturing, and increasing affordability.\n[p.36] The PMDA considers multiple factors in its review process, including the drug's safety, efficacy, quality, and manufacturing process in accordance with the Act on Securing Quality, Efficacy and Safety of Products Including Pharmaceuticals and Medical Devices. The NMPA considers multiple factors in its review process, including the drug's safety, efficacy, quality, and manufacturing process.\n[p.40] Table of Contents • V181 is an investigational quadrivalent vaccine for the prevention of dengue disease caused by any of the four dengue virus serotypes (DENV-1, DENV-2, DENV-3, and DENV-4), regardless of prior dengue exposure. MK-1406, which received Breakthrough Therapy designation from the FDA in 2025, was obtained in connection with the January 2026 acquisition of Cidara Therapeutics, Inc. • MK-7240, tulisokibart, is an investigational humanized monoclonal antibody directed to tumor necrosis factor-like ligand 1A, a central amplifier of inflammatory pathways and fibrotic mechanisms in inflammatory bowel disease, being evaluated for the treatment of Crohn's disease and ulcerative colitis.\n[p.44] The Company believes these practices create a competitive edge by focusing on the needs of patients worldwide and leveraging employee insights to improve performance. The Company continually monitors and adjusts its compensation and benefits programs to remain competitive, contemporary, helpful, and engaging and to ensure that they are anchored in fairness, flexibility, quality, security, and affordability.\n[p.46] Table of Contents Some of the potential impacts of climate change to the Company's business include increased operating costs due to additional regulatory requirements, physical risks to the Company's facilities, water limitations, and disruptions to its supply chain. These goals address the rising expectations of the Company's customers, investors, external stakeholders, and employees regarding the environmental impact of its operations and supply chain. The Company is working to reduce its Scope 3 emissions through a robust supplier engagement approach to reinforce the Company's expectations, drive partnerships, and raise awareness of the Company's climate change objectives to accelerate GHG reduction activities. The Company launched the Sustainability Partner Exchange, an education and partnership series to facilitate dialogue and knowledge-sharing between the Company and its suppliers. The Company continues to improve upon the accuracy of its Scope 3 GHG data through close collaboration with suppliers to enhance Scope 3 data calculation, collection, and reporting processes. The Company believes that meeting its environmental sustainability goals is intrinsically linked to the creation of innovative, cost-efficient manufacturing processes with low environmental impact. The Company aims to develop efficient and sustainable processes at product launch, with the goal of minimizing material use and waste from its commercial manufacturing. The Company utilizes an innovative \"green-by-design\" development strategy with a goal to progress from an initial early clinical supply route to a fully optimized and sustainable commercial manufacturing process. As water is a key input to the Company's manufacturing operations, the Company assesses water risk throughout its network as a standard business practice."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"acquisition\", \"entity\": \"Cidara Therapeutics, Inc.\", \"quote\": \"was obtained in connection with the January 2026 acquisition of Cidara Therapeutics, Inc.\", \"page\": 40}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "acquisition",
+    "entity": "Cidara Therapeutics, Inc.",
+    "quote": "was obtained in connection with the January 2026 acquisition of Cidara Therapeutics, Inc.",
+    "page": 40
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.053014215,
+  "prompt_tokens": 1232,
+  "prompt_time": 0.09194167,
+  "completion_tokens": 61,
+  "completion_time": 0.11763867,
+  "total_tokens": 1293,
+  "total_time": 0.20958034
+ }
+}

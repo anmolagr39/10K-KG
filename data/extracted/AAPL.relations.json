@@ -1,0 +1,62 @@
+{
+ "ticker": "AAPL",
+ "relations": [
+  {
+   "ticker": "AAPL",
+   "type": "segment",
+   "entity": "Americas",
+   "entity_canonical": "Americas",
+   "company": null,
+   "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+   "page": 6,
+   "doc": "AAPL_10K_2026-09-26.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AAPL",
+   "type": "segment",
+   "entity": "Europe",
+   "entity_canonical": "Europe",
+   "company": null,
+   "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+   "page": 6,
+   "doc": "AAPL_10K_2026-09-26.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AAPL",
+   "type": "segment",
+   "entity": "Greater China",
+   "entity_canonical": "Greater China",
+   "company": null,
+   "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+   "page": 6,
+   "doc": "AAPL_10K_2026-09-26.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AAPL",
+   "type": "segment",
+   "entity": "Japan",
+   "entity_canonical": "Japan",
+   "company": null,
+   "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+   "page": 6,
+   "doc": "AAPL_10K_2026-09-26.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AAPL",
+   "type": "segment",
+   "entity": "Rest of Asia Pacific",
+   "entity_canonical": "Rest of Asia Pacific",
+   "company": null,
+   "quote": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+   "page": 6,
+   "doc": "AAPL_10K_2026-09-26.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 7388
+}

@@ -1,0 +1,175 @@
+{
+ "tag": "relations:NVDA",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of NVIDIA Corporation's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company NVIDIA Corporation names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies NVIDIA Corporation (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to NVIDIA Corporation (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of NVIDIA Corporation (entity = segment name)\n  \"acquisition\" - a company NVIDIA Corporation acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.4] This deep and broad software stack accelerates the performance and facilitates the deployment of NVIDIA accelerated computing for computationally intensive workloads such as artificial intelligence, or AI, model training and inference, data analytics, scientific computing, robotics, and 3D graphics, with vertical-specific optimizations to address industries ranging from healthcare and telecom to automotive and manufacturing. In 2012, the AlexNet neural network, trained on NVIDIA GPUs, won the ImageNet computer image recognition competition, marking the \"Big Bang\" moment of AI. Our acquisition of Mellanox in 2020 expanded our offerings to include networking, enabled our platforms to be data center scale, and led to the introduction of a new processor class – the data processing unit, or DPU.\n[p.6] Some of our direct customers include original equipment manufacturers, or OEMs, original device manufacturers, or\n[p.8] We also have partnerships in automotive, healthcare, financial services, manufacturing, retail, and technology among others, to accelerate the adoption of AI.\n[p.10] Therefore, we provide an AI-based hardware and software solution, designed and implemented from the ground up based on automotive safety standards, for the AV and EV market under the DRIVE brand, which we are bringing to market through our partnerships across the transportation industry including with automotive OEMs, mobility service providers, robotaxis, tier-1 suppliers, and start-ups.\n[p.12] Our partner network incorporates global, regional and specialized CSPs, OEMs, ODMs, ISVs, global system integrators, add-in board manufacturers, or AIBs, distributors, automotive manufacturers and tier-1 automotive suppliers, and other ecosystem participants. Manufacturing We utilize a fabless and contracting manufacturing strategy, whereby we employ and partner with key suppliers for all phases of the manufacturing process, including wafer fabrication, assembly, testing, and packaging. We use the expertise of industry-leading suppliers that are certified by the International Organization for Standardization in such areas as fabrication, assembly, quality control and assurance, reliability, and testing. While currently our supply chain is mainly concentrated in Asia, we are expanding into the U.S. and Latin America. We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products. Competition The market for our products is intensely competitive and is characterized by rapid technological change and evolving industry standards. We believe that the principal competitive factors in this market are performance, breadth of product offerings, access to customers and partners and distribution channels, software support, conformity to industry standard APIs, manufacturing capabilities, processor pricing, and total system costs.\n[p.14] Table of Contents demand and whether we are able to deliver consistent volumes of our products at acceptable levels of quality and at competitive prices. A significant source of competition comes from companies that provide or intend to provide GPUs, CPUs, DPUs, embedded SoCs, and other accelerated, AI computing processor products, and providers of semiconductor-based high-performance interconnect products based on InfiniBand, Ethernet, Fibre Channel, and proprietary technologies. Our current competitors include: • suppliers and licensors of hardware and software for discrete and integrated GPUs, custom chips and other accelerated computing solutions, including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel; • large cloud services companies with internal teams designing hardware and software that incorporate accelerated or AI computing functionality as part of their internal solutions or platforms, such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft; • suppliers of Arm-based CPUs and companies that incorporate hardware and software for CPUs as part of their internal solutions or platforms, such as Amazon, Huawei, and Microsoft; • suppliers of hardware and software for SoC products that are used in servers or embedded into automobiles, autonomous machines, and gaming devices, such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.; and • networking products consisting of switches, network adapters (including DPUs), and cable solutions (including optical modules) include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies. The laws of certain foreign countries in which our products are or may be manufactured or sold, including various countries in Asia, may not protect our products or IP rights to the same extent as the laws of the United States. • the degree to which IP laws exist and are meaningfully enforced in different jurisdictions; and • the commercial significance of our operations and our competitors' operations in particular countries and regions.\n[p.16] These restrictions impacted exports of certain chips, as well as software, hardware, equipment and technology used to develop, produce and manufacture certain chips to China (including Hong Kong and Macau) and Russia, and specifically impact our A100 and H100 integrated circuits, DGX or any other systems or boards which incorporate A100 or H100 integrated circuits. In the event that we are able to sell licensed products into the China market, we may not be able to pass along all or any of the tariff to our customers, and may be subject to litigation, increased costs, and a harmed competitive position. Under the current rules and geopolitical landscape, we are unable to create and deliver a competitive product for China's data center market that receives approval from both the USG and the Chinese government. As of the end of fiscal year 2026, we were effectively foreclosed from competing in China's data center computing/compute market, and our effective foreclosure from the China market helped our competitors build larger developer and customer ecosystems to challenge us worldwide. Unless we are able to return with a product that meets the approval of both the USG and the Chinese government, our lost opportunity and the benefit to our competitors will have a material and adverse impact on our business, operating results, and financial condition. Our competitive position has been harmed by export controls, and our competitive position and future results will be further harmed, over the long term, if the restrictions remain in place or are expanded in geographic, customer, or product scope, if customers purchase product from competitors, if customers develop their own internal solution, if we are unable to provide contractual warranty or other extended service obligations, if the USG does not grant licenses in a timely manner or denies licenses to significant customers or if we incur significant transition costs.\n[p.18] The licensing requirements have already and may in the future benefit certain of our competitors, as the licensing process will make our pre-sale and post-sale technical support efforts more cumbersome and less certain and encourage customers in China, the Middle East, and other regions to pursue alternatives to our products, including semiconductor suppliers based in China, Europe, and Israel. The Chinese government has encouraged customers to purchase from our China-based competitors and discouraged customers from purchasing, importing, or using our data center products, including any China-specific product designed to comply with U.S. export controls. While we work to enhance the resiliency and redundancy of our supply chain, which is currently concentrated in Asia, new and existing export controls or changes to existing export controls could limit alternative manufacturing locations and negatively impact our business. Compliance with existing or future governmental regulations, including, but not limited to, those pertaining to IP ownership and infringement, taxes, import and export requirements and tariffs, anti-corruption, business acquisitions, foreign exchange controls and cash repatriation restrictions, data privacy requirements, competition and antitrust, advertising, employment, product regulations, cybersecurity, environmental, health and safety requirements, the responsible use of AI, climate change, cryptocurrency, and consumer laws, could further increase our costs, impact our competitive position, and otherwise may have a material adverse impact on our business, financial condition and results of operations in subsequent periods. Huang was employed at LSI Logic Corporation, a computer chip manufacturer, where he held a variety of positions including as Director of Coreware, the business unit responsible for LSI's SOC.\n[p.20] She served from 2002 to 2004 as Senior Vice President and General Manager of the Electro-Optics business at Coherent, Inc., a manufacturer of commercial and scientific laser equipment. • Competition could adversely impact our market share and financial results. Risks Related to Demand, Supply, and Manufacturing • Long manufacturing lead times and uncertain supply and capacity availability, combined with a failure to estimate customer demand accurately has led and could lead to mismatches between supply and demand. 12"
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"acquisition\", \"entity\": \"Mellanox\", \"quote\": \"Our acquisition of Mellanox in 2020 expanded our offerings to include networking, enabled our platforms to be data center scale\", \"page\": 4}, {\"type\": \"supplier\", \"entity\": \"Taiwan Semiconductor Manufacturing Company Limited\", \"quote\": \"We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Samsung Electronics Co., Ltd.\", \"quote\": \"We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Hon Hai Precision Industry Co., Ltd.\", \"quote\": \"We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Wistron Corporation\", \"quote\": \"We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.\", \"page\": 12}, {\"type\": \"supplier\", \"entity\": \"Fabrinet\", \"quote\": \"We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.\", \"page\": 12}, {\"type\": \"competitor\", \"entity\": \"Advanced Micro Devices, Inc.\", \"quote\": \"including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Huawei Technologies Co. Ltd.\", \"quote\": \"including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Intel Corporation\", \"quote\": \"including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Alibaba Group\", \"quote\": \"such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Alphabet Inc.\", \"quote\": \"such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Amazon, Inc.\", \"quote\": \"such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Baidu, Inc.\", \"quote\": \"such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Microsoft Corporation\", \"quote\": \"such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Ambarella, Inc.\", \"quote\": \"such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Broadcom\", \"quote\": \"such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Qualcomm Incorporated\", \"quote\": \"such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Renesas Electronics Corporation\", \"quote\": \"such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Tesla, Inc.\", \"quote\": \"such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Arista Networks\", \"quote\": \"include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Cisco Systems, Inc.\", \"quote\": \"include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Hewlett Packard Enterprise Company\", \"quote\": \"include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Lumentum Holdings Inc.\", \"quote\": \"include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.\", \"page\": 14}, {\"type\": \"competitor\", \"entity\": \"Marvell Technology, Inc\", \"quote\": \"include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.\", \"page\": 14}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "acquisition",
+    "entity": "Mellanox",
+    "quote": "Our acquisition of Mellanox in 2020 expanded our offerings to include networking, enabled our platforms to be data center scale",
+    "page": 4
+   },
+   {
+    "type": "supplier",
+    "entity": "Taiwan Semiconductor Manufacturing Company Limited",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Samsung Electronics Co., Ltd.",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Hon Hai Precision Industry Co., Ltd.",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Wistron Corporation",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "Fabrinet",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+    "page": 12
+   },
+   {
+    "type": "competitor",
+    "entity": "Advanced Micro Devices, Inc.",
+    "quote": "including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Huawei Technologies Co. Ltd.",
+    "quote": "including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Intel Corporation",
+    "quote": "including solutions offered for AI, such as Advanced Micro Devices, Inc., or AMD, Huawei Technologies Co. Ltd., or Huawei, and Intel Corporation, or Intel;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Alibaba Group",
+    "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Alphabet Inc.",
+    "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Amazon, Inc.",
+    "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Baidu, Inc.",
+    "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Microsoft Corporation",
+    "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Ambarella, Inc.",
+    "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Broadcom",
+    "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Qualcomm Incorporated",
+    "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Renesas Electronics Corporation",
+    "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Tesla, Inc.",
+    "quote": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Arista Networks",
+    "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Cisco Systems, Inc.",
+    "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Hewlett Packard Enterprise Company",
+    "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Lumentum Holdings Inc.",
+    "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "page": 14
+   },
+   {
+    "type": "competitor",
+    "entity": "Marvell Technology, Inc",
+    "quote": "include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "page": 14
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.05421902,
+  "prompt_tokens": 2154,
+  "prompt_time": 0.152420828,
+  "completion_tokens": 1622,
+  "completion_time": 3.318172453,
+  "total_tokens": 3776,
+  "total_time": 3.470593281
+ }
+}

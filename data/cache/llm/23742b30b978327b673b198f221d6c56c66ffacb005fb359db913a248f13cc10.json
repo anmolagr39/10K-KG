@@ -1,0 +1,127 @@
+{
+ "tag": "relations:AXP",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of American Express Company's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company American Express Company names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies American Express Company (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to American Express Company (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of American Express Company (entity = segment name)\n  \"acquisition\" - a company American Express Company acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.6] We principally engage in businesses comprising four reportable operating segments: U.S. Consumer Services (USCS), Commercial Services (CS), International Card Services (ICS) and Global Merchant and Network Services (GMNS). For further information about our reportable operating segments, see \"Business Segment Results of Operations\" under \"MD&A.\"\n[p.8] We offer a broad set of card products, rewards and services to this premium consumer and broad commercial customer base, in the United States and internationally, through our USCS, CS and ICS reportable operating segments. We also provide non-card business-to-business (B2B) payment products and cash and expense management solutions to our commercial clients, which we are enhancing through our 2025 acquisition of Center, an expense management software company.\n[p.10] Table of Contents Merchant Acquiring Business Our GMNS reportable operating segment builds and manages relationships with millions of merchants around the world that choose to accept American Express cards.\n[p.12] Spending on our cards, which is higher on average on a per-card basis versus our network competitors, offers superior value to merchants in the form of loyal customers and larger transactions, and attracts partners to provide value to our Card Members and merchants.\n[p.14] Competitive Total Compensation.\n[p.17] Table of Contents COMPETITION We compete in the global payments industry with networks, issuers, acquirers and other payment service providers and methods of payment, including paper-based transactions (e.g., cash and checks) and electronic transfers (e.g., wire transfers and Automated Clearing House (ACH)), as well as evolving and growing alternative mechanisms, systems and products that leverage new technologies, business models and customer relationships to create payment, financing or banking solutions. For example, there is heightened competition with respect to several aspects of our Card Member value propositions, such as in partnerships and other differentiated offerings (e.g., lounge space in U.S. and global hub airports, dining experiences and other experiential offerings). Our global card network competes in the global payments industry with other card networks, including, among others, Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two of which are owned by Capital One). In addition to such networks, we compete against a range of companies globally, including merchant acquirers, processors, payment facilitators and web- and mobile-based payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks (such as the National Payments Corporation of India). The principal competitive factors that affect card-issuing, merchant and network businesses include: • The features, value and quality of the products and services, including customer care, rewards programs and offers, partnerships, travel-, lifestyle- and business-related benefits (including lounges, dining and other entertainment, as well as business tools), banking services and digital and mobile services, as well as the costs associated with providing such features and services • Reputation and brand recognition • The number, spending characteristics and credit performance of customers • The quantity, diversity and quality of the establishments where the cards can be used • The attractiveness of the value proposition to cardholders, corporate clients, merchants, merchant acquirers, card issuers and processors, payment facilitators and other payment intermediaries (including the relative cost and ease of using or accepting the products and services, and capabilities such as fraud prevention and data analytics) • The number, quality and cost of other cards and other forms of payment and financing available to customers, as well as the integration and connectivity of those products • The security of cardholder, merchant and network partner information • The success of marketing and promotional campaigns • The speed of innovation and investment in systems, technologies and product and service offerings • The nature and quality of expense management tools, electronic payment methods and data capture and reporting capabilities, particularly for business customers 9\n[p.18] Table of Contents Another aspect of competition is the dynamic and rapid growth of alternative payment and financing mechanisms, systems and products, which include payment facilitators and processors, digital payment, open banking and electronic wallet platforms, point-of- sale lenders and buy now, pay later products, real-time settlement and processing systems, financial technology companies, digital currencies developed by both the private sector and central banks, tokenization, blockchain and similar distributed ledger technologies, prepaid systems and gift cards, and systems linked to customer accounts or that provide payment solutions. In addition to the discussion in this section, see \"Our operating results may materially suffer because of substantial and increasingly intense competition worldwide in the payments industry\" under \"Risk Factors\" for further discussion of the potential impact of competition on our business, and \"Our business is subject to evolving and comprehensive government regulation and supervision, which could materially adversely affect our results of operations and financial condition\" and \"Legal proceedings regarding provisions in our merchant contracts, including non-discrimination and honor-all-cards provisions, could have a material adverse effect on our business and result in additional litigation and/or arbitrations, changes to our merchant agreements and/or business practices, substantial monetary damages and damage to our reputation and brand\" under \"Risk Factors\" for a discussion of the potential impact on our ability to compete effectively due to government regulations or if ongoing legal proceedings limit our ability to prevent merchants from engaging in various actions that discriminate against our card products. 10\n[p.26] While the impact of the CFPB's rulemaking will depend upon the content of the final rule, this rulemaking and other open banking initiatives have the potential to change the competitive landscape, presenting challenges to our business model, such as limiting advantages provided by our integrated payments platform, as well as opportunities since we may also act as an authorized third party and receive data from data providers. 16"
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"segment\", \"entity\": \"U.S. Consumer Services (USCS)\", \"quote\": \"four reportable operating segments: U.S. Consumer Services (USCS), Commercial Services (CS), International Card Services (ICS)\", \"page\": 6}, {\"type\": \"segment\", \"entity\": \"Commercial Services (CS)\", \"quote\": \"U.S. Consumer Services (USCS), Commercial Services (CS), International Card Services (ICS) and Global Merchant and Network Services (GMNS)\", \"page\": 6}, {\"type\": \"segment\", \"entity\": \"International Card Services (ICS)\", \"quote\": \"Commercial Services (CS), International Card Services (ICS) and Global Merchant and Network Services (GMNS)\", \"page\": 6}, {\"type\": \"segment\", \"entity\": \"Global Merchant and Network Services (GMNS)\", \"quote\": \"International Card Services (ICS) and Global Merchant and Network Services (GMNS). For further information about our reportable operating segments\", \"page\": 6}, {\"type\": \"acquisition\", \"entity\": \"Center\", \"quote\": \"enhancing through our 2025 acquisition of Center, an expense management software company\", \"page\": 8}, {\"type\": \"competitor\", \"entity\": \"Visa\", \"quote\": \"other card networks, including, among others, Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"China UnionPay\", \"quote\": \"including, among others, Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"Mastercard\", \"quote\": \"Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two of which are owned\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"JCB\", \"quote\": \"China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two of which are owned by\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"Discover\", \"quote\": \"Mastercard, JCB, Discover and Diners Club International (the last two of which are owned by Capital One)\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"Diners Club International\", \"quote\": \"JCB, Discover and Diners Club International (the last two of which are owned by Capital One)\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"Capital One\", \"quote\": \"Discover and Diners Club International (the last two of which are owned by Capital One)\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"Alipay\", \"quote\": \"web- and mobile-based payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"PayPal\", \"quote\": \"mobile-based payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks (such as\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"Shop Pay\", \"quote\": \"payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks (such as the National\", \"page\": 17}, {\"type\": \"competitor\", \"entity\": \"National Payments Corporation of India\", \"quote\": \"regional payment networks (such as the National Payments Corporation of India). The principal competitive factors\", \"page\": 17}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "U.S. Consumer Services (USCS)",
+    "quote": "four reportable operating segments: U.S. Consumer Services (USCS), Commercial Services (CS), International Card Services (ICS)",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "Commercial Services (CS)",
+    "quote": "U.S. Consumer Services (USCS), Commercial Services (CS), International Card Services (ICS) and Global Merchant and Network Services (GMNS)",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "International Card Services (ICS)",
+    "quote": "Commercial Services (CS), International Card Services (ICS) and Global Merchant and Network Services (GMNS)",
+    "page": 6
+   },
+   {
+    "type": "segment",
+    "entity": "Global Merchant and Network Services (GMNS)",
+    "quote": "International Card Services (ICS) and Global Merchant and Network Services (GMNS). For further information about our reportable operating segments",
+    "page": 6
+   },
+   {
+    "type": "acquisition",
+    "entity": "Center",
+    "quote": "enhancing through our 2025 acquisition of Center, an expense management software company",
+    "page": 8
+   },
+   {
+    "type": "competitor",
+    "entity": "Visa",
+    "quote": "other card networks, including, among others, Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "China UnionPay",
+    "quote": "including, among others, Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Mastercard",
+    "quote": "Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two of which are owned",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "JCB",
+    "quote": "China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two of which are owned by",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Discover",
+    "quote": "Mastercard, JCB, Discover and Diners Club International (the last two of which are owned by Capital One)",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Diners Club International",
+    "quote": "JCB, Discover and Diners Club International (the last two of which are owned by Capital One)",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Capital One",
+    "quote": "Discover and Diners Club International (the last two of which are owned by Capital One)",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Alipay",
+    "quote": "web- and mobile-based payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "PayPal",
+    "quote": "mobile-based payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks (such as",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "Shop Pay",
+    "quote": "payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks (such as the National",
+    "page": 17
+   },
+   {
+    "type": "competitor",
+    "entity": "National Payments Corporation of India",
+    "quote": "regional payment networks (such as the National Payments Corporation of India). The principal competitive factors",
+    "page": 17
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.047082559,
+  "prompt_tokens": 1474,
+  "prompt_time": 0.101824586,
+  "completion_tokens": 809,
+  "completion_time": 1.6422671690000001,
+  "total_tokens": 2283,
+  "total_time": 1.744091755
+ }
+}

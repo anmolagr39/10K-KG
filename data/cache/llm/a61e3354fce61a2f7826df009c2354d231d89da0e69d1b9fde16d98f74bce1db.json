@@ -1,0 +1,79 @@
+{
+ "tag": "relations:INTC:1",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Intel Corporation's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Intel Corporation names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Intel Corporation (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Intel Corporation (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Intel Corporation (entity = segment name)\n  \"acquisition\" - a company Intel Corporation acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.8] Overview We are a global designer and manufacturer of semiconductor products. The CPUs and other semiconductor solutions that we design, manufacture, market, sell and service are incorporated in computing and related end products and services, and utilized globally by consumers, enterprises, governments and educational organizations. Our customers primarily include OEMs, ODMs, CSPs, and other manufacturers and service providers, such as industrial and communication equipment manufacturers. As a U.S.-based integrated design manufacturer, or IDM, in addition to designing CPUs and other semiconductor products, we develop leading-edge semiconductor manufacturing process technologies, or nodes, and advanced packaging technologies and predominantly manufacture our semiconductor products at our manufacturing and assembly and test facilities, many of which are in the U.S. We are the only company undertaking research, design and development of leading-edge and next generation semiconductor manufacturing technologies and high-volume manufacturing of logic semiconductors utilizing leading-edge nodes in the U.S., making us a strategically important company from both a national economic and national security perspective. We aim to build a new Intel for the future, undertaking an enterprise-wide transformation to strengthen execution, enhance innovation and better position our products and offerings in the complex, highly competitive and rapidly evolving technology landscape. In 2025 and recent years, the semiconductor industry has experienced momentum driven by the following: ▪ significantly increased compute demand, particularly for GPU systems, driven by generative AI workloads; ▪ an expansion in the types of AI workloads as AI technologies are adopted across industries and applications; ▪ a PC market driven by user refreshes that resulted from expanding AI capabilities, end-of-support for Windows 10 and aging devices from the COVID era; and ▪ increased demand for secure and geographically diversified supply chains in a period of increased geopolitical tensions. Our strategy is centered on four core priorities: ▪ Transforming our culture to become an engineering-focused, customer-centric organization that prioritizes decisive actions, disciplined execution and strong financial management; ▪ Revitalizing the x86 ecosystem that for decades has been our foundation of leadership, adapting and advancing our x86 product offerings to support current and next-generation AI workloads, supported by our U.S.-based leading-edge semiconductor process technology R&D and manufacturing and advanced packaging capabilities; ▪ Growing our external foundry business where we aim to leverage our U.S.-based capabilities in leading-edge semiconductor process technology R&D and manufacturing and advanced packaging to become a trusted foundry partner to third-party semiconductor customers and to financially support our continued investment in capital-intensive, U.S.-based, leading-edge R&D and manufacturing; and ▪ Expanding our market opportunities by leveraging our engineering and design expertise to develop purpose-built ASICs and GPUs for customers to address the increasing diversity of AI-driven compute workloads.\n[p.9] In 2025, we released our initial Intel Core Ultra Series 3 processors, the first products to be manufactured using our new Intel 18A process technology. Intel 18A introduces two industry firsts in high-volume semiconductor manufacturing: gate-all-around transistors (RibbonFET) and backside power delivery (PowerVia). We expect Intel 18A to serve as the manufacturing process for multiple generations of our future client and server CPU products. We remain committed to advancing leading-edge semiconductor process technology and manufacturing in the U.S., where we are the only company conducting both leading-edge semiconductor logic R&D and related high-volume manufacturing. However, the development and manufacturing of modern leading-edge process technologies, particularly those utilizing EUV lithography such as Intel 4, Intel 3, Intel 18A, Intel 14A and future nodes, require substantial capital investment.\n[p.10] Further, we announced that if we are unable to secure a significant external foundry customer for Intel 14A, we may pause or discontinue our pursuit of Intel 14A and successor leading-edge process technologies. In such event, we would expect, over time, to shift manufacturing to third-party foundries, particularly TSMC, as we develop products for nodes beyond Intel 18A and its derivative node, Intel 18A-P.\n[p.11] Growing Our External Foundry Business In recent years, the cost of developing leading-edge semiconductor process technologies and of the manufacturing facilities utilizing such process technologies has increased significantly and outpaced the growth in our products business. Since that decision, demand for leading-edge foundry capacity has increased significantly to support the demand for compute, particularly from AI workloads, and we expect continued increases in such demand in future years. In 2025, we ramped Intel 18A into high- volume production and are seeking to establish it as our first significant node for government and enterprise foundry customers. We enhanced operational processes and quality systems to meet the rigorous standards expected in the foundry industry, and continued investing in ecosystem enablement to make our manufacturing network accessible to third-party external customers, including support for industry-standard EDA tools, process design kits and a broad portfolio of foundation IP that customers can utilize as a part of their designs. Finally, our strategy includes combining our IP and SoC development capabilities with our leading-edge manufacturing know-how to provide differentiated and full-service semiconductor solutions.\n[p.12] Our Business We are a global leader in the design and manufacturing of CPUs and other semiconductor products. Our products are designed and marketed by our Intel Products business, which includes our CCG and DCAI operating segments, and are manufactured by our Intel Foundry operating segment and third-party suppliers. Our Intel Foundry operating segment also offers semiconductor design and manufacturing services to external customers. We leverage our talent, IP, manufacturing assets and other resources to run our business and execute our strategic priorities. We report our business results in three reportable segments: CCG, DCAI and Intel Foundry. Intel Products is composed of two operating segments: CCG and DCAI. Competition CCG's primary competitor is AMD, which like us designs processors based on the x86 architecture. We also face significant competition from companies that design processors based on the ARM architecture, such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek with its Kompanio products."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\n  \"relations\": [\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"AMD\",\n      \"quote\": \"CCG's primary competitor is AMD, which like us designs processors based on the x86 architecture.\",\n      \"page\": 12\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Apple\",\n      \"quote\": \"such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek\",\n      \"page\": 12\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"Qualcomm\",\n      \"quote\": \"such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek\",\n      \"page\": 12\n    },\n    {\n      \"type\": \"competitor\",\n      \"entity\": \"MediaTek\",\n      \"quote\": \"Qualcomm with its Snapdragon products and MediaTek with its Kompanio products.\",\n      \"page\": 12\n    },\n    {\n      \"type\": \"supplier\",\n      \"entity\": \"TSMC\",\n      \"quote\": \"shift manufacturing to third-party foundries, particularly TSMC, as we develop products for nodes beyond Intel 18A\",\n      \"page\": 10\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"CCG\",\n      \"quote\": \"We report our business results in three reportable segments: CCG, DCAI and Intel Foundry.\",\n      \"page\": 12\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"DCAI\",\n      \"quote\": \"We report our business results in three reportable segments: CCG, DCAI and Intel Foundry.\",\n      \"page\": 12\n    },\n    {\n      \"type\": \"segment\",\n      \"entity\": \"Intel Foundry\",\n      \"quote\": \"We report our business results in three reportable segments: CCG, DCAI and Intel Foundry.\",\n      \"page\": 12\n    }\n  ]\n}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "competitor",
+    "entity": "AMD",
+    "quote": "CCG's primary competitor is AMD, which like us designs processors based on the x86 architecture.",
+    "page": 12
+   },
+   {
+    "type": "competitor",
+    "entity": "Apple",
+    "quote": "such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek",
+    "page": 12
+   },
+   {
+    "type": "competitor",
+    "entity": "Qualcomm",
+    "quote": "such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek",
+    "page": 12
+   },
+   {
+    "type": "competitor",
+    "entity": "MediaTek",
+    "quote": "Qualcomm with its Snapdragon products and MediaTek with its Kompanio products.",
+    "page": 12
+   },
+   {
+    "type": "supplier",
+    "entity": "TSMC",
+    "quote": "shift manufacturing to third-party foundries, particularly TSMC, as we develop products for nodes beyond Intel 18A",
+    "page": 10
+   },
+   {
+    "type": "segment",
+    "entity": "CCG",
+    "quote": "We report our business results in three reportable segments: CCG, DCAI and Intel Foundry.",
+    "page": 12
+   },
+   {
+    "type": "segment",
+    "entity": "DCAI",
+    "quote": "We report our business results in three reportable segments: CCG, DCAI and Intel Foundry.",
+    "page": 12
+   },
+   {
+    "type": "segment",
+    "entity": "Intel Foundry",
+    "quote": "We report our business results in three reportable segments: CCG, DCAI and Intel Foundry.",
+    "page": 12
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.123149113,
+  "prompt_tokens": 1554,
+  "prompt_time": 0.107766465,
+  "completion_tokens": 481,
+  "completion_time": 0.923393973,
+  "total_tokens": 2035,
+  "total_time": 1.031160438
+ }
+}

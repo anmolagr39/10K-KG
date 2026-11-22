@@ -1,0 +1,117 @@
+{
+ "ticker": "V",
+ "relations": [
+  {
+   "ticker": "V",
+   "type": "acquisition",
+   "entity": "Newpay",
+   "entity_canonical": "Newpay",
+   "company": null,
+   "quote": "expanded our participation in account-based payment infrastructure through our acquisition of Newpay in Argentina",
+   "page": 17,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "acquisition",
+   "entity": "Currencycloud",
+   "entity_canonical": "Currencycloud",
+   "company": null,
+   "quote": "additional assets we have acquired and built, such as Currencycloud and YellowPepper, to create the Visa Direct platform",
+   "page": 19,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "acquisition",
+   "entity": "YellowPepper",
+   "entity_canonical": "YellowPepper",
+   "company": null,
+   "quote": "additional assets we have acquired and built, such as Currencycloud and YellowPepper, to create the Visa Direct platform",
+   "page": 19,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "acquisition",
+   "entity": "Prisma",
+   "entity_canonical": "Prisma",
+   "company": null,
+   "quote": "we completed our acquisition of Prisma, a provider of credit, debit and prepaid card issuer processing services in Argentina",
+   "page": 20,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "acquisition",
+   "entity": "Featurespace",
+   "entity_canonical": "Featurespace",
+   "company": null,
+   "quote": "We expanded our Risk and Security Solutions offerings through the acquisition of Featurespace, whose real-time behavioral analytics",
+   "page": 22,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "competitor",
+   "entity": "Discover",
+   "entity_canonical": "Discover",
+   "company": null,
+   "quote": "These competitors may be more concentrated in specific geographic regions, such as Discover in the U.S.",
+   "page": 29,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "competitor",
+   "entity": "JCB",
+   "entity_canonical": "JCB",
+   "company": null,
+   "quote": "such as Discover in the U.S. and JCB in Japan, or have a leading position in certain countries",
+   "page": 29,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "competitor",
+   "entity": "UnionPay",
+   "entity_canonical": "UnionPay",
+   "company": null,
+   "quote": "or have a leading position in certain countries, such as UnionPay in China.",
+   "page": 29,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "competitor",
+   "entity": "American Express",
+   "entity_canonical": null,
+   "company": "AXP",
+   "quote": "Diners Club / Visa American Express Discover JCB Mastercard Payments Volume ($B) 14,567 1,888 257 342 8,812",
+   "page": 29,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "V",
+   "type": "competitor",
+   "entity": "Mastercard",
+   "entity_canonical": null,
+   "company": "MA",
+   "quote": "Diners Club / Visa American Express Discover JCB Mastercard Payments Volume ($B) 14,567 1,888 257 342 8,812",
+   "page": 29,
+   "doc": "V_10K_2026-09-30.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 4983
+}

@@ -1,0 +1,55 @@
+{
+ "tag": "relations:ADBE",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Adobe Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Adobe Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Adobe Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Adobe Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Adobe Inc. (entity = segment name)\n  \"acquisition\" - a company Adobe Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.6] Marketing professionals require AI-driven solutions that enable them to create, manage and optimize personalized digital experiences at scale and to enhance brand visibility across the content supply chain. Centered around Adobe Experience Platform and apps and Adobe GenStudio, our offerings streamline the content supply chain and deliver agile, self-service capabilities and integrated workflows to collaborate effectively and efficiently produce high volumes of on-brand, personalized content to strengthen brand visibility. Our competitive differentiation comes from the increased value we provide customers by integrating the Adobe Experience Platform with our comprehensive set of solutions and embedding AI into our portfolio of solutions, such as Adobe Experience Platform AI Assistant.\n[p.8] COMPETITION We participate in a highly competitive and rapidly evolving environment where our competitors include companies of various sizes and both public and private companies, including large, global companies and smaller companies with more specialized focuses, new entrants, and AI or cloud-native companies. We compete with software companies, AI companies, hardware manufacturers, operating system developers, and social media companies across our business.\n[p.10] Table of Contents Our solutions for business professionals and consumers face broad competition from productivity tools and consumer-focused creative tools including general productivity platforms and apps, web- and mobile-first design platforms, an array of easy-to-use desktop, web and mobile content creation apps, AI-first creativity and productivity tools, presentation tools, and social media platforms that offer built-in media editing capabilities. Our solutions for creators and creative professionals face broad competition from both established and emerging players including professional tools and suites for imaging, video, design, 3D, and other creative tasks, purpose-built mobile apps, AI-first creative tools, as well as creative tools integrated into broader desktop, web, and mobile applications. See the section titled \"Risk Factors\" contained in Part I, Item 1A of this report for additional information regarding risks related to competition.\n[p.14] Adobe Firefly Foundry Firefly Foundry enables enterprises to create deeply-tuned, customized Firefly generative AI models based on their intellectual property, product and brand styles with the support of Adobe scientists and engineers, across a wide variety of use cases. Adobe GenStudio Adobe GenStudio is an end-to-end, content supply chain solution for ideation, creation, production, activation, delivery, asset management, analytics and insights.\n[p.18] SEGMENTS In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising. To serve the end-to-end content supply chain needs of marketing professionals, our Digital Experience solutions include Adobe Experience Platform and native applications, including Real-Time Customer Data Platform, Customer Journey Analytics, Adobe Experience Manager Sites, Adobe Commerce, Adobe Journey Optimizer, Adobe Marketo Engage and solutions within Adobe GenStudio, such as Workfront, Adobe Experience Manager Assets and GenStudio for Performance Marketing. Effective in the first quarter of fiscal 2026, we will combine our prior segments—Digital Media, Digital Experience and Publishing and Advertising—into a single operating and reportable segment due to changes in how management intends to evaluate results, allocate resources and execute the strategic opportunities outlined above.\n[p.20] Table of Contents retailers, software developers, mobile app stores, systems integrators, independent software vendors and value-added resellers, as well as through original equipment manufacturers and hardware manufacturers. Consulting Services We have a global professional services team dedicated to designing and implementing solutions for our largest customers.\n[p.23] GOVERNMENT REGULATION We operate globally and are subject to a wide range of laws and regulations in the U.S. and other countries where we operate, covering a wide variety of subject matters, including, but not limited to, those related to antitrust and competition, consumer protection, data privacy and security, and AI. Compensation, Benefits and Wellbeing Adobe offers fair, competitive compensation and benefits that support our employees' overall wellbeing.\n[p.25] Before Freescale, he served as Chief Financial Officer and Executive Vice President of Finance and Administration at GlobalFoundries, a multinational semiconductor company, and he served as Managing Director and Head of Mergers and Acquisitions and Strategy at Mubadala Technology Fund, a private equity fund.\n[p.27] Wadhwani previously worked at Adobe as Senior Vice President and General Manager of Adobe's Digital Media business, having joined Adobe in 2005 through the Company's acquisition of Macromedia, Inc., a software company, where he had been Vice President of Developer Products.\n[p.28] Pentland served as SVP and General Counsel at Roku, Inc., a manufacturer of media players for streaming entertainment.\n[p.29] Our numerous competitors include companies of various sizes and both public and private companies, including large, global companies and smaller companies with more specialized focuses, new entrants, and AI or cloud-native companies. In addition, we expect to face more competition as AI continues to advance and be integrated into the markets in which we compete and to change the software industry. Our competitors or other third parties may develop AI solutions more rapidly or successfully, including but not limited to different data training strategies or proprietary access to data and, as a result, other AI solutions may achieve greater and faster adoption. For example, we face increasing competition from companies offering generative and agentic AI solutions, including but not limited to prompt-based and multi-modal creation and editing, document productivity and understanding, ad distribution and creation, and purpose-built AI agents. For additional information regarding our competition and the risks arising out of the competitive environment in which we operate, see the section titled \"Competition\" contained in Part I, Item 1 of this report. 17"
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"segment\", \"entity\": \"Digital Media\", \"quote\": \"In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.\", \"page\": 18}, {\"type\": \"segment\", \"entity\": \"Digital Experience\", \"quote\": \"In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.\", \"page\": 18}, {\"type\": \"segment\", \"entity\": \"Publishing and Advertising\", \"quote\": \"In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.\", \"page\": 18}, {\"type\": \"acquisition\", \"entity\": \"Macromedia, Inc.\", \"quote\": \"having joined Adobe in 2005 through the Company's acquisition of Macromedia, Inc., a software company\", \"page\": 27}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "segment",
+    "entity": "Digital Media",
+    "quote": "In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.",
+    "page": 18
+   },
+   {
+    "type": "segment",
+    "entity": "Digital Experience",
+    "quote": "In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.",
+    "page": 18
+   },
+   {
+    "type": "segment",
+    "entity": "Publishing and Advertising",
+    "quote": "In fiscal 2025, our business consisted of three reportable segments: Digital Media, Digital Experience and Publishing and Advertising.",
+    "page": 18
+   },
+   {
+    "type": "acquisition",
+    "entity": "Macromedia, Inc.",
+    "quote": "having joined Adobe in 2005 through the Company's acquisition of Macromedia, Inc., a software company",
+    "page": 27
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.054246255,
+  "prompt_tokens": 1455,
+  "prompt_time": 0.106842164,
+  "completion_tokens": 217,
+  "completion_time": 0.411663458,
+  "total_tokens": 1672,
+  "total_time": 0.518505622
+ }
+}

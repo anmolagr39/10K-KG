@@ -1,0 +1,18 @@
+{
+ "ticker": "ABBV",
+ "relations": [
+  {
+   "ticker": "ABBV",
+   "type": "segment",
+   "entity": "single global business segment",
+   "entity_canonical": "single global business segment",
+   "company": null,
+   "quote": "AbbVie operates as a single global business segment dedicated to the research and development, manufacturing, commercialization and sale of innovative medicines and therapies.",
+   "page": 4,
+   "doc": "ABBV_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 10323
+}

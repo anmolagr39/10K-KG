@@ -1,0 +1,37 @@
+{
+ "tag": "relations:LLY:1",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Eli Lilly and Company's annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Eli Lilly and Company names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Eli Lilly and Company (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Eli Lilly and Company (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Eli Lilly and Company (entity = segment name)\n  \"acquisition\" - a company Eli Lilly and Company acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.26] Other aspects of the 340B program, including the manner in which manufacturers can offer 340B pricing, and proper definitions of \"patient\" and \"child site\" under the 340B statute, are subject to inquiries and ongoing litigation by Lilly and/or other parties, the resolution of which could impact the growth and scope of the 340B program.\n[p.29] • Early Development Phase Early development includes initial testing for safety and efficacy and early analyses of manufacturing requirements. Raw Materials and Product Supply Most of the principal materials we use in our manufacturing operations are available from more than one source. Our active ingredient manufacturing and finishing operations, including formulation, filling, assembling, delivery device manufacturing, and packaging, take place at sites in the U.S., including Puerto Rico, Ireland and a number of other sites throughout the world. Investments to increase our manufacturing capacity include new sites in North Carolina, Wisconsin, Indiana, Virginia, Texas, Alabama, Pennsylvania, Ireland, Germany, and the Netherlands. Among other third-party providers, we, and the pharmaceutical industry generally, depend on China-based suppliers for portions of our supply chain. U.S. officials have enacted and continue to consider legislation or other actions that are intended to limit supply chain reliance on China, including the BIOSECURE Act.\n[p.31] For more information on the additional risks we face in connection with any difficulties, disruptions, and shortages in the manufacturing, distribution, and sale of our products, see Item 1A, \"Risk Factors—Risks Related to Our Operations—Manufacturing, quality, or supply chain difficulties, disruptions, or shortages could lead to product supply problems or other negative outcomes.\" Quality Assurance Our success depends in great measure on customer confidence in the quality of our products and in the integrity of the data that support their safety and effectiveness.\n[p.33] Executive Vice President and President, Manufacturing Operations (since 2021). Hernandez held various leadership roles with Lilly, including senior vice president, global parenteral drug product, delivery devices Edgardo Hernandez 51 and regional manufacturing, and vice president, Fegersheim operations. Van Naarden joined Lilly in 2019 when the company acquired Loxo Oncology, Inc., where he was the chief operating officer.\n[p.36] Risks Related to Our Business and Industry Pharmaceutical research and development is very costly and highly uncertain; we may not succeed in developing, licensing, or acquiring commercially successful products sufficient in number or value to replace revenues of products that have lost or will lose intellectual property protection or are displaced by competing products or therapies."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"acquisition\", \"entity\": \"Loxo Oncology, Inc.\", \"quote\": \"Van Naarden joined Lilly in 2019 when the company acquired Loxo Oncology, Inc., where he was the chief operating officer.\", \"page\": 33}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "acquisition",
+    "entity": "Loxo Oncology, Inc.",
+    "quote": "Van Naarden joined Lilly in 2019 when the company acquired Loxo Oncology, Inc., where he was the chief operating officer.",
+    "page": 33
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.049715912,
+  "prompt_tokens": 841,
+  "prompt_time": 0.061720117,
+  "completion_tokens": 69,
+  "completion_time": 0.151756668,
+  "total_tokens": 910,
+  "total_time": 0.213476785
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "tag": "relations:CSCO",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Cisco Systems, Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Cisco Systems, Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Cisco Systems, Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Cisco Systems, Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Cisco Systems, Inc. (entity = segment name)\n  \"acquisition\" - a company Cisco Systems, Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.14] Risk Factors,\" including the risk factors entitled \"Our results of operations may be negatively impacted by unfavorable economic and market conditions and the uncertain geopolitical environment;\" \"Entrance into new or developing markets exposes us to additional competition and will likely increase demands on our service and support operations;\" \"Due to the global nature of our operations, political or economic changes or other factors in a specific country or region could harm our results of operations or financial condition;\" \"We are exposed to fluctuations in currency exchange rates that could negatively impact our financial results and cash flows;\" and \"Cyber attacks, data breaches or other incidents impacting our solutions and IT environment may disrupt our operations, harm our results of operations or financial condition, and damage our reputation or otherwise materially harm our business; and cyber attacks, data breaches or other incidents on our customers' or third-party providers' networks, or in third-party products we use, could result in claims of liability against us, give rise to legal and/or regulatory action, damage our reputation or otherwise materially harm our business,\" among others. Cisco Capital, our financing arm, helps customers acquire the technology they need to achieve their business objectives and stay competitive. Acquisitions, Investments, and Alliances The markets in which we compete require a wide variety of technologies, products, and capabilities. Risk Factors,\" including the risk factor entitled \"If we do not successfully manage our strategic alliances, we may not realize the expected benefits from such alliances, and we may experience increased competition or delays in product development.\"\n[p.16] Table of Contents Competition We compete in the networking and communications equipment markets, providing products and services designed to transport, and help secure data, voice, and video traffic across cloud, private and public networks and the Internet. In particular, we have experienced price-focused competition from competitors in Asia, especially from China, and we anticipate this will continue. Our competitors (in each case relative to only some of our products or services) include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;\n[p.18] Table of Contents Manufacturing We rely on contract manufacturers for our manufacturing needs. The manufacturing processes and procedures are generally certified to International Organization for Standardization 9001 standards.\n[p.24] • Customer patterns, such as fluctuating demand for our products and services, especially with respect to service providers and cloud customers; the timing, size, and mix of orders from customers; and changes in sales and implementation cycles for our products and reduced visibility into our customers' spending plans and associated revenue • Our ability to maintain appropriate inventory levels and purchase commitments and manage manufacturing and customer lead times • Price and product competition in the communications and networking industries, which can change rapidly due to technological innovation and different business models from various geographic regions • Industry trends such as consolidation among our competitors and our customers, and the introduction and market acceptance of new technologies, products and technology standards, and our success in these new and evolving markets and with emerging technologies, including AI • Variations in sales channels, product costs, or mix of products sold (e.g., hardware and software sales, including mix of cloud-based and on-premise software sales) • Fluctuations in our gross margins, and the factors that contribute to such fluctuations • The ability of our direct sale customers, channel partners, contract manufacturers and suppliers to obtain financing, to fund capital expenditures, or withstand financial problems • Actual events, circumstances, outcomes, and amounts differing from judgments, assumptions, and estimates used in determining the values of certain assets (including the amounts of related valuation allowances), liabilities, and other items reflected in our Consolidated Financial Statements • How well we execute on our strategy and operating plans and the impact of changes in our business model that could result in significant restructuring charges • Our ability to achieve targeted cost reductions and anticipated benefits from our investments • Changes in tax laws or accounting rules, or interpretations thereof Any of these factors, or others discussed in this report, could materially harm our business, results of operations, or financial condition. Challenging global economic conditions, including tariffs or other trade barriers or disruptions, rising inflation, or other changes, have contributed, and may continue to contribute, to slowdowns in the markets in which we operate, resulting in: reduced demand for our products due to constrained IT-related spending by customers, particularly service provider, cloud, enterprise and other customer markets; increased price competition for our products, not only from our competitors but also as a consequence of customers disposing of unutilized products; risk of excess and obsolete inventories; risk of supply constraints; risk of excess facilities and manufacturing capacity; and higher overhead costs as a percentage of revenue and higher interest expense."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": [{\"type\": \"competitor\", \"entity\": \"Amazon Web Services LLC\", \"quote\": \"Our competitors (in each case relative to only some of our products or services) include: Amazon Web Services LLC;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Arista Networks, Inc.\", \"quote\": \"include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Broadcom Inc.\", \"quote\": \"Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Ciena Corporation\", \"quote\": \"Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"CrowdStrike Holdings, Inc.\", \"quote\": \"Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Datadog Inc.\", \"quote\": \"CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Dell Technologies Inc.\", \"quote\": \"Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Dynatrace Inc.\", \"quote\": \"Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Fortinet, Inc.\", \"quote\": \"Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Hewlett-Packard Enterprise Company\", \"quote\": \"Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Huawei Technologies Co., Ltd.\", \"quote\": \"Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Microsoft Corporation\", \"quote\": \"Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Nokia Corporation\", \"quote\": \"Microsoft Corporation; Nokia Corporation; Nvidia Corporation;\", \"page\": 16}, {\"type\": \"competitor\", \"entity\": \"Nvidia Corporation\", \"quote\": \"Nokia Corporation; Nvidia Corporation;\", \"page\": 16}]}",
+ "parsed": {
+  "relations": [
+   {
+    "type": "competitor",
+    "entity": "Amazon Web Services LLC",
+    "quote": "Our competitors (in each case relative to only some of our products or services) include: Amazon Web Services LLC;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Arista Networks, Inc.",
+    "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Broadcom Inc.",
+    "quote": "Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Ciena Corporation",
+    "quote": "Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "CrowdStrike Holdings, Inc.",
+    "quote": "Ciena Corporation; CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Datadog Inc.",
+    "quote": "CrowdStrike Holdings, Inc.; Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Dell Technologies Inc.",
+    "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Dynatrace Inc.",
+    "quote": "Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Fortinet, Inc.",
+    "quote": "Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Hewlett-Packard Enterprise Company",
+    "quote": "Fortinet, Inc.; Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Huawei Technologies Co., Ltd.",
+    "quote": "Hewlett-Packard Enterprise Company; Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Microsoft Corporation",
+    "quote": "Huawei Technologies Co., Ltd.; Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Nokia Corporation",
+    "quote": "Microsoft Corporation; Nokia Corporation; Nvidia Corporation;",
+    "page": 16
+   },
+   {
+    "type": "competitor",
+    "entity": "Nvidia Corporation",
+    "quote": "Nokia Corporation; Nvidia Corporation;",
+    "page": 16
+   }
+  ]
+ },
+ "usage": {
+  "queue_time": 0.054352081,
+  "prompt_tokens": 1303,
+  "prompt_time": 0.111380004,
+  "completion_tokens": 738,
+  "completion_time": 1.497933588,
+  "total_tokens": 2041,
+  "total_time": 1.609313592
+ }
+}

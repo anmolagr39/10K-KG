@@ -1,0 +1,179 @@
+{
+ "ticker": "AXP",
+ "relations": [
+  {
+   "ticker": "AXP",
+   "type": "segment",
+   "entity": "U.S. Consumer Services (USCS)",
+   "entity_canonical": "U.S. Consumer Services (USCS)",
+   "company": null,
+   "quote": "four reportable operating segments: U.S. Consumer Services (USCS), Commercial Services (CS), International Card Services (ICS)",
+   "page": 6,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "segment",
+   "entity": "Commercial Services (CS)",
+   "entity_canonical": "Commercial Services (CS)",
+   "company": null,
+   "quote": "U.S. Consumer Services (USCS), Commercial Services (CS), International Card Services (ICS) and Global Merchant and Network Services (GMNS)",
+   "page": 6,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "segment",
+   "entity": "International Card Services (ICS)",
+   "entity_canonical": "International Card Services (ICS)",
+   "company": null,
+   "quote": "Commercial Services (CS), International Card Services (ICS) and Global Merchant and Network Services (GMNS)",
+   "page": 6,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "acquisition",
+   "entity": "Center",
+   "entity_canonical": "Center",
+   "company": null,
+   "quote": "enhancing through our 2025 acquisition of Center, an expense management software company",
+   "page": 8,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "Visa",
+   "entity_canonical": null,
+   "company": "V",
+   "quote": "other card networks, including, among others, Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "China UnionPay",
+   "entity_canonical": "China UnionPay",
+   "company": null,
+   "quote": "including, among others, Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "Mastercard",
+   "entity_canonical": null,
+   "company": "MA",
+   "quote": "Visa, China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two of which are owned",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "JCB",
+   "entity_canonical": "JCB",
+   "company": null,
+   "quote": "China UnionPay, Mastercard, JCB, Discover and Diners Club International (the last two of which are owned by",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "Discover",
+   "entity_canonical": "Discover",
+   "company": null,
+   "quote": "Mastercard, JCB, Discover and Diners Club International (the last two of which are owned by Capital One)",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "Diners Club International",
+   "entity_canonical": "Diners Club International",
+   "company": null,
+   "quote": "JCB, Discover and Diners Club International (the last two of which are owned by Capital One)",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "Capital One",
+   "entity_canonical": null,
+   "company": "COF",
+   "quote": "Discover and Diners Club International (the last two of which are owned by Capital One)",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "Alipay",
+   "entity_canonical": "Alipay",
+   "company": null,
+   "quote": "web- and mobile-based payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "PayPal",
+   "entity_canonical": null,
+   "company": "PYPL",
+   "quote": "mobile-based payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks (such as",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "Shop Pay",
+   "entity_canonical": "Shop Pay",
+   "company": null,
+   "quote": "payment platforms (e.g., Alipay, PayPal and Shop Pay), as well as regional payment networks (such as the National",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "AXP",
+   "type": "competitor",
+   "entity": "National Payments Corporation of India",
+   "entity_canonical": "National Payments Corporation of India",
+   "company": null,
+   "quote": "regional payment networks (such as the National Payments Corporation of India). The principal competitive factors",
+   "page": 17,
+   "doc": "AXP_10K_2025-12-31.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [
+  {
+   "type": "segment",
+   "entity": "Global Merchant and Network Services (GMNS)",
+   "quote": "International Card Services (ICS) and Global Merchant and Network Services (GMNS). For further information about our reportable operating segments",
+   "page": 6
+  }
+ ],
+ "chars": 6533
+}

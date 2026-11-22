@@ -1,0 +1,1095 @@
+{
+ "summary": {
+  "overall": {
+   "n": 30,
+   "accuracy": 0.3,
+   "precision": 0.23333333333333334,
+   "recall": 0.23333333333333334,
+   "abstained": 17,
+   "page_accuracy": 0.7142857142857143
+  },
+  "single_fact": {
+   "n": 10,
+   "accuracy": 0.6,
+   "precision": 0.6,
+   "recall": 0.6,
+   "abstained": 4,
+   "page_accuracy": 0.8333333333333334
+  },
+  "multi_hop": {
+   "n": 10,
+   "accuracy": 0.2,
+   "precision": 0.0,
+   "recall": 0.0,
+   "abstained": 5,
+   "page_accuracy": null
+  },
+  "cross_filing": {
+   "n": 10,
+   "accuracy": 0.1,
+   "precision": 0.1,
+   "recall": 0.1,
+   "abstained": 8,
+   "page_accuracy": 0.0
+  }
+ },
+ "rows": [
+  {
+   "id": "T01",
+   "type": "single_fact",
+   "question": "What was Costco's total revenue for its fiscal year ended August 30, 2026?",
+   "correct": true,
+   "abstained": false,
+   "answer": "number: 303154000000",
+   "gold": {
+    "kind": "number",
+    "value": 303154000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 303154000000,
+    "unit": "USD",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 5.0
+  },
+  {
+   "id": "T02",
+   "type": "single_fact",
+   "question": "How much did Merck spend on research and development in 2025?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "number",
+    "value": 15789000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 1,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 2.1
+  },
+  {
+   "id": "T03",
+   "type": "single_fact",
+   "question": "What were JPMorgan Chase's total deposits at December 31, 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "number: 2559320000000",
+   "gold": {
+    "kind": "number",
+    "value": 2559320000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 2559320000000,
+    "unit": "USD",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 26.1
+  },
+  {
+   "id": "T04",
+   "type": "single_fact",
+   "question": "What was NVIDIA's diluted earnings per share for fiscal year 2026?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "number",
+    "value": 4.9,
+    "unit": "USD/share",
+    "formula": "f1",
+    "tolerance": {
+     "abs": 0.005
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 1,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 26.6
+  },
+  {
+   "id": "T05",
+   "type": "single_fact",
+   "question": "Which accounting firm audits Adobe's financial statements?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "entity",
+    "value": "KPMG LLP",
+    "aliases": [
+     "KPMG"
+    ]
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 1,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 23.4
+  },
+  {
+   "id": "T06",
+   "type": "single_fact",
+   "question": "How many associates did Home Depot employ at the end of fiscal 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "number: 472400",
+   "gold": {
+    "kind": "number",
+    "value": 472400.0,
+    "unit": "count",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 472400,
+    "unit": "count",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 24.4
+  },
+  {
+   "id": "T07",
+   "type": "single_fact",
+   "question": "In which U.S. state is Visa incorporated?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "entity",
+    "value": "Delaware",
+    "aliases": []
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 1,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 27.0
+  },
+  {
+   "id": "T08",
+   "type": "single_fact",
+   "question": "How much did Eli Lilly spend on purchases of property and equipment in 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "number: 7841000000",
+   "gold": {
+    "kind": "number",
+    "value": 7841000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 7841000000,
+    "unit": "USD",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 28.5
+  },
+  {
+   "id": "T09",
+   "type": "single_fact",
+   "question": "What provision for credit losses did Capital One record in 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "number: 20700000000",
+   "gold": {
+    "kind": "number",
+    "value": 20655000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 20700000000,
+    "unit": "USD",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 0.0,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 20.7
+  },
+  {
+   "id": "T10",
+   "type": "single_fact",
+   "question": "What were net sales of Amazon's AWS segment in 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "number: 128725000000",
+   "gold": {
+    "kind": "number",
+    "value": 128725000000.0,
+    "unit": "USD",
+    "formula": "f1",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 128725000000,
+    "unit": "USD",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 1,
+   "n_gold": 1,
+   "n_matched_retrieved": 1,
+   "n_matched_gold": 1,
+   "page_accuracy": 1.0,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 24.7
+  },
+  {
+   "id": "T11",
+   "type": "multi_hop",
+   "question": "What was Alphabet's operating margin in 2025 (income from operations as a percentage of revenues)?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "percent",
+    "value": 32.032639,
+    "unit": "pct",
+    "formula": "f1 / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 22.4
+  },
+  {
+   "id": "T12",
+   "type": "multi_hop",
+   "question": "What was Amazon's free cash flow in 2025, defined as net cash provided by operating activities minus purchases of property and equipment?",
+   "correct": false,
+   "abstained": false,
+   "answer": "number: 11194000000",
+   "gold": {
+    "kind": "number",
+    "value": 7695000000.0,
+    "unit": "USD",
+    "formula": "f1 - f2",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 11194000000,
+    "unit": "USD",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 1,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 23.8
+  },
+  {
+   "id": "T13",
+   "type": "multi_hop",
+   "question": "By what percentage did Walmart's total revenues grow in fiscal 2026 compared with fiscal 2025?",
+   "correct": true,
+   "abstained": false,
+   "answer": "percent: 4.7",
+   "gold": {
+    "kind": "percent",
+    "value": 4.725214,
+    "unit": "pct",
+    "formula": "(f1 - f2) / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "percent",
+    "value": 4.7,
+    "unit": "pct",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 1,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 29.0
+  },
+  {
+   "id": "T14",
+   "type": "multi_hop",
+   "question": "What was Oracle's effective tax rate for fiscal 2026, i.e. provision for income taxes divided by income before income taxes?",
+   "correct": true,
+   "abstained": false,
+   "answer": "percent: 12.6",
+   "gold": {
+    "kind": "percent",
+    "value": 12.616344,
+    "unit": "pct",
+    "formula": "f1 / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "percent",
+    "value": 12.6,
+    "unit": "pct",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 3,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 28.2
+  },
+  {
+   "id": "T15",
+   "type": "multi_hop",
+   "question": "Which other companies in the corpus are audited by the same accounting firm as NVIDIA?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "list",
+    "value": [
+     "IBM",
+     "CSCO",
+     "QCOM",
+     "AVGO",
+     "JPM",
+     "BAC",
+     "GS",
+     "MA",
+     "AXP",
+     "PYPL",
+     "JNJ",
+     "MRK"
+    ],
+    "aliases": []
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 13,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 24.3
+  },
+  {
+   "id": "T16",
+   "type": "multi_hop",
+   "question": "What percentage of its 2025 revenue did Meta spend on research and development?",
+   "correct": false,
+   "abstained": false,
+   "answer": "percent: 29",
+   "gold": {
+    "kind": "percent",
+    "value": 28.548113,
+    "unit": "pct",
+    "formula": "f1 / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "percent",
+    "value": 29,
+    "unit": "pct",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 26.7
+  },
+  {
+   "id": "T17",
+   "type": "multi_hop",
+   "question": "What percentage of Apple's total net sales in fiscal 2026 came from Services?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "percent",
+    "value": 25.75026,
+    "unit": "pct",
+    "formula": "f1 / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 27.3
+  },
+  {
+   "id": "T18",
+   "type": "multi_hop",
+   "question": "What was Bank of America's efficiency ratio in 2025, i.e. total noninterest expense divided by total revenue net of interest expense?",
+   "correct": false,
+   "abstained": false,
+   "answer": "percent: 51.51",
+   "gold": {
+    "kind": "percent",
+    "value": 61.652387,
+    "unit": "pct",
+    "formula": "f1 / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "percent",
+    "value": 51.51,
+    "unit": "pct",
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 1,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 28.0
+  },
+  {
+   "id": "T19",
+   "type": "multi_hop",
+   "question": "What was Costco's total revenue per employee in fiscal 2026?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "number",
+    "value": 853954.929577,
+    "unit": "USD",
+    "formula": "f1 / f2",
+    "tolerance": {
+     "rel": 0.01
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 26.6
+  },
+  {
+   "id": "T20",
+   "type": "multi_hop",
+   "question": "By what percentage did Microsoft's net income grow in fiscal year 2026 versus fiscal year 2025?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "percent",
+    "value": 31.3428,
+    "unit": "pct",
+    "formula": "(f1 - f2) / f2 * 100",
+    "tolerance": {
+     "abs": 0.1
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 24.5
+  },
+  {
+   "id": "T21",
+   "type": "cross_filing",
+   "question": "Rank JPMorgan Chase, Bank of America, Citigroup, Wells Fargo and Goldman Sachs by net income in 2025, highest first.",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "ranking",
+    "value": [
+     "JPM",
+     "BAC",
+     "WFC",
+     "GS",
+     "C"
+    ],
+    "aliases": []
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 5,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 24.1
+  },
+  {
+   "id": "T22",
+   "type": "cross_filing",
+   "question": "Among the semiconductor companies that NVIDIA names as competitors in its 10-K, which one spent the most on research and development in its latest fiscal year?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "entity",
+    "value": "INTC",
+    "aliases": [
+     "Intel",
+     "Intel Corporation"
+    ]
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 8,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 19.6
+  },
+  {
+   "id": "T23",
+   "type": "cross_filing",
+   "question": "Which of the five retailers (Walmart, Costco, Target, Home Depot, Lowe's) had the highest operating margin in its latest fiscal year?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "entity",
+    "value": "HD",
+    "aliases": [
+     "Home Depot",
+     "The Home Depot"
+    ]
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 10,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 23.5
+  },
+  {
+   "id": "T24",
+   "type": "cross_filing",
+   "question": "What was the combined revenue of Apple, Microsoft, Alphabet, Amazon and Meta in their latest fiscal years?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "number",
+    "value": 2131399000000.0,
+    "unit": "USD",
+    "formula": "f1 + f2 + f3 + f4 + f5",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 5,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 19.2
+  },
+  {
+   "id": "T25",
+   "type": "cross_filing",
+   "question": "Which of the five pharma companies (Johnson & Johnson, Pfizer, Merck, AbbVie, Eli Lilly) reported the highest research and development expense in 2025? Use the research and development line, excluding acquired in-process R&D.",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "entity",
+    "value": "MRK",
+    "aliases": [
+     "Merck",
+     "Merck & Co."
+    ]
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 5,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 30.1
+  },
+  {
+   "id": "T26",
+   "type": "cross_filing",
+   "question": "Which reported higher net revenue in its latest fiscal year, Visa or Mastercard, and by how much?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "compare",
+    "winner": "V",
+    "aliases": [
+     "Visa"
+    ],
+    "difference": 13112000000.0,
+    "formula": "f1 - f2",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 2,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 28.4
+  },
+  {
+   "id": "T27",
+   "type": "cross_filing",
+   "question": "Which of the payments companies (Visa, Mastercard, American Express, PayPal, Capital One) had the highest net income in its latest fiscal year?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "entity",
+    "value": "V",
+    "aliases": [
+     "Visa"
+    ]
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 5,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 27.3
+  },
+  {
+   "id": "T28",
+   "type": "cross_filing",
+   "question": "Which of the five chip companies (NVIDIA, AMD, Intel, Qualcomm, Broadcom) had the largest total assets at its latest balance sheet date?",
+   "correct": false,
+   "abstained": true,
+   "answer": "none: None",
+   "gold": {
+    "kind": "entity",
+    "value": "INTC",
+    "aliases": [
+     "Intel"
+    ]
+   },
+   "pred": {
+    "kind": "none",
+    "value": null,
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 0,
+   "n_gold": 5,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 22.2
+  },
+  {
+   "id": "T29",
+   "type": "cross_filing",
+   "question": "How much larger were Home Depot's net sales than Lowe's net sales in their latest fiscal years?",
+   "correct": true,
+   "abstained": false,
+   "answer": "number: HD (diff 78397000000)",
+   "gold": {
+    "kind": "number",
+    "value": 78397000000.0,
+    "unit": "USD",
+    "formula": "f1 - f2",
+    "tolerance": {
+     "rel": 0.005
+    }
+   },
+   "pred": {
+    "kind": "number",
+    "value": 78397000000,
+    "unit": "USD",
+    "winner": "HD",
+    "difference": 78397000000
+   },
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_retrieved": 2,
+   "n_gold": 2,
+   "n_matched_retrieved": 2,
+   "n_matched_gold": 2,
+   "page_accuracy": 0.0,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 23.0
+  },
+  {
+   "id": "T30",
+   "type": "cross_filing",
+   "question": "Which companies in the corpus name TSMC as a foundry or manufacturing partner in their 10-K?",
+   "correct": false,
+   "abstained": false,
+   "answer": "list: ['INTC', 'AVGO', 'AMD']",
+   "gold": {
+    "kind": "list",
+    "value": [
+     "NVDA",
+     "AMD",
+     "INTC",
+     "QCOM",
+     "AVGO"
+    ],
+    "aliases": []
+   },
+   "pred": {
+    "kind": "list",
+    "value": [
+     "INTC",
+     "AVGO",
+     "AMD"
+    ],
+    "unit": null,
+    "winner": null,
+    "difference": null
+   },
+   "precision": 0.0,
+   "recall": 0.0,
+   "n_retrieved": 3,
+   "n_gold": 5,
+   "n_matched_retrieved": 0,
+   "n_matched_gold": 0,
+   "page_accuracy": null,
+   "plan": null,
+   "error": null,
+   "repaired": false,
+   "seconds": 25.0
+  }
+ ]
+}

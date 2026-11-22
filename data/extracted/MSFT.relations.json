@@ -1,0 +1,40 @@
+{
+ "ticker": "MSFT",
+ "relations": [
+  {
+   "ticker": "MSFT",
+   "type": "segment",
+   "entity": "Productivity and Business Processes",
+   "entity_canonical": "Productivity and Business Processes",
+   "company": null,
+   "quote": "We operate our business and report our financial performance using three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.",
+   "page": 9,
+   "doc": "MSFT_10K_2026-06-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "MSFT",
+   "type": "segment",
+   "entity": "Intelligent Cloud",
+   "entity_canonical": "Intelligent Cloud",
+   "company": null,
+   "quote": "We operate our business and report our financial performance using three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.",
+   "page": 9,
+   "doc": "MSFT_10K_2026-06-30.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "MSFT",
+   "type": "segment",
+   "entity": "More Personal Computing",
+   "entity_canonical": "More Personal Computing",
+   "company": null,
+   "quote": "We operate our business and report our financial performance using three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.",
+   "page": 9,
+   "doc": "MSFT_10K_2026-06-30.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 5477
+}

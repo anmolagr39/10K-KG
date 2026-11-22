@@ -1,0 +1,30 @@
+{
+ "tag": "relations:GOOGL",
+ "request": {
+  "model": "qwen/qwen3.8-27b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You extract business relations from excerpts of Alphabet Inc.'s annual report (10-K, Item 1 Business).\nEach excerpt starts with [p.N] = its PDF page.\n\nReturn JSON: {\"relations\": [{\"type\": ..., \"entity\": ..., \"quote\": ..., \"page\": N}]}\ntype is one of:\n  \"competitor\"  - a company Alphabet Inc. names as a competitor\n  \"supplier\"    - a company that manufactures for / supplies Alphabet Inc. (foundry, contract manufacturer, key supplier)\n  \"customer\"    - a named customer that is significant to Alphabet Inc. (e.g. accounts for a % of revenue)\n  \"segment\"     - a reportable/operating segment of Alphabet Inc. (entity = segment name)\n  \"acquisition\" - a company Alphabet Inc. acquired or agreed to acquire\nRules:\n- entity must be a specific organization (or segment) NAMED in the text, never a category like \"cloud providers\".\n- quote must be copied EXACTLY from the excerpt (8-30 words) and must contain the entity name.\n- page is the [p.N] of the excerpt the quote comes from.\n- list each (type, entity) once. If nothing qualifies, return {\"relations\": []}.\n\nEXCERPTS:\n[p.11] Competition Our business is characterized by rapid change as well as new and disruptive technologies. We face formidable competition in every aspect of our business, including but not limited to, from: • general purpose search engines and information services; • vertical search engines and e-commerce providers for queries on topics such as those related to travel, jobs, and health, which users may navigate directly to rather than go through Google; • online advertising platforms and networks, including online shopping and streaming services; • other forms of advertising, such as billboards, magazines, newspapers, radio, and television, as our advertisers typically advertise in multiple media, both online and offline; • digital content and application platform providers; • providers of enterprise cloud services; • AI model developers and providers of AI products and services; • companies that design, manufacture, and market consumer hardware products, including businesses that have developed proprietary platforms; • providers of digital video services;\n[p.13] Table of Contents Alphabet Inc. Competing successfully depends heavily on our ability to continually develop and distribute innovative products and technologies to the marketplace across our businesses. For example, for advertising, competing successfully depends on attracting and retaining: • users, for whom other products and services are literally one click away, on the basis of the relevance of our advertising, as well as the general usefulness, security, and availability of our products and services; • advertisers, primarily based on our ability to generate sales leads, and ultimately customers, and to deliver their advertisements in an efficient and effective manner across a variety of distribution channels even as trends in advertising mediums and user preferences change; and • content providers, primarily based on the quality of our advertiser base, our ability to help these partners generate revenues from advertising, and the terms of our agreements with them. For additional information about competition, see Item 1A Risk Factors of this Annual Report on Form 10-K. We choose our partners and staffing agencies carefully, and review their compliance with Google's Supplier Code of Conduct. Particularly with regard to AI; competition; consumer protection; content moderation, including access restrictions for minors; data privacy and security; intellectual property; news publications; and sustainability and other social matters, we have seen an increase in new and evolving laws and regulations, as well as related enforcement actions and investigations, being proposed and implemented in recent years by legislative and regulatory bodies around the world.\n[p.15] We have also filed patent applications in the US and foreign countries covering certain of our technology, and acquired patent assets to supplement our portfolio.\n[p.16] We believe AI is quickly reshaping the advertising industry, including how ads are delivered online, and we and our competitors are constantly adjusting to meet this shift and provide new and evolving advertising formats."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2500,
+  "response_format": {
+   "type": "json_object"
+  }
+ },
+ "response": "{\"relations\": []}",
+ "parsed": {
+  "relations": []
+ },
+ "usage": {
+  "queue_time": 0.046750536,
+  "prompt_tokens": 850,
+  "prompt_time": 0.058820013,
+  "completion_tokens": 11,
+  "completion_time": 0.021290656,
+  "total_tokens": 861,
+  "total_time": 0.080110669
+ }
+}

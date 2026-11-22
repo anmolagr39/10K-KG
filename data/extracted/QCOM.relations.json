@@ -1,0 +1,117 @@
+{
+ "ticker": "QCOM",
+ "relations": [
+  {
+   "ticker": "QCOM",
+   "type": "segment",
+   "entity": "QCT",
+   "entity_canonical": "QCT",
+   "company": null,
+   "quote": "QCT develops and supplies integrated circuit platforms and system software with advanced connectivity and high- performance, low-power computing technologies.",
+   "page": 6,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "segment",
+   "entity": "QTL",
+   "entity_canonical": "QTL",
+   "company": null,
+   "quote": "QTL grants licenses or otherwise provides rights to use portions of our intellectual property portfolio, which includes certain patent rights essential to and/or useful in the manufacture and sale of certain wireless products.",
+   "page": 6,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "segment",
+   "entity": "QSI",
+   "entity_canonical": "QSI",
+   "company": null,
+   "quote": "Our QSI (Qualcomm Strategic Initiatives) reportable segment makes strategic investments.",
+   "page": 6,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "supplier",
+   "entity": "Taiwan Semiconductor Manufacturing Company (TSMC)",
+   "entity_canonical": "TSMC",
+   "company": null,
+   "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.",
+   "page": 12,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "supplier",
+   "entity": "Samsung Electronics",
+   "entity_canonical": "Samsung",
+   "company": null,
+   "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.",
+   "page": 12,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "supplier",
+   "entity": "GlobalFoundries",
+   "entity_canonical": "GlobalFoundries",
+   "company": null,
+   "quote": "The primary foundry suppliers for our various digital, analog/mixed-signal, RF and PM integrated circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and GlobalFoundries.",
+   "page": 12,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "supplier",
+   "entity": "Amkor Technology",
+   "entity_canonical": "Amkor Technology",
+   "company": null,
+   "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+   "page": 12,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "supplier",
+   "entity": "Advanced Semiconductor Engineering",
+   "entity_canonical": "Advanced Semiconductor Engineering",
+   "company": null,
+   "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+   "page": 12,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "supplier",
+   "entity": "Siliconware Precision Industries",
+   "entity_canonical": "Siliconware Precision Industries",
+   "company": null,
+   "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+   "page": 12,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  },
+  {
+   "ticker": "QCOM",
+   "type": "supplier",
+   "entity": "STATS ChipPAC",
+   "entity_canonical": "STATS ChipPAC",
+   "company": null,
+   "quote": "Our primary semiconductor assembly and test suppliers are Amkor Technology, Advanced Semiconductor Engineering, Siliconware Precision Industries and STATS ChipPAC.",
+   "page": 12,
+   "doc": "QCOM_10K_2026-09-27.pdf",
+   "method": "llm+grounding"
+  }
+ ],
+ "dropped": [],
+ "chars": 8481
+}
